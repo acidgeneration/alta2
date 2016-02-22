@@ -1,0 +1,470 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../modules/head/head
+    include ../modules/footer/footer
+
+    head
+        +head(head.defaults)
+    body
+        include ../modules/menu/menu.jade
+        .content
+            include ../modules/header/header.jade
+            .sub-link
+                a.link(href="") Продукция
+                a.link(href="") Где купить
+            include ../modules/intro/intro.jade
+            include ../modules/section/section.jade
+            ul.tab-list
+                li.wrap-item
+                    a.tab-title(href="#") Не знаете что <br/> выбрать?
+                    .tab-item
+                        p И даже с языками, спользующими латинский алфавит, могут возникнуть небольшие проблемы: в различных языкх те или иные буквы встречаются с разной частотой, имеется разница в длине наиболее распространенных слов.  Отсюда напрашивается вывод, что все же лучше использовать в качестве «рыбы».
+                        .choose-material.clearfix
+                            a.choose-item.active(href="#")
+                                .icon
+                                    img(src="%=static=%img/content/material-1.jpg" alt="icon")
+                                .title Кирпич
+                            a.choose-item(href="#")
+                                .icon
+                                    img(src="%=static=%img/content/material-2.jpg" alt="icon")
+                                .title Дерево
+                            a.choose-item(href="#")
+                                .icon
+                                    img(src="%=static=%img/content/material-3.jpg" alt="icon")
+                                .title Камень
+                            a.choose-item(href="#")
+                                .icon
+                                    img(src="%=static=%img/content/material-4.jpg" alt="icon")
+                                .title Штукатурка
+                        .compare-material.clearfix
+                            .list
+                                .compare-item.active
+                                    .icon
+                                        img(src="%=static=%img/content/material-1-1.jpg" alt="icon")
+                                    .title Кирпичная кладка
+                                    ul.plus
+                                        li Экологичен
+                                        li Натурален
+                                        li Красив и прочен
+                                    ul.minus
+                                        li Экологичен
+                                        li Натурален
+                                        li Красив и прочен
+                                .compare-item
+                                    .icon
+                                        img(src="%=static=%img/content/material-2.jpg" alt="icon")
+                                    .title Дерево
+                                    ul.plus
+                                        li Экологичен
+                                        li Натурален
+                                        li Красив и прочен
+                                    ul.minus
+                                        li Экологичен
+                                        li Натурален
+                                        li Красив и прочен
+                                .compare-item
+                                    .icon
+                                        img(src="%=static=%img/content/material-3.jpg" alt="icon")
+                                    .title Камень
+                                    ul.plus
+                                        li Экологичен
+                                        li Натурален
+                                        li Красив и прочен
+                                    ul.minus
+                                        li Экологичен
+                                        li Натурален
+                                        li Красив и прочен
+                                .compare-item
+                                    .icon
+                                        img(src="%=static=%img/content/material-4.jpg" alt="icon")
+                                    .title Штукатурка
+                                    ul.plus
+                                        li Экологичен
+                                        li Натурален
+                                        li Красив и прочен
+                                    ul.minus
+                                        li Экологичен
+                                        li Натурален
+                                        li Красив и прочен
+                            .list
+                                .compare-item.active
+                                    .icon
+                                        img(src="%=static=%img/content/material-5.png" alt="icon")
+                                    .title Кирпичная кладка
+                                    ul.plus
+                                        li Экологичен
+                                        li Натурален
+                                        li Красив и прочен
+                                    ul.minus
+                                        li Экологичен
+                                        li Натурален
+                                        li Красив и прочен
+                                .compare-item
+                                    .icon
+                                        img(src="%=static=%img/content/material-5.png" alt="icon")
+                                    .title Фасадная панель 2 «Кирпич»
+                                    ul.plus
+                                        li Прочная
+                                        li Долговечная
+                                        li Легко моется
+                                    ul.minus
+                                        li Нет &#42;
+                                .compare-item
+                                    .icon
+                                        img(src="%=static=%img/content/material-5.png" alt="icon")
+                                    .title Кирпичная кладка 3
+                                    ul.plus
+                                        li Экологичен
+                                        li Натурален
+                                    ul.minus
+                                        li Экологичен
+                                        li Натурален
+                                        li Красив и прочен
+                                .compare-item
+                                    .icon
+                                        img(src="%=static=%img/content/material-5.png" alt="icon")
+                                    .title Фасадная панель4 «Кирпич»
+                                    ul.plus
+                                        li Прочная
+                                        li Долговечная
+                                    ul.minus
+                                        li Нет &#42;
+                        a.btn.btn-red(href="#") В каталог
+                        p
+                            i &#42; при качественных фасадных панелях и профессиональном  монтаже
+                li.wrap-item
+                    a.tab-title(href="#") Какой цвет <br/> выбрать?
+                    .tab-item
+                        .double-tab.clearfix
+                            a.item.active(href="#") Сайдинг
+                            a.item(href="#") Фасадные панели
+                        .sub-title Большой выбор цветов
+                        p   И даже с языками, спользующими латинский алфавит, могут возникнуть небольшие проблемы: в различных языкх те или иные буквы встречаются с разной частотой, имеется разница в длине наиболее.
+                        .color-table.wrap-list
+                            .list.clearfix.active
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#dce775")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#ffa757")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color.shadow(href="#" style="background-color:#fb4032")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#7faefc")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#06ac00")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#939393")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#251a16")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#332c33")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#827772")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#d4cabe")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#f6d413")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#f8bf34")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color.shadow(href="#" style="background-color:#fb5c18")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#4e1c1b")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#b47a72")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#967472")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#ac424e")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#511a31")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#005782")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#0a5dc7")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#52586d")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#6f80b6")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#041f76")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#1c0b37")
+                                        span.accept
+                                            .icon-check
+                            .list.clearfix
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#4e1c1b")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#b47a72")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#967472")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#ac424e")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#511a31")
+                                        span.accept
+                                            .icon-check
+                                .wrap-color
+                                    a.color(href="#" style="background-color:#005782")
+                                        span.accept
+                                            .icon-check
+                        a.btn.btn-blue.btn-form(href="#") Хочу дом такого цвета
+                        a.btn.btn-red(href="#") В каталог
+                li.wrap-item
+                    a.tab-title(href='') Где купить?
+                    .tab-item
+                        p И даже с языками, спользующими латинский алфавит, могут возникнуть небольшие проблемы: в различных языкх те или иные буквы встречаются с разной частотой, имеется разница в длине наиболее распространенных слов.
+                        .double-col.clearfix
+                            img.map-img(src="%=static=%img/content/map.png")
+                            .item.eq-height
+                                .number 150
+                                .title вариантов <br/> отделки
+                            .item.eq-height
+                                .number 113
+                                .title офисов продаж
+                            .item.eq-height
+                                .number 15
+                                .title коллекций <br/> материалов
+                            .item.eq-height
+                                ul
+                                    li Надежная компания
+                                    li Прямые заказы
+                                    li Сертификация
+                                    li Соотношение «цена-качество»
+                        a.btn.btn-blue(href="#") Где купить
+                li.wrap-item
+                    a.tab-title(href='') Что нужно знать <br/>  о монтаже?
+                    .tab-item
+                        .double-tab.clearfix
+                            a.item.dbl-row.active(href="#") Монтажот производителя
+                            a.item.dbl-row(href="#") Самостоятельный монтаж
+                        .wrap-list
+                            .list.active.clearfix
+                                .sub-title.dark Самостоятельный монтаж
+                                p И даже с языками, спользующими латинский алфавит, могут возникнуть небольшие проблемы: в различных языкх те или иные буквы встречаются с разной частотой, имеется разница в длине наиболее распространенных слов.
+                                .wrap-video
+                                    iframe.video(src="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=0")
+                                    a.btn-play(href="#")
+                                a.btn.btn-simple(href="#") Скачать инструкцию
+                                .wrap-form
+                                    .title-form Заказ монтажа
+                                    form(method="post")
+                                        .wrap-input
+                                            input(type="text" placeholder="Ваше имя")
+                                        .wrap-input
+                                            input(type="text" placeholder="Ваш телефон")
+                                        .wrap-select
+                                            select(style="width:100%;")
+                                                option(value="Москва и область") Москва и область
+                                                option(value="Москва и область") Москва и область
+                                                option(value="Москва и область") Москва и область
+                                                option(value="Москва и область") Москва и область
+                                        a.btn.btn-red(href="#") Заказать монтаж
+                            .list.clearfix
+                                .sub-title.dark Самостоятельный монтаж
+                                p И даже с языками, спользующими латинский алфавит, могут возникнуть небольшие проблемы: в различных языкх те или иные буквы встречаются с разной частотой, имеется разница в длине наиболее распространенных слов.
+                                .wrap-video
+                                    iframe.video(src="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=0")
+                                    a.btn-play
+                                a.btn.btn-simple(href="#") Скачать инструкцию
+                                .wrap-form
+                                    .title-form Заказ монтажа
+                                    form(method="post")
+                                        .wrap-input
+                                            input(type="text" placeholder="Ваше имя")
+                                        .wrap-input
+                                            input(type="text" placeholder="Ваш телефон")
+                                        .wrap-select
+                                            select(style="width:100%;")
+                                                option(value="Москва и область") Москва и область
+                                                option(value="Москва и область") Москва и область
+                                                option(value="Москва и область") Москва и область
+                                                option(value="Москва и область") Москва и область
+                                        a.btn.btn-red(href="#") Заказать монтаж
+                li.wrap-item
+                    a.tab-title(href='') Про что еще <br/> не забыть?
+                    .tab-item
+                        .double-tab.clearfix
+                            a.item.active(href="#") Дом снаружи
+                            a.item(href="#") Дом внутри
+                        .wrap-list
+                            .list.active
+                                .columns.clearfix
+                                    a.col-i.clearfix(href="#")
+                                        .icon
+                                            img(src="%=static=%img/content/icon_intro_1dark.svg" style="width:30px")
+                                        .title Водосточная система
+                                    a.col-i.clearfix(href="#")
+                                        .icon
+                                            img(src="%=static=%img/content/icon_intro_3dark.svg" style="width: 30px")
+                                        .title Газонная решетка
+                                    a.col-i.clearfix(href="#")
+                                        .icon
+                                            img(src="%=static=%img/content/icon_intro_7dark.svg" style="width:30px")
+                                        .title Кровля
+                                    a.col-i.clearfix(href="#")
+                                        .icon
+                                            img(src="%=static=%img/content/icon_intro_9dark.svg" style="width:30px")
+                                        .title Цокольный сайдинг
+                                    a.col-i.clearfix(href="#")
+                                        .icon
+                                            img(src="%=static=%img/content/icon_intro_6dark.svg" style="width:34px")
+                                        .title Дренажная система
+                                    a.col-i.clearfix(href="#")
+                                        .icon
+                                            img(src="%=static=%img/content/icon_intro_4dark.svg" style="width: 30px")
+                                        .title Террасная доска
+                            .list
+                                .columns.clearfix
+                                    a.col-i.clearfix(href="#")
+                                        .icon
+                                            img(src="%=static=%img/content/icon_intro_1dark.svg" style="width:30px")
+                                        .title Водосточная систем аЦокольный сайдинг
+                                    a.col-i.clearfix(href="#")
+                                        .icon
+                                            img(src="%=static=%img/content/icon_intro_3dark.svg" style="width: 30px")
+                                        .title Газонная решетка решетка
+                                    a.col-i.clearfix(href="#")
+                                        .icon
+                                            img(src="%=static=%img/content/icon_intro_7dark.svg" style="width:30px")
+                                        .title Кровля
+                                    a.col-i.clearfix(href="#")
+                                        .icon
+                                            img(src="%=static=%img/content/icon_intro_9dark.svg" style="width:30px")
+                                        .title Цокольный сайдин гЦокольный сайдинг
+                                    a.col-i.clearfix(href="#")
+                                        .icon
+                                            img(src="%=static=%img/content/icon_intro_6dark.svg" style="width:34px")
+                                        .title Дренажная система
+                                    a.col-i.clearfix(href="#")
+                                        .icon
+                                            img(src="%=static=%img/content/icon_intro_4dark.svg" style="width: 30px")
+                                        .title Террасная доска
+                        a.btn.btn-red(href="#") В каталог
+            include ../modules/product-list/product-list.jade
+            .section-white
+                .section-title О компании
+                a.logotype(href="#")
+                    img(src="%=static=%img/content/logo-about.png")
+                p Руку при оценке качества восприятия макета благодаря чему появляется возможность получить более. Разной частотой, имеется разница в книгопечатании еще в длине наиболее распространенных слов. Различных языках те или иные буквы. Использованием lorem ipsum на руку. Использовать в качестве рыбы текст этот.
+                .list
+                    ul
+                        li
+                            .icon
+                                img(src="%=static=%img/content/icon_intro_1.svg")
+                            | Руку при оценкеРазной частотой, имеется разница
+                        li
+                            .icon
+                                img(src="%=static=%img/content/icon_intro_1.svg")
+                            | Руку при оценкеРазной частотой, имеется разница
+                        li
+                            .icon
+                                img(src="%=static=%img/content/icon_intro_1.svg")
+                            | Руку при оценкеРазной частотой, имеется разница
+            .section-white
+                .section-title Фотографии
+                .scroll-slider.simple-slider
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                .wrap-img
+                                    img(src="%=static=%img/content/slide257x182.jpg")
+                            .swiper-slide
+                                .wrap-img
+                                    img(src="%=static=%img/content/slide257x182.jpg")
+                            .swiper-slide
+                                .wrap-img
+                                    img(src="%=static=%img/content/slide257x182.jpg")
+                            .swiper-slide
+                                .wrap-img
+                                    img(src="%=static=%img/content/slide257x182.jpg")
+                            .swiper-slide
+                                .wrap-img
+                                    img(src="%=static=%img/content/slide257x182.jpg")
+                            .swiper-slide
+                                .wrap-img
+                                    img(src="%=static=%img/content/slide257x182.jpg")
+                        .swiper-scrollbar.scroll-blue
+                a.btn.btn-blue(href="#") Подробнее о компании
+            .section-white
+                .section-title Новости
+                img.banner(src="%=static=%img/content/banner2.jpg" alt="banner")
+                .news-list
+                    .news
+                        .news-title Только до 25 февраля!
+                        .date 24.02.2016
+                        p Руку при оценке качества восприятия макета благодаря чему появляется возможность получить более. Разной частотой, имеется разница в книгопечатании еще в длине наиболее распространенных слов. Различных языках теиные буквы. Использованием lorem ipsum на руку. Использовать в качестве рыбы текст этот.айтах.
+                    .news
+                        .news-title Заголовок
+                        .date 24.02.2016
+                        p Алфавит, могут возникнуть небольшие проблемы: в книгопечатании еще в книгопечатании еще.
+                    .news
+                        .news-title Заголовок
+                        .date 24.02.2016
+                        p Алфавит, могут возникнуть небольшие проблемы: в книгопечатании еще в книгопечатании еще.
+                    .news
+                        .news-title Заголовок
+                        .date 24.02.2016
+                        p Алфавит, могут возникнуть небольшие проблемы: в книгопечатании еще в книгопечатании еще.
+                a.btn.btn-blue(href="#") Больше новостей
+            +footer()
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')
+        script(src='%=static=%js/separate-js/start.js')

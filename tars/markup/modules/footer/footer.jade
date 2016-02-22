@@ -1,0 +1,88 @@
+mixin footer(data)
+    footer.page-footer
+        img.stripe(src="%=static=%img/content/stripe.png")
+        .footer
+            .columns.clearfix
+                .col
+                    ul
+                        li
+                            a.link(href="#") О компании
+                        li
+                            a.link(href="#") Монтаж
+                        li
+                            a.link(href="#") Галерея
+                        li
+                            a.link(href="#") Дилерам
+                        li
+                            a.link(href="#") Где купить
+                    ul.contacts-list
+                        li Москва
+                            strong 8-800-777-11
+                        li Казань
+                            strong 8-800-777-11
+                        li Новосибирск
+                            strong 8-800-777-11
+                .col
+                    ul
+                        li
+                            a.link(href="#") Сайдинг     Дрен
+                        li
+                            a.link(href="#") Фасадные панели
+                        li
+                            a.link(href="#") Комплектующие
+                        li
+                            a.link(href="#") Водосточные  системы
+                        li
+                            a.link(href="#") Дренажные системы
+                        li
+                            a.link(href="#") Газонная решетка
+                        li
+                            a.link(href="#") Террасная доска
+                        li
+                            a.link(href="#") Черепица
+                        li
+                            a.link(href="#") Вагонка ПВХ
+                        li
+                            a.link(href="#") Панели ПВХ
+            a.email(href="mailto:mail@alta-profil.ru") e-mail:
+                strong alta@profil.ru
+            .wrap-form
+                a.btn.btn-blue.btn-form  Сбор негатива
+                .msg
+                    a.btn-close.icon-close
+                    .sub-title Спасибо,<br/> мы свяжемся с Вами!
+                .form
+                    .sub-title Сбор негатива
+                    form(action="post")
+                    .wrap-input
+                        input(type="text" placeholder="Ваше имя")
+                    .wrap-input
+                        input(type="text" placeholder="Ваш e-mail")
+                    .wrap-input
+                        textarea(placeholder="Текст сообщения")
+                    .wrap-input
+                        a.btn.btn-red.btn-send(href="#") Отправить
+
+            .wrap-soc
+                .soc-links.clearfix
+                    a.soc-icon.icon-vk(href="http://vk.com/altaprofilru")
+                    a.soc-icon.icon-fb(href="https://www.facebook.com/altaprofilru")
+                    a.soc-icon.icon-ok2(href="http://ok.ru/group/52745676259413")
+                        .path1
+                        .path2
+                        .path3
+                    a.soc-icon.icon-yt(href="https://www.youtube.com/user/altaprofil1 ")
+            .dwnld.clearfix
+                .title Доступно для скачивания
+                a(href="https://play.google.com/store/apps/details?id=com.ideaintech.alta")
+                    img(src="%=static=%img/content/gp.png")
+                a(href="https://itunes.apple.com/ru/app/al-ta-profil/id623821935?mt=8 ")
+                    img(src="%=static=%img/content/as.png")
+            a.link Перейти в полную версию сайта
+            img.icon-man(src="%=static=%img/content/man.png")
+    .footer-btm
+        p © Альта-Профиль, 2003—2016
+        a.logo(href="#")
+            img(src="%=static=%img/content/completo.png")
+        p Сделано в
+            a(href="#") Completo
