@@ -69,3 +69,89 @@
 		li
 			line-height: 18px
 			padding-bottom 6px
+
+
+.email
+	display block
+	line-height: 18px
+	color color-dark
+	font-size 14px
+	margin-bottom 45px
+	strong
+		font-weight bold
+		text-decoration underline
+
+// ебучая лента
+.stripe
+	display block
+	position relative
+	width 100%
+	margin-bottom 10px
+
+//
+.wrap-soc
+	display block
+	padding-bottom 13px
+	text-align center
+
+.soc-links
+	display inline-block
+	position relative
+	a
+		float left
+		margin 0 10px
+		display block
+		border-radius 1px
+
+.icon-man
+	display block
+	margin 0 auto
+.footer-btm
+	background color-blue
+	text-align center
+	padding-top 8px
+	p
+		color #FFF
+		display block
+		padding-bottom 16px
+	a
+		color #FFF
+		text-decoration underline
+	.logo
+		padding-bottom 5px
+		img
+			width 79px
+
+
+//Сбор негатива
+
+.msg
+	position: absolute
+	left 0
+	top 0
+	bottom 55px
+	width 100%
+	background #FFF
+	opacity 0
+	visibility hidden
+	transition 	visibility .3s ease 0s ,opacity .3s ease 0s
+	.btn-close
+		position absolute
+		z-index 10
+		width 50px
+		height 50px
+		display block
+		right -20px
+		top 20px
+		font-size 16px
+		color #777777
+	.sub-title
+		position absolute
+		left 0
+		width 100%
+		top 50%
+		text-align center
+		transform translateY(-50%)
+	.sent &
+		opacity 1
+		visibility visible

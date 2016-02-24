@@ -13,6 +13,7 @@
 // ==========================================================================
 
 // Correct `block` display not defined in IE 8/9.
+
 article
 aside
 details
@@ -217,7 +218,29 @@ textarea
 table
 	border-collapse collapse
 	border-spacing 0
-/*reset css*/
+
+
+
+
+
+
+/*
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+reset css
+
+TODO (zupra) отступы уже сброшены
+outline тоже
+*:focus, *:active, *:hover // @stylint ignore
+	outline none
+
+	смысла не вижу
+	vertical-align: baseline;
+	background: transparent;
+
+
+
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td {
 	margin: 0;
 	padding: 0;
@@ -226,22 +249,32 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, 
 	vertical-align: baseline;
 	background: transparent;
 }
-a,button
+
+*/
+
+
+a
 	text-decoration none
-.clearfix:before, .clearfix:after {
+//
+// .clearfix
+// 	cf()
+//
+
+.clearfix:before, .clearfix:after
 	content: "\0020";
 	display: block;
 	height: 0;
 	visibility: hidden;
-}
 
 .clearfix:after {
 	clear: both;
 }
-
 .clearfix {
 	zoom: 1;
 }
-*
-	font-family 'Roboto', sans-serif
-	font-weight normal
+
+
+
+
+body
+	font 400 14px/1.4em 'Roboto', sans-serif
