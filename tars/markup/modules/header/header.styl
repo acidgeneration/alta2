@@ -1,0 +1,89 @@
+.page-header
+	width 100%
+	background #FFF
+	position fixed
+	left 0
+	top 0
+	z-index 400
+	box-shadow 0 0px 8px 5px #CCC
+	.btn-burger
+		position absolute
+		left 8px
+		top 10px
+		height 30px
+		width 18px
+
+		//box-sizing: content-box
+		padding 5px
+		span
+			width 18px
+			height 3px
+			background color-light-blue
+			border-radius 1px
+			position absolute
+			left 5px
+			top 11px
+			transition transform .2s ease 0s;
+			&:first-child
+				top 18px
+				transition transform .2s ease .1s;
+			&:last-child
+				top: 25px
+				transition transform .2s ease .2s;
+	.btn-cart
+		position: absolute
+		right 53px
+		width 31px
+		height 28px
+		top 16px
+		display block
+		span
+			color #FFF
+			display block
+			background color-light-red
+			border-radius 50%
+			width 14px
+			height 14px
+			position absolute
+			top 2px
+			left 7px
+			line-height 16px
+			font-size 8px
+			text-align center
+	.btn-phone
+		position: absolute
+		right 7px
+		width 31px
+		height 28px
+		top 18px
+		display block
+.header-i
+	width 100%
+	height 60px
+	padding 0 13px
+	box-sizing border-box
+	.logotype
+		float left
+		width 111px
+		padding-top 13px
+		margin-left 32px
+		img
+			width 100%
+
+
+.menu-open
+	.btn-burger
+		span
+			transform rotateY(180deg)
+.sub-link
+	background #fff
+	height 50px
+	position: relative
+	width 100%
+	.link
+		color #0071bb
+		font-size 25px
+		line-height: 50px;
+		width 50%
+		float left
+		text-align center

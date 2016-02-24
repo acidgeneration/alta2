@@ -1,106 +1,12 @@
+// ЗДЕСЬ ТОЛЬКО!!! общие для всех
 
-
-
-.page-header
-	width 100%
-	background #FFF
-	position fixed
-	left 0
-	top 0
-	z-index 400
-	box-shadow 0 0px 8px 5px #CCC
-
-
-
-	.btn-burger
-		position absolute
-		left 8px
-		top 10px
-		height 30px
-		width 18px
-
-		box-sizing: content-box
-
-		padding 5px
-
-		span
-			width 18px
-			height 3px
-			background color-light-blue
-			border-radius 1px
-			position absolute
-			left 5px
-			top 11px
-			transition transform .2s ease 0s;
-			&:first-child
-				top 18px
-				transition transform .2s ease .1s;
-			&:last-child
-				top: 25px
-				transition transform .2s ease .2s;
-	.btn-cart
-		position: absolute
-		right 53px
-		width 31px
-		height 28px
-		top 16px
-		display block
-
-		span
-			color #FFF
-			display block
-			background color-light-red
-			border-radius 50%
-			width 14px
-			height 14px
-			position absolute
-			top 2px
-			left 7px
-			line-height 16px
-			font-size 8px
-			text-align center
-	.btn-phone
-		position: absolute
-		right 7px
-		width 31px
-		height 28px
-		top 18px
-		display block
-.header-i
-	width 100%
-	height 60px
-	padding 0 13px
-
-	box-sizing border-box
-	.logotype
-		float left
-		width 111px
-		padding-top 13px
-		margin-left 32px
-		img
-			width 100%
-.menu-open
-	.btn-burger
-		span
-			transform rotateY(180deg)
-.sub-link
-	background #fff
-	height 50px
-	position: relative
-	width 100%
-	.link
-		color #0071bb
-		font-size 25px
-		line-height: 50px;
-		width 50%
-		float left
-		text-align center
 .content
 	position relative
 	overflow hidden
 	padding-top 60px
 	z-index 50
 	background #f6f8fa url(../img/content/bg-patter47x35.png) repeat
+
 .scroll-slider
 	&.simple-slider
 		padding-bottom 30px
@@ -115,7 +21,6 @@
 	.swiper-container
 		position relative
 		padding 14px 0px 23px
-
 		box-sizing: content-box
 	.swiper-slide
 		width 80%
@@ -135,7 +40,7 @@
 		.wrap-img
 			padding-bottom: 5px;
 		.title
-			color #444
+			color #444;
 			font-size 16px;
 			line-height: 20px;
 			display: block
@@ -146,7 +51,7 @@
 			text-align:left;
 			width 205px
 		p
-			color #444
+			color #444;
 			font-size 16px;
 			text-align:left;
 			line-height: 20px;
@@ -157,6 +62,10 @@
 			padding-bottom 10px;
 		strong
 			font-weight bold;
+
+
+
+
 .section-white
 	background: #fff;
 	padding:25px 13px 20px;
@@ -187,7 +96,9 @@
 			color color-dark
 			padding-bottom 20px;
 
+
 			box-sizing: content-box
+
 			min-height: 40px;
 			&:last-child
 				padding-bottom 0
@@ -200,6 +111,9 @@
 			overflow:hidden;
 			border-radius 2px;
 			background: #d9d6d6;
+
+
+
 .news-list
 	padding-bottom 5px
 .news
@@ -210,7 +124,7 @@
 	&:last-child
 		border-bottom 0
 	.date
-		color #999
+		color #999999
 		position absolute
 		right -4px
 		top 4px
@@ -235,13 +149,55 @@
 
 
 
+.stripe
+	display block
+	position relative
+	width 100%
+	margin-bottom 10px
+.email
+	display block
+	line-height: 18px
+	color color-dark
+	font-size 14px
+	margin-bottom 45px
+	strong
+		font-weight bold
+		text-decoration underline
+.intro
+	background url(../img/content/home-bg.jpg) 50% 50% no-repeat
+	background-size cover
+	padding 10px 13px 0
+	.logotype
+		width 250px
+		margin 5px auto 0
+		display: block
+		img
+			width 100%
+			display block
+	p
+		font-size 18px
+		color #ffffff
+		line-height 21px
+		text-align center
+		padding 0 5% 30px
 
-
-
-
-
-
-
+	.list-item
+		width 50%
+		float left
+		position relative
+		text-align center
+		img
+			margin 4px auto 0
+		.icon
+			display block
+			margin 0 auto 2px
+			width 50px
+			height 50px
+			border 1px solid #ffffff
+			border-radius 4px
+			overflow hidden
+		p
+			padding-bottom 15px
 .banner
 	width 288px
 	border 1px solid color-dark
@@ -261,9 +217,9 @@
 		margin 0 13px
 .wrap-feedback
 	padding 1px 0 14px
-	background-color #FFF
+	background-color #fff
 	.btn-drop
-		color #FFF
+		color #fff
 		display block
 		font-size 25px
 		line-height 50px
@@ -286,7 +242,7 @@
 	.item
 		padding-bottom 30px
 		p
-			color #FFF
+			color #ffffff
 			font-size 14px
 			line-height 18px
 			display block
@@ -303,7 +259,7 @@
 		text-align center
 		padding-bottom 35px
 		a
-			color #FFF
+			color #ffffff
 			font-size 15px
 			line-height 17px
 			font-weight 600
@@ -363,7 +319,7 @@
 	p
 		font-size 14px
 		line-height 18px
-		color #777
+		color #777777
 		display block
 		padding-bottom 20px
 		word-wrap break-word
@@ -374,7 +330,7 @@
 		font-size 11px
 		line-height 14px
 .choose-material
-	color #777
+	color #777777
 	padding-top 7px
 	padding-bottom 10px
 .choose-item
@@ -393,7 +349,7 @@
 			position relative
 			z-index 2
 	.title
-		color #777
+		color #777777
 		font-size 14px
 		font-weight lighter
 		line-height 20px
@@ -434,7 +390,7 @@
 	&.active
 		display block
 	.title
-		color #777
+		color #777777
 		font-size 14px
 		line-height 17px
 		padding-bottom 3px
@@ -453,7 +409,7 @@
 	ul
 		padding-bottom 3px
 		li
-			color #777
+			color #777777
 			font-size 14px
 			line-height 18px
 			padding-left 10px
@@ -488,15 +444,15 @@
 		float left
 		display block
 		text-align center
-		background #FFF
-		border 1px solid #CCC
-		box-shadow -3px 3px 9px 0 rgba(0,0,0,.24);
+		background #ffffff
+		border 1px solid #cccccc
+		box-shadow -3px 3px 9px 0 rgba(00,00,00,.24);
 		margin-top -1px
 		transition border .3s ease 0s,box-shadow .3s ease 0s,background .3s ease 0s
 		&:last-child
 			float right
 		&.active
-			background #DDD
+			background #dddddd
 			box-shadow none
 			border none
 			margin-top 0
@@ -538,7 +494,7 @@
 		opacity 0
 		.icon-check
 			z-index 2
-			color #000
+			color #000000
 			font-size 10px
 			position absolute
 			top 50%
@@ -553,7 +509,7 @@
 			position absolute
 			content ''
 			z-index 1
-			background #FFF
+			background #fff
 			border-radius 50%
 .double-col
 	position relative
@@ -564,6 +520,7 @@
 		padding 0 13px
 
 		box-sizing: content-box
+
 		width 100%
 		display block
 		z-index 0
@@ -574,7 +531,6 @@
 		z-index 1
 		position relative
 		padding-bottom 25px
-
 		&:nth-child(even)
 			padding-right 10px
 		&:nth-child(odd)
@@ -586,7 +542,7 @@
 			line-height 15px
 			display: block
 		.number
-			color #FFF
+			color #ffffff
 			font-size 65px
 			line-height 65px
 			letter-spacing -1px
@@ -621,7 +577,7 @@
 	width 100%
 	height 200px
 	position relative
-	background #FFF
+	background #ffffff
 	margin-bottom 30px
 	.btn-play
 		position: absolute
@@ -643,6 +599,7 @@
 			background url(../img/content/icon-play.png) no-repeat 50% 50%
 
 			background-size cover
+
 			width 16px
 			height 16px
 	.video
@@ -669,7 +626,7 @@
 		.title
 			display inline-block
 			position relative
-			color #777
+			color #777777
 			font-size 14px
 			line-height 18px
 		.icon
@@ -678,7 +635,7 @@
 			position absolute
 			left 0
 			top 0
-			border 1px solid #777
+			border 1px solid #777777
 			border-radius 1px
 			overflow hidden
 			img
@@ -713,6 +670,7 @@
 		line-height 16px
 		padding 8px 9px
 		resize none
+
 .wrap-select
 	padding-bottom 20px
 	select
@@ -731,6 +689,7 @@
 		background url(../img/content/arrow-b.svg) no-repeat 50% 50%
 
 		background-size cover
+
 		width 10px
 		height 6px
 		display block
@@ -757,3 +716,48 @@
 .icon-man
 	display block
 	margin 0 auto
+.footer-btm
+	background color-blue
+	text-align center
+	padding-top 8px
+	p
+		color #ffffff
+		display block
+		padding-bottom 16px
+	a
+		color #ffffff
+		text-decoration underline
+	.logo
+		padding-bottom 5px
+		img
+			width 79px
+.msg
+	position: absolute
+	left 0
+	top 0
+	bottom 55px
+	width 100%
+	background #ffffff
+	opacity 0
+	visibility hidden
+	transition 	visibility .3s ease 0s ,opacity .3s ease 0s
+	.btn-close
+		position absolute
+		z-index 10
+		width 50px
+		height 50px
+		display block
+		right -20px
+		top 20px
+		font-size 16px
+		color #777777
+	.sub-title
+		position absolute
+		left 0
+		width 100%
+		top 50%
+		text-align center
+		transform translateY(-50%)
+	.sent &
+		opacity 1
+		visibility visible

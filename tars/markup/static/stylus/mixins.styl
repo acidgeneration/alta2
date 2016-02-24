@@ -1,38 +1,27 @@
 // Mixins.
-cf()
-	*zoom: 1
-	&:before, &:after
-		content: ''
-		display: table
-	&:after
-		clear: both
-
 
 m-nl()
-	margin 0
-	padding 0
-	text-indent 0
-	list-style none
-	list-style-position outside
+    margin 0
+    padding 0
+    text-indent 0
+    list-style none
+    list-style-position outside
 
+m-cf()
+    &:before, &:after
+        display table
+        content ""
 
-// 
-// m-cf()
-// 	&:before, &:after
-// 		display table
-// 		content ""
-//
-// 	&:after
-// 		clear both
-//
-// 	.lt-ie8 &
-// 			zoom 1
-//
+    &:after
+        clear both
+
+    .lt-ie8 &
+        zoom 1
 
 
 m-blocks-justify()
-	text-align justify
-	text-justify newspaper
+    text-align justify
+    text-justify newspaper
 
 
 // You can add your own mixins here:

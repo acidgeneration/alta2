@@ -28,12 +28,12 @@ jQuery(function ($) {
 		equalHeight($('.columns .col-i'),2);
 	};
 
-	// $(window).on('load', function () {
-	// 	resizeWindow();
-	// });
-	// $(window).on('resize', function () {
-	// 	resizeWindow();
-	// });
+	$(window).on('load', function () {
+		resizeWindow();
+	});
+	$(window).on('resize', function () {
+		resizeWindow();
+	});
 
 	window.addEventListener("orientationchange", function () {
 		clearTimeout(resizeTimeout);

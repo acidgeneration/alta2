@@ -1,0 +1,26 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../modules/head/head
+    include ../modules/footer/footer
+
+    head
+        +head(head.defaults)
+    body
+    
+        //include ../modules/menu/menu.jade
+    
+        .content
+            include ../modules/header/header.jade
+            
+            
+            .section-white
+            
+                include ../modules/section-white/about_company.jade
+
+            
+            +footer()
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')
+        script(src='%=static=%js/separate-js/start.js')
