@@ -9,6 +9,8 @@
 
 
 
+
+// swiper-slider
 .scroll-slider
 	&.simple-slider
 		padding-bottom 30px
@@ -66,6 +68,7 @@
 		strong
 			font-weight bold;
 
+// />swiper-slider
 
 
 
@@ -207,9 +210,30 @@
 .section-blue
 	background color-blue
 
-.tab-list
+
+
+.counter
 	counter-reset list
+	.wrap-item:before
+		position absolute
+		display block
+		left 10px
+		top -6px
+		color #0071bb
+		font-size 25px
+		line-height 40px
+		counter-increment: list
+		content: counter(list) ". "
+
+
+.tab-list
+	//counter-reset list
 	padding 45px 0 5px
+
+
+
+
+
 	.sub-title
 		color red
 		font-family 'Trebuchet MS',sans-serif
@@ -220,19 +244,23 @@
 		display block
 		&.dark
 			color #444
+
+
+
 	.wrap-item
 		position: relative
 		padding-bottom 29px
-		&:before
-			position absolute
-			display block
-			left 10px
-			top -6px
-			color #0071bb
-			font-size 25px
-			line-height 40px
-			counter-increment: list
-			content: counter(list) ". "
+		// &:before
+		// 	position absolute
+		// 	display block
+		// 	left 10px
+		// 	top -6px
+		// 	color #0071bb
+		// 	font-size 25px
+		// 	line-height 40px
+		// 	counter-increment: list
+		// 	content: counter(list) ". "
+
 	.tab-title
 		padding-left 37px
 		color #0071bb
@@ -244,12 +272,14 @@
 .tab-item
 	padding 28px 13px 10px
 	display none
-	.btn-form
-		background #ddd
-		color #444
-		&.active
-			background color-light-blue
-			color #fff
+
+	// .btn-form
+	// 	background #ddd
+	// 	color #444
+	//
+	// 	&.active
+	// 		background color-light-blue
+	// 		color #fff
 	p
 		font-size 14px
 		line-height 18px
@@ -263,6 +293,9 @@
 		font-style italic
 		font-size 11px
 		line-height 14px
+
+
+
 .choose-material
 	color #777
 	padding-top 7px
@@ -619,6 +652,9 @@
 
 
 
+
+
+//select2
 .wrap-select
 	padding-bottom 20px
 	select

@@ -1,0 +1,71 @@
+.item_gallery
+  color color-dark
+  margin-bottom 2em
+  img
+    display block
+    //margin-bottom 20px //1em
+    margin 0 auto 20px
+
+
+.gallery_title
+  color color-dark //#444
+  font-size 18px
+  i
+    float right
+    padding-left 18px
+    color #999
+    font-size 12px
+    &.chat
+      background url('%=static=%assets/gallery/z-g_chat.png') left center no-repeat
+      margin-left 20px
+    &.photo
+      background url('%=static=%assets/gallery/z-g_photo.png') left center no-repeat
+  p
+    color color-light-blue
+
+
+
+.description
+  h3
+    margin 14px 0
+    color #777
+    font-size 18px
+  .autor
+    margin 1em 0 0
+
+  b
+    font-weight bold
+  a
+    color color-light-blue
+
+  dt
+    padding-left 20px
+    &:nth-child(1)
+      background url('%=static=%assets/gallery/z-g_map.png') left center no-repeat
+    &:nth-child(2)
+      background url('%=static=%assets/gallery/z-g_date.png') left center no-repeat
+    &:nth-child(3)
+      background url('%=static=%assets/gallery/z-g_material.png') left center no-repeat
+
+//TODO переделать!!!
+.XYi
+  font-size 18px
+  color color-dark
+
+.item_gallery-more
+  text-align center
+
+  a
+    //display block
+    //! костыль
+    // display inline-block
+    // width 100%
+    // margin-top 2em
+
+    font-size 16px
+    color #999
+    border-bottom 1px dashed #999
+
+
+.item_gallery-toggle
+  display none

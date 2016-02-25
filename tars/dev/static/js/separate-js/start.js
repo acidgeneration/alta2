@@ -51,10 +51,19 @@ jQuery(function ($) {
 			.on('click','.wrap-form .btn-close',function(e){
 				e.preventDefault();
 				var el = $(this);
-				el.closest('.wrap-form').find('.form').hide();
-				el.closest('.wrap-form').removeClass('sent');
+
+
+				// el.closest('.wrap-form').find('.form').hide();
+				// el.closest('.wrap-form').removeClass('sent');
+				//
+
+				el.closest('.wrap-form').removeClass('sent').find('.form').hide();
+
+
+
+
 				setTimeout(function () {
-					el.closest('.wrap-form').find('.btn-form').show();
+					el.closest('.wrap-form').find('.js_btn-form').show();
 				},500)
 			})
 
@@ -66,11 +75,11 @@ jQuery(function ($) {
 					el.closest('.wrap-form').find('.form').hide();
 					el.closest('.wrap-form').removeClass('sent');
 					setTimeout(function () {
-						el.closest('.wrap-form').find('.btn-form').show();
+						el.closest('.wrap-form').find('.js_btn-form').show();
 					},500)
 				},3000);
 			})
-			.on('click','.footer .btn-form',function(e){
+			.on('click','.footer .js_btn-form',function(e){
 				e.preventDefault();
 				var el = $(this);
 				el.hide();
@@ -106,7 +115,7 @@ jQuery(function ($) {
 				var p = el.closest('.tab-item');
 				p.find('.wrap-list .list').removeClass('active').hide();
 				p.find('.wrap-list .list').eq(el.index()).fadeIn();
-				p.find('.btn-form').removeClass('active');
+				//p.find('.btn-form').removeClass('active');
 				p.find('.color-table .color').removeClass('active');
 				$('.eq-height').css('height','auto');
 				equalHeight($('.double-col .eq-height'),2);
@@ -118,7 +127,7 @@ jQuery(function ($) {
 				var e = $(this);
 				$('.color-table .color').removeClass('active');
 				e.addClass('active');
-				e.closest('.wrap-item').find('.btn-form').addClass('active');
+				//e.closest('.wrap-item').find('.btn-form').addClass('active');
 			})
 			.on('click','.tab-list .tab-title',function(e){
 				e.preventDefault();
@@ -143,6 +152,23 @@ jQuery(function ($) {
 					$this.find('.compare-item').eq(i).fadeIn();
 				});
 			});
+
+
+
+			$(".js_gallery-more").click(function(e){
+					e.preventDefault();
+
+					$(this).text(function(i, text){
+		          return text === "Подробнее" ? "Скрыть информацию" : "Подробнее";
+		      })
+
+
+			    $(this).parents('.item_gallery').find('.item_gallery-toggle').toggle(1000);
+					//.toggle(speed,easing,callback)
+					//text == "Подробнее" ? "Скрыть информацию" : "Подробнее";
+			});
+
+
 
 	//Swiper
 	var sliderOption = {
