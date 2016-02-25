@@ -1,6 +1,10 @@
 head: {
     defaults: {
-        title: 'default title',
+        title: 'Главная',
+        useSocialMetaTags: true
+    },
+    gallery: {
+        title: 'Галерея',
         useSocialMetaTags: true
     }
 }
