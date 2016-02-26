@@ -162,10 +162,8 @@ jQuery(function ($) {
 		          return text === "Подробнее" ? "Скрыть информацию" : "Подробнее";
 		      })
 
-
-			    $(this).parents('.item_gallery').find('.item_gallery-toggle').toggle(1000);
+			    $(this).parents('.item_gallery').find('.item_gallery-toggle').slideToggle(1000);
 					//.toggle(speed,easing,callback)
-					//text == "Подробнее" ? "Скрыть информацию" : "Подробнее";
 			});
 
 
