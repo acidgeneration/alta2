@@ -1,49 +1,49 @@
 doctype html
 html(class="no-js", lang="ru")
 
-    include ../modules/head/head
-    include ../modules/footer/footer
+	include ../modules/head/head
+	include ../modules/footer/footer
 
-    head
-        +head(head.defaults)
-    body
-    
-        //include ../modules/header/menu.jade
-    
-        .content
-            include ../modules/header/header.jade
+	head
+		+head(head.defaults)
+	body
 
-            .sub-link
-                a.link(href="") Продукция
-                a.link(href="") Где купить
-            
-            //Первый
-            include ../modules/header/intro.jade
-            
-            //синие отзывы
-            include ../modules/reviews/reviews.jade
-            
-            //распашные секции
-            include ../modules/tab-list/tab-list.jade
-            
-            //Популярные товары
-            include ../modules/product-list/product-list.jade
-            
-            .section-white
-            
-                include ../modules/section-white/about_company.jade
-                
-            .section-white
-                include ../modules/section-white/photo.jade
+		//include ../modules/header/menu.jade
 
-            
-            .section-white
-                include ../modules/section-white/news.jade
-            
-                        
-            
-            +footer()
+		.content
+			include ../modules/header/header.jade
 
-        //- Main scripts. You can replace it, but I recommend you to leave it here
-        script(src='%=static=%js/main%=hash=%%=min=%.js')
-        script(src='%=static=%js/separate-js/start.js')
+			.sub-link
+				a.link(href="") Продукция
+				a.link(href="") Где купить
+
+			//Первый
+			include ../modules/header/intro.jade
+
+			//синие отзывы
+			include ../modules/reviews/reviews.jade
+
+			//распашные секции
+			include ../modules/tab-list/tab-list.jade
+
+			//Популярные товары
+			include ../modules/product-list/product-list.jade
+
+			.section-white
+
+				include ../modules/section-white/about_company.jade
+
+			.section-white
+				include ../modules/section-white/photo.jade
+
+
+			.section-white
+				include ../modules/section-white/news.jade
+
+
+
+			+footer()
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')
+		script(src='%=static=%js/separate-js/start.js')

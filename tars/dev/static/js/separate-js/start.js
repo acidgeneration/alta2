@@ -1,3 +1,5 @@
+
+
 function equalHeight(group, groupSize) {
 	if (!group.length) {
 		return;
@@ -15,27 +17,26 @@ function equalHeight(group, groupSize) {
 }
 
 jQuery(function ($) {
+
+/*
+
+	// equalHeight - костыль, убираем уго
+
+
 	var resizeTimeout;
 	var scrollSlider,gallerySlider,scrollSliderSimple;
-
 	function resizeWindow() {
 		$('.color-table .wrap-color').css('height',$('.color-table .wrap-color').width());
-
 		$('.intro .list-item').css('height', 'auto');
 		equalHeight($('.intro .list-item'));
-
 		$('.eq-height').css('height','auto');
 		equalHeight($('.double-col .eq-height'),2);
-
 		$('.columns .col-i').css('height','auto');
 		equalHeight($('.columns .col-i'),2);
 	};
-
 	$(window).on('load resize', function () {
 		resizeWindow();
 	});
-
-
 	window.addEventListener("orientationchange", function () {
 		clearTimeout(resizeTimeout);
 		resizeTimeout = setTimeout(function () {
@@ -43,6 +44,7 @@ jQuery(function ($) {
 		}, 100);
 	}, false);
 
+*/
 
 	$(document)
 //			.on('click','.lang-list .item',function(e){
@@ -151,19 +153,13 @@ jQuery(function ($) {
 					$this.find('.compare-item').removeClass('active').hide();
 					$this.find('.compare-item').eq(i).fadeIn();
 				});
-			});
-
-
-
-			$(".js_gallery-more").click(function(e){
-					e.preventDefault();
-
-					$(this).text(function(i, text){
-		          return text === "Подробнее" ? "Скрыть информацию" : "Подробнее";
-		      })
-
-			    $(this).parents('.item_gallery').find('.item_gallery-toggle').slideToggle(1000);
-					//.toggle(speed,easing,callback)
+			})
+			.on('click', '.js_gallery-more', function(e){
+				e.preventDefault();
+				$(this).text(function(i, text){
+	          return text === "Подробнее" ? "Скрыть информацию" : "Подробнее";
+	      })
+		    $(this).parents('.item_gallery').find('.item_gallery-toggle').slideToggle(1000);
 			});
 
 
