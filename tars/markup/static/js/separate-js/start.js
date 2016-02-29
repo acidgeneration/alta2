@@ -178,9 +178,19 @@ jQuery(function ($) {
 
 
 
+	//
+	// swiperDot = new Swiper('.swiper-dot',{
+  //   //Your options here:
+  //   mode:'horizontal',
+  //   loop: true,
+  //   pagination: '.swiper-dot-pagination',
+	// 	paginationClickable: true,
+	// 	//createPagination: true
+  // });
+	//
 
-	swiperDot = new Swiper('.swiper-dot',{
-    //Your options here:
+	$('.swiper-dot').swiper({
+		//Your options here:
     mode:'horizontal',
     loop: true,
     pagination: '.swiper-dot-pagination',
@@ -188,15 +198,21 @@ jQuery(function ($) {
 		//createPagination: true
   });
 
+	$('.swiper-color').swiper({
 
-	// var swiper-dot = $('.swiper-dot').swiper({
-  //   //Your options here:
-  //   mode:'horizontal',
-  //   loop: true,
-	// 	centeredSlides: true
-  //   //etc..
-  // });
-	//
+		scrollbar: '.swiper-scrollbar',
+		scrollbarHide: false,
+		centeredSlides: true,
+		slidesPerView: 'auto',
+		spaceBetween: 15,
+		//Your options here:
+		mode:'horizontal',
+		loop: true,
+		pagination: '.swiper-color-pagination',
+		paginationClickable: true,
+		//createPagination: true
+	});
+
 
 
 	$('.wrap-select select').select2();
