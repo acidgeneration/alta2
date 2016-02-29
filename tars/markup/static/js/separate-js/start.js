@@ -177,6 +177,28 @@ jQuery(function ($) {
 	scrollSliderSimple = new Swiper($('.scroll-slider.simple-slider .swiper-container'),sliderOption);
 
 
+
+
+	swiperDot = new Swiper('.swiper-dot',{
+    //Your options here:
+    mode:'horizontal',
+    loop: true,
+    pagination: '.swiper-dot-pagination',
+		paginationClickable: true,
+		//createPagination: true
+  });
+
+
+	// var swiper-dot = $('.swiper-dot').swiper({
+  //   //Your options here:
+  //   mode:'horizontal',
+  //   loop: true,
+	// 	centeredSlides: true
+  //   //etc..
+  // });
+	//
+
+
 	$('.wrap-select select').select2();
 
 });
