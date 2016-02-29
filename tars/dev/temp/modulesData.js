@@ -24,6 +24,10 @@ head: {
     gallery: {
         title: 'Галерея',
         useSocialMetaTags: true
+    },
+    lawngrids: {
+        title: 'Газоннные решетки',
+        useSocialMetaTags: true
     }
 }
 ,
@@ -34,4 +38,7 @@ __pages: [{
              },{
                 name: 'index',
                 href: '/index.html'
+             },{
+                name: 'lawngrids',
+                href: '/lawngrids.html'
              }]

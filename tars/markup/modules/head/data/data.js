@@ -6,5 +6,9 @@ head: {
     gallery: {
         title: 'Галерея',
         useSocialMetaTags: true
+    },
+    lawngrids: {
+        title: 'Газоннные решетки',
+        useSocialMetaTags: true
     }
 }
