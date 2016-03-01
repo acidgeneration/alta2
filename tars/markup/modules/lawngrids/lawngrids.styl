@@ -14,7 +14,8 @@
     font-size 25px
     margin-bottom 1em
 
-ul.blue-dot
+//-ul
+.blue-dot
   margin-bottom 2em
   li
     margin-bottom 1em
@@ -48,7 +49,7 @@ ul.blue-dot
 
 
 
-.swiper-dot
+.swiper-dot, .swiper-color
   text-align center
 
 .swiper-dot-pagination
@@ -59,3 +60,48 @@ ul.blue-dot
     height: 11px
     margin 5px
   //.swiper-pagination-bullet-active
+
+/*
+setNthBg(clr)
+  for i in clr
+    //&:nth-of-type({index + 1})
+    &:nth-child({i})
+      background clr
+*/
+
+setNthBg(colorList)
+  for col, index in colorList
+    //&:nth-of-type({index + 1})
+    &:nth-child({index + 1})
+      background col
+
+
+
+
+.swiper-color-pagination
+  margin-top 1em
+  //span
+  i
+    //display inline-block
+    width 40px
+    height 40px
+    border-radius: 0
+    opacity: 1
+  .swiper-pagination-bullet
+    setNthBg(#59933C #50390C #2F2F2F #FF7D77 #F2E841 #10D8F4)
+
+  .swiper-pagination-bullet-active
+    border 2px solid #ff3131
+    background inherit //none
+
+
+/*
+width: 8px;
+height: 8px;
+display: inline-block;
+border-radius: 100%;
+background: #000;
+opacity: 0.2;
+
+
+*/

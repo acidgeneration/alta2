@@ -53,16 +53,7 @@ jQuery(function ($) {
 			.on('click','.wrap-form .btn-close',function(e){
 				e.preventDefault();
 				var el = $(this);
-
-
-				// el.closest('.wrap-form').find('.form').hide();
-				// el.closest('.wrap-form').removeClass('sent');
-				//
-
 				el.closest('.wrap-form').removeClass('sent').find('.form').hide();
-
-
-
 
 				setTimeout(function () {
 					el.closest('.wrap-form').find('.js_btn-form').show();
@@ -73,6 +64,7 @@ jQuery(function ($) {
 				e.preventDefault();
 				var el = $(this);
 				el.closest('.wrap-form').addClass('sent');
+
 				setTimeout(function(){
 					el.closest('.wrap-form').find('.form').hide();
 					el.closest('.wrap-form').removeClass('sent');
@@ -80,6 +72,7 @@ jQuery(function ($) {
 						el.closest('.wrap-form').find('.js_btn-form').show();
 					},500)
 				},3000);
+
 			})
 			.on('click','.footer .js_btn-form',function(e){
 				e.preventDefault();
@@ -107,16 +100,21 @@ jQuery(function ($) {
 				var el = $(this);
 				el.closest('.wrap-item').find('.drop-list').slideToggle();
 				el.toggleClass('active');
+
+				//TODO что за нах
 				gallerySlider.update()
+
 			})
 			.on('click',' .double-tab .item',function(e){
 				e.preventDefault();
 				var el = $(this);
 				el.closest('.double-tab').find('.item').removeClass('active');
 				el.addClass('active');
-				var p = el.closest('.tab-item');
-				p.find('.wrap-list .list').removeClass('active').hide();
-				p.find('.wrap-list .list').eq(el.index()).fadeIn();
+
+					var p = el.closest('.tab-item');
+					p.find('.wrap-list .list').removeClass('active').hide();
+					p.find('.wrap-list .list').eq(el.index()).fadeIn();
+
 				//p.find('.btn-form').removeClass('active');
 				p.find('.color-table .color').removeClass('active');
 				$('.eq-height').css('height','auto');
@@ -172,26 +170,14 @@ jQuery(function ($) {
 		slidesPerView: 'auto',
 		spaceBetween: 15
 	}
-	gallerySlider = new Swiper($('.scroll-slider.gallery-slider .swiper-container'),sliderOption);
-	scrollSlider = new Swiper($('.scroll-slider.product-slider .swiper-container'),sliderOption);
-	scrollSliderSimple = new Swiper($('.scroll-slider.simple-slider .swiper-container'),sliderOption);
 
+	//TODO что за нах
+	gallerySlider = new Swiper($('.swiper-photo_blue'),sliderOption);
+	$('.swiper-photo, .swiper-product').swiper(sliderOption);
 
-
-	//
-	// swiperDot = new Swiper('.swiper-dot',{
-  //   //Your options here:
-  //   mode:'horizontal',
-  //   loop: true,
-  //   pagination: '.swiper-dot-pagination',
-	// 	paginationClickable: true,
-	// 	//createPagination: true
-  // });
-	//
 
 	$('.swiper-dot').swiper({
 		//Your options here:
-    mode:'horizontal',
     loop: true,
     pagination: '.swiper-dot-pagination',
 		paginationClickable: true,
@@ -199,14 +185,17 @@ jQuery(function ($) {
   });
 
 	$('.swiper-color').swiper({
-
 		scrollbar: '.swiper-scrollbar',
 		scrollbarHide: false,
 		centeredSlides: true,
 		slidesPerView: 'auto',
 		spaceBetween: 15,
+
+
+		createPagination: false,
+		paginationElement: 'i',
 		//Your options here:
-		mode:'horizontal',
+
 		loop: true,
 		pagination: '.swiper-color-pagination',
 		paginationClickable: true,

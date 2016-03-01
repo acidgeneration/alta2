@@ -1,4 +1,4 @@
-section.wrap-feedback.section-blue
+section.section-blue
 	.wrap-item
 		a.btn-drop(href="#") Отзывы
 			.icon-arrow
@@ -18,7 +18,9 @@ section.wrap-feedback.section-blue
 					strong Екатерина,
 					| г. Казань «ОАО Спектр»
 				p Самым известным «рыбным» текстом является знаменитый Lorem ipsum. Считается, что впервые его применили... книгопечатании еще в XVI веке.
+
 			.hidden
+
 				.item
 					p
 						strong Михаил,
@@ -39,31 +41,11 @@ section.wrap-feedback.section-blue
 				a.btn-more(href="#") Показать ещё
 				a.link(href="#") Перейти на страницу отзывов
 
-	//-swiper
+
 
 	.wrap-item
 		a.btn-drop(href="#") Фото продукции
 			.icon-arrow
 		.drop-list
-			.scroll-slider.gallery-slider
-				.swiper-container
-					.swiper-wrapper
-						.swiper-slide
-							.wrap-img
-								img(src="%=static=%img/content/slide257x182.jpg")
-						.swiper-slide
-							.wrap-img
-								img(src="%=static=%img/content/slide257x182.jpg")
-						.swiper-slide
-							.wrap-img
-								img(src="%=static=%img/content/slide257x182.jpg")
-						.swiper-slide
-							.wrap-img
-								img(src="%=static=%img/content/slide257x182.jpg")
-						.swiper-slide
-							.wrap-img
-								img(src="%=static=%img/content/slide257x182.jpg")
-						.swiper-slide
-							.wrap-img
-								img(src="%=static=%img/content/slide257x182.jpg")
-					.swiper-scrollbar
+			//-swiper
+			include ../../modules/swiper/1_photo.jade
