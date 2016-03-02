@@ -56,21 +56,12 @@
     margin 5px
   //.swiper-pagination-bullet-active
 
-/*
-setNthBg(clr)
-  for i in clr
-    //&:nth-of-type({index + 1})
-    &:nth-child({i})
-      background clr
-*/
 
 setNthBg(colorList)
   for col, index in colorList
     //&:nth-of-type({index + 1})
     &:nth-child({index + 1})
       background col
-
-
 
 
 .swiper-color-pagination
@@ -100,3 +91,47 @@ opacity: 0.2;
 
 
 */
+
+
+.example
+  //margin 3em 0
+  padding 3em 0
+  position relative
+  //display flex
+  .example-bg
+    height 155px
+    background: linear-gradient(-90deg, #6d99ff 0%, #3c6cde 100%)
+
+  img
+    position absolute
+    top 50%
+    left 50%
+    transform: translate(-50%,-50%);
+
+
+.step-list
+  margin 2em 0
+  border-left: 1px dashed color-light-blue
+  margin-left 20px
+  padding-left 30px
+
+  h4
+    position relative
+    &:before
+      content: ''
+      position absolute
+      left -50px
+      width 40px
+      height 40px
+      //background-color color-light-blue
+      border-radius 50%
+
+
+  h4:nth-child(1):before
+    background url('%=static=%assets/lawngrids/step-list_1.png') center no-repeat color-light-blue
+  h4:nth-child(2):before
+  background url('%=static=%assets/lawngrids/step-list_2.png') center no-repeat color-light-blue
+  h4:nth-child(3):before
+    background url('%=static=%assets/lawngrids/step-list_3.png') center no-repeat color-light-blue
+  h4:nth-child(4):before
+    background url('%=static=%assets/lawngrids/step-list_4.png') center no-repeat color-light-blue
