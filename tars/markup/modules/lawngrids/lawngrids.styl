@@ -1,109 +1,111 @@
 .intro_lawngrids
-	text-align center
-	color #FFF
-	background url('%=static=%assets/lawngrids/z_bg.jpg') no-repeat center #0F2418
-	height 430px
+  text-align center
+  color #FFF
+  background url('%=static=%assets/lawngrids/z_bg.jpg') no-repeat center #0F2418
+  height 430px
 
-	padding 0 10px
+  padding 0 10px
 
-	display flex
-	flex-direction column
-	justify-content center
+  display flex
+  flex-direction column
+  justify-content center
 
-	h1
-		font-size 25px
-		margin-bottom 1em
+
+  h1
+    //font-size 25px
+    margin-bottom 1em
+    color #FFF
 
 //-ul
 .blue-dot
-	margin-bottom 2em
-	li
-		margin-bottom 1em
-		&:before
-			content '\25CF\2000' //http://unicode-table.com/ru/search/?q=%D0%BA%D1%80%D1%83%D0%B3
-			color color-light-blue
+  margin-bottom 2em
+  li
+    margin-bottom 1em
+    &:before
+      content '\25CF\2000' //http://unicode-table.com/ru/search/?q=%D0%BA%D1%80%D1%83%D0%B3
+      color color-light-blue
 
 
 
 
 
 .swiper-dot, .swiper-color
-	text-align center
+  text-align center
 
 .swiper-dot-pagination
-	margin 2em 0 3em
-	text-align center
-	.swiper-pagination-bullet
-		width: 11px
-		height: 11px
-		margin 5px
-	//.swiper-pagination-bullet-active
+  margin 2em 0 3em
+  text-align center
+  .swiper-pagination-bullet
+    width: 11px
+    height: 11px
+    margin 5px
+  //.swiper-pagination-bullet-active
 
 
 setNthBg(colorList)
-	for col, index in colorList
-		//&:nth-of-type({index + 1})
-		&:nth-child({index + 1})
-			background col
+  for col, index in colorList
+    //&:nth-of-type({index + 1})
+    &:nth-child({index + 1})
+      background col
 
 
 .swiper-color-pagination
-	margin-top 1em
-	//span
-	i
-		//display inline-block
-		width 40px
-		height 40px
-		border-radius: 0
-		opacity: 1
-	.swiper-pagination-bullet
-		setNthBg(#59933C #50390C #2F2F2F #FF7D77 #F2E841 #10D8F4)
+  margin-top 1em
+  //span
+  i
+    //display inline-block
+    width 40px
+    height 40px
+    border-radius: 0
+    opacity: 1
+  .swiper-pagination-bullet
+    setNthBg(#59933C #50390C #2F2F2F #FF7D77 #F2E841 #10D8F4)
 
-	.swiper-pagination-bullet-active
-		border 2px solid #ff3131
-		background inherit //none
+  .swiper-pagination-bullet-active
+    border 2px solid #ff3131
+    background inherit //none
 
 
 
 
 .example
-	//margin 3em 0
-	padding 3em 0
-	position relative
-	//display flex
-	.example-bg
-		height 155px
-		background: linear-gradient(-90deg, #6d99ff 0%, #3c6cde 100%)
+  //margin 3em 0
+  padding 3em 0
+  position relative
+  //display flex
+  .example-bg
+    height 155px
+    background: linear-gradient(-90deg, #6d99ff 0%, #3c6cde 100%)
 
-	img
-		position absolute
-		top 50%
-		left 50%
-		transform: translate(-50%,-50%);
+  img
+    position absolute
+    top 50%
+    left 50%
+    transform: translate(-50%,-50%);
 
 
 .step-list
-	margin 2em 0
-	border-left: 1px dashed color-light-blue
-	margin-left 20px
-	padding-left 30px
+  margin 2em 0
+  border-left: 1px dashed color-light-blue
+  margin-left 20px
+  padding-left 30px
 
-	h4
-		position relative
-		&:before
-			content: ''
-			position absolute
-			left -50px
-			width 40px
-			height 40px
-			//background-color color-light-blue
-			border-radius 50%
+  h4
+    position relative
+    &:before
+      content: ''
+      position absolute
+      left -50px
+      width 40px
+      height 40px
+      //background-color color-light-blue
+      border-radius 50%
 
-		&:nth-of-type(1):before
-			background url('%=static=%assets/lawngrids/step-list_1.png') center no-repeat color-light-blue
-		&:nth-of-type(2):before
-			background url('%=static=%assets/lawngrids/step-list_2.png') center no-repeat color-light-blue
-		&:nth-of-type(3):before
-			background url('%=static=%assets/lawngrids/step-list_3.png') center no-repeat color-light-blue
-		&:nth-of-type(4):before
-			background url('%=static=%assets/lawngrids/step-list_4.png') center no-repeat color-light-blue
+    &:nth-of-type(1):before
+      background url('%=static=%assets/lawngrids/step-list_1.png') center no-repeat color-light-blue
+    &:nth-of-type(2):before
+      background url('%=static=%assets/lawngrids/step-list_2.png') center no-repeat color-light-blue
+    &:nth-of-type(3):before
+      background url('%=static=%assets/lawngrids/step-list_3.png') center no-repeat color-light-blue
+    &:nth-of-type(4):before
+      background url('%=static=%assets/lawngrids/step-list_4.png') center no-repeat color-light-blue
