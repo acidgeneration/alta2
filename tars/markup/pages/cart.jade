@@ -1,0 +1,24 @@
+doctype html
+html(class="no-js", lang="ru")
+
+	include ../modules/head/head
+	include ../modules/footer/footer
+
+	head
+		+head(head.lawngrids)
+	body
+		.content
+			include ../modules/header/header
+
+
+			//.section-white
+
+			include ../modules/cart/cart
+
+			+footer()
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')
+
+		//
+		script(src='%=static=%js/separate-js/start.js')

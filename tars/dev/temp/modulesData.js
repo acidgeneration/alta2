@@ -33,6 +33,9 @@ head: {
 ,
 
 __pages: [{
+                name: 'cart',
+                href: '/cart.html'
+             },{
                 name: 'gallery',
                 href: '/gallery.html'
              },{
