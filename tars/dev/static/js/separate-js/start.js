@@ -157,10 +157,21 @@ jQuery(function ($) {
 				$(this).text(function(i, text){
 	          return text === "Подробнее" ? "Скрыть информацию" : "Подробнее";
 	      })
-		    $(this).parents('.item_gallery').find('.item_gallery-toggle').slideToggle(1000);
+		    $(this).parents('.item_gallery').find('.item_gallery-toggle').fadeToggle(1000);
+			})
+
+
+			.on('click', '.js_expander-trigger', function(e){
+				//e.preventDefault();
+				//alert(1);
+				$(this).next('.js_expander-content').slideToggle();
 			});
 
 
+
+			// $('.js_expander-trigger').click(function(){
+		  //   $(this).toggleClass("expander-hidden");
+		  // });
 
 	//Swiper
 	var sliderOption = {
