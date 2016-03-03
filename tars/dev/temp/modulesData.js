@@ -28,6 +28,10 @@ head: {
     lawngrids: {
         title: 'Газоннные решетки',
         useSocialMetaTags: true
+    },
+    cart: {
+        title: 'Карточка товара',
+        useSocialMetaTags: true
     }
 }
 ,
