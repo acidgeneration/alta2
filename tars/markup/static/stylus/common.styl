@@ -265,6 +265,32 @@ form
 
 
 
+//figure.badge
+.badge
+	position relative
+	display inline-block
+
+	&-sale
+		position absolute
+		top 0
+		left 0
+		background #e00c1b
+		font-size 21px
+		padding .5em .2em .2em
+		color #FFF
+		&:after
+
+			content ''
+			position absolute
+			bottom -10px
+			left 0
+
+			width: 0;
+			height: 0;
+
+			border-style: solid;
+			border-width: 10px 34px 0 0;
+			border-color: #e00c1b transparent transparent transparent;
 
 
 
