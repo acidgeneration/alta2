@@ -175,12 +175,16 @@ label
 	height 1rem
 	line-height 1rem
 	font-size 65%
-	color #eee
+	color #FFF //#eee
 	text-align center
-	background-color color-blue //#eee
-	background-size 50% 50%
-	background-position center center
-	background-repeat no-repeat
+	background-color #EEE//color-blue
+
+	// background-size 50% 50%
+	// background-position center center
+	// background-repeat no-repeat
+	//
+
+
 	user-select none
 
 .checkbox
@@ -189,7 +193,9 @@ label
 	input
 		&:checked
 			& ~ .control-indicator
-				background #000
+				background color-light-blue //#000
+				&:before
+					content '✔'
 
 
 
