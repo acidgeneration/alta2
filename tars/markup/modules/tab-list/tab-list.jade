@@ -3,6 +3,9 @@ ul.tab-list.counter
 		a.tab-title(href="#") Не знаете что <br/> выбрать?
 		.tab-item
 			p И даже с языками, спользующими латинский алфавит, могут возникнуть небольшие проблемы: в различных языкх те или иные буквы встречаются с разной частотой, имеется разница в длине наиболее распространенных слов.  Отсюда напрашивается вывод, что все же лучше использовать в качестве «рыбы».
+
+
+
 			.choose-material.clearfix
 				a.choose-item.active(href="#")
 					.icon
@@ -116,6 +119,9 @@ ul.tab-list.counter
 			a.btn.btn-red(href="#") В каталог
 			p
 				i &#42; при качественных фасадных панелях и профессиональном  монтаже
+
+
+
 	li.wrap-item
 		a.tab-title(href="#") Какой цвет <br/> выбрать?
 		.tab-item
@@ -123,7 +129,8 @@ ul.tab-list.counter
 				a.item.active(href="#") Сайдинг
 				a.item(href="#") Фасадные панели
 			.sub-title Большой выбор цветов
-			p   И даже с языками, спользующими латинский алфавит, могут возникнуть небольшие проблемы: в различных языкх те или иные буквы встречаются с разной частотой, имеется разница в длине наиболее.
+			p И даже с языками, спользующими латинский алфавит, могут возникнуть небольшие проблемы: в различных языкх те или иные буквы встречаются с разной частотой, имеется разница в длине наиболее.
+
 			.color-table.wrap-list
 				.list.clearfix.active
 					.wrap-color
@@ -249,6 +256,8 @@ ul.tab-list.counter
 								.icon-check
 			a.btn.btn-blue(href="#") Хочу дом такого цвета
 			a.btn.btn-red(href="#") В каталог
+
+
 	li.wrap-item
 		a.tab-title(href='') Где купить?
 		.tab-item
@@ -271,6 +280,8 @@ ul.tab-list.counter
 						li Сертификация
 						li Соотношение «цена-качество»
 			a.btn.btn-blue(href="#") Где купить
+
+
 	li.wrap-item
 		a.tab-title(href='') Что нужно знать <br/>  о монтаже?
 		.tab-item
@@ -285,41 +296,44 @@ ul.tab-list.counter
 						iframe.video(src="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=0")
 						a.btn-play(href="#")
 					a.btn.btn-simple(href="#") Скачать инструкцию
-					.wrap-form
-						.title-form Заказ монтажа
-						form(method="post")
-							.wrap-input
-								input(type="text" placeholder="Ваше имя")
-							.wrap-input
-								input(type="text" placeholder="Ваш телефон")
-							.wrap-select
-								select(style="width:100%;")
-									option(value="Москва и область") Москва и область
-									option(value="Москва и область") Москва и область
-									option(value="Москва и область") Москва и область
-									option(value="Москва и область") Москва и область
-							a.btn.btn-red(href="#") Заказать монтаж
+
+					//.wrap-form
+					.title-form Заказ монтажа
+					//h2 Заказ монтажа
+					form(method="post")
+						input(type="text" placeholder="Ваше имя")
+						input(type="text" placeholder="Ваш телефон")
+						.wrap-select
+
+							//-(style="width:100%;")
+							select(style="width:100%;")
+								option(value="Москва и область") Москва и область
+								option(value="Москва и область") Москва и область
+								option(value="Москва и область") Москва и область
+								option(value="Москва и область") Москва и область
+						a.btn.btn-red(href="#") Заказать монтаж
+
 				.list.clearfix
-					.sub-title.dark Самостоятельный монтаж
+					//-.sub-title.dark Самостоятельный монтаж
+					h2 Самостоятельный монтаж
+
 					p И даже с языками, спользующими латинский алфавит, могут возникнуть небольшие проблемы: в различных языкх те или иные буквы встречаются с разной частотой, имеется разница в длине наиболее распространенных слов.
 					.wrap-video
 						iframe.video(src="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=0")
 						a.btn-play
 					a.btn.btn-simple(href="#") Скачать инструкцию
-					.wrap-form
-						.title-form Заказ монтажа
-						form(method="post")
-							.wrap-input
-								input(type="text" placeholder="Ваше имя")
-							.wrap-input
-								input(type="text" placeholder="Ваш телефон")
-							.wrap-select
-								select(style="width:100%;")
-									option(value="Москва и область") Москва и область
-									option(value="Москва и область") Москва и область
-									option(value="Москва и область") Москва и область
-									option(value="Москва и область") Москва и область
-							a.btn.btn-red(href="#") Заказать монтаж
+					//-.wrap-form
+					.title-form Заказ монтажа
+					form(method="post")
+						input(type="text" placeholder="Ваше имя")
+						input(type="text" placeholder="Ваш телефон")
+						.wrap-select
+							select(style="width:100%;")
+								option(value="Москва и область") Москва и область
+								option(value="Москва и область") Москва и область
+								option(value="Москва и область") Москва и область
+								option(value="Москва и область") Москва и область
+						a.btn.btn-red(href="#") Заказать монтаж
 	li.wrap-item
 		a.tab-title(href='') Про что еще <br/> не забыть?
 		.tab-item

@@ -1,0 +1,160 @@
+
+
+button, textarea, input //:not([type="checkbox"]) //input
+	width 100%
+	margin .5em 0
+button
+	border 0
+
+
+//input
+input //:not([type="checkbox"])
+	line-height: 33px
+	height: 35px
+	padding 0 1em
+textarea
+	padding .5em 1em
+	margin-bottom 1em
+
+
+
+//TODO start
+/*
+  тут кастомные checkbox и radio
+  СТРУКТУРА:
+
+label.control.checkbox
+  input(type="checkbox", name="x")
+  i.control-indicator
+  | text
+
+label.control.radio
+  input(type="radio", name="x")
+  i.control-indicator
+  | text
+
+*/
+.control
+	position relative
+	//display inline-block
+	display block
+
+	padding-left 1.5rem
+	padding-bottom 1em
+	line-height: 1rem
+
+	cursor pointer
+	input
+		//display none
+		position absolute
+		opacity 0
+		z-index -1
+
+		&:focus
+			& ~ .control-indicator
+				box-shadow 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9
+		&:checked
+			& ~ .control-indicator
+				color #fff
+				background-color #0074d9
+		&:active
+			& ~ .control-indicator
+				color #fff
+				background-color #84c6ff
+
+.control-indicator
+	position absolute
+	top 0 //.25rem
+	left 0
+
+	width 1rem
+	height 1rem
+	line-height 1rem
+	font-size 75% //65%
+	color #FFF //#eee
+	text-align center
+	background-color #EEE//color-blue
+
+	user-select none
+
+.checkbox
+	.control-indicator
+		border-radius .25rem
+	input
+		&:checked
+			& ~ .control-indicator
+				background color-light-blue //#000
+				&:before
+					content '✔'
+.radio
+	.control-indicator
+		border-radius 50%
+	input
+		&:checked
+			& ~ .control-indicator
+				background #000
+
+//TODO end
+
+
+
+
+form
+	text-align center
+	//padding 1em 1em 1.4em
+	h1
+		margin .5em 0
+		line-height 125%
+
+	.wrap-select
+		text-align left
+		margin-top: .5em;
+
+.blue-form
+	background color-light2-blue
+	padding 1em 1em 1.4em
+	
+	margin-bottom 2em
+	h1
+		color #FFF
+	button
+		border 1px solid rgba(#FFF, .4)
+
+
+
+
+
+
+//select2
+.wrap-select
+	padding-bottom 20px
+
+	select, .select2
+		width 100%
+
+		//font-size 14px
+	.select2-container--default .select2-selection--single
+		//border-radius 0
+		//border 1px solid #aeaeae
+		border: 1px solid #ACACAC
+
+		height 35px
+		line-height 33px
+		padding-right 40px
+	.select2-container--default .select2-selection--single .select2-selection__arrow
+		width 35px
+	.select2-container--default .select2-selection--single .select2-selection__arrow b
+		background url(../img/content/arrow-b.svg) no-repeat 50% 50%
+
+		background-size cover
+
+		width 10px
+		height 6px
+		display block
+		border none
+		margin-left -10px
+		margin-top 1px
+.select2-dropdown
+	border-radius 0
+	.select2-results__option
+		//font-size 14px
