@@ -6,13 +6,13 @@ html(class="no-js", lang="ru")
 
 
 	head
-		+head(head.lawngrids)
+		+head(head.type)
 	body
 		.content
 			include ../modules/header/header
 
-			//.section-white
-			include ../modules/lawngrids_page/lawngrids
+			.section-white
+				include ../modules/type_page/type_page
 
 			+footer()
 
@@ -21,12 +21,3 @@ html(class="no-js", lang="ru")
 
 		//
 		script(src='%=static=%js/separate-js/start.js')
-
-
-
-
-
-		//-API yandex maps
-		script(src='//api-maps.yandex.ru/2.1/?lang=ru_RU')
-		script(src='%=static=%js/separate-js/map.js')
-		// -script(src='%=static=%/js/lawngrids/map.js')
