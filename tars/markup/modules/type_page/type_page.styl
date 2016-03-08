@@ -1,0 +1,119 @@
+figure
+  img
+    text-align center
+figcaption
+  color #777
+  padding-left 1em
+  position relative
+  &:before
+    content: '—'
+    position absolute
+    text-indent: -1em
+
+figure, .poster
+  margin-bottom 3em
+  //text-align center
+
+
+.poster
+  font-weight lighter
+  margin-top 3em
+  color #FFF
+  width 320px
+  height 217px
+
+  display flex
+  flex-direction column
+  justify-content center
+
+  text-align center
+  padding 1em
+
+  font-size 1.2em
+
+  //reset
+  p:first-child
+  .btn
+    margin-bottom 0
+
+  p:first-child
+    font-weight bold
+    font-size 25px
+    text-transform uppercase
+    line-height 130%
+    margin-bottom 10px
+  .btn
+    border 1px solid #f1f1f1
+  &.pstr_1
+    background url('%=static=%assets/type_page/bg_1.jpg') no-repeat
+  &.pstr_2
+    background url('%=static=%assets/type_page/bg_2.jpg') no-repeat
+
+
+
+
+._red
+  color: color-red
+  font-weight: bold
+  text-align center
+  &-text
+    font-size 18px
+    text-transform uppercase
+    line-height 1.4
+  &-number
+    line-height 1
+    font-size: 138px
+    letter-spacing: -15px
+    //text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2)
+    text-shadow: 0 4px 0 #eee, 0 15px 15px rgba(0,0,0,0.24)
+
+._blue
+  color: color-light-blue
+  font-weight: bold
+  text-align center
+  line-height 1.6
+  margin-bottom 2em
+  &-text
+    text-transform uppercase
+  &-number
+    font-size: 74px
+
+
+blockquote
+  border-bottom 2px solid color-light-blue
+  border-top 2px solid color-light-blue
+
+  padding 1.2em
+  margin 2em 0
+
+  text-align center
+
+  color: color-light-blue
+  font-size 18px
+  line-height 1.4em
+  cite
+    display block
+    padding-top 1em
+    font-size 14px
+
+.label
+  padding 1.4em 2em 1.4em 4.2em
+  margin 3em 0
+  p //reset
+    margin-bottom 0
+
+.lbl-ok
+  color #b9f9c6
+  background url('%=static=%assets/type_page/label-ok.png') 1em 1.4em no-repeat #21b139
+.lbl-stop
+  color #e3e3e3
+  background url('%=static=%assets/type_page/label-stop.png') 1em 1.4em no-repeat #e84c3d
+
+.lbl-ok
+.lbl-stop
+  p:first-child
+    color #FFF
+
+.lbl-alert
+  color #777
+  background url('%=static=%assets/type_page/label-alert.png') 1em 1.4em no-repeat #e0e0e0

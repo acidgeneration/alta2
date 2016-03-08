@@ -1,16 +1,7 @@
-.section-title Где купить сайдинг?
-.sort-block-i
-	.wrap-select
 
-
+h1 Где купить сайдинг?
+.wrap-select
+	- var options = ["Москва", "Московская область", "Тутуево", "Кукуево"];
 		select
-			//- each option, i in options
-			//-   option(value=i) #{options}
-
-			option(value="1") Все
-			option(value="2") Сайдинг
-			option(value="3") Фасадные панели
-			option(value="4") Дренажные системы
-			option(value="5") Газонная решеткa
-			option(value="6") Водосточные системы
-			option(value="7") Внутренняя отделка
+			- for option in options
+				option(value="") #{option}
