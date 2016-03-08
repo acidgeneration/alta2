@@ -160,7 +160,7 @@ jQuery(function ($) {
 
 
 			.on('click', '.js_expander-trigger', function(e){
-				//e.preventDefault();
+				e.preventDefault();
 				$(this).next('.js_expander-content').slideToggle();
 			});
 
