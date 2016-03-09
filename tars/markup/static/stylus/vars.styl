@@ -9,15 +9,22 @@ color-dark = #444
 a
 	color color-light-blue
 
-.btn
+
+
+btn()
 	cursor pointer
 	font-size 14px
 	line-height 33px
 	height 35px
-	display block
+
 	text-align center
 	margin-bottom 20px
 
+
+.btn
+	btn()
+
+	display block
 	position relative
 	z-index 1
 
@@ -35,3 +42,34 @@ a
 	&.btn-simple
 		text-decoration underline
 		color color-dark //#444
+
+
+
+.gray
+	btn()
+
+	color #444
+	background #FFF
+	//box-shadow: 3px 5px 10px 1px rgba(0, 0, 0, 0.24)
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.24)
+
+	border 1px solid #CCC
+
+	float left
+	width calc(50% - 10px)
+
+	&:nth-child(1)
+		margin-right 10px
+	&:nth-child(2)
+		margin-left 10px
+
+
+
+	&:hover
+		box-shadow: none
+	&.active
+		background #DDD
+		box-shadow: none
+		border 0
+
+		//color #FFF

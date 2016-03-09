@@ -48,6 +48,7 @@ jQuery(function ($) {
 
 	$(document)
 
+			//форма на главной
 			.on('click','.wrap-form .btn-close',function(e){
 				e.preventDefault();
 				var el = $(this);
@@ -70,8 +71,10 @@ jQuery(function ($) {
 						el.closest('.wrap-form').find('.js_btn-form').show();
 					},500)
 				},3000);
-
 			})
+			// </>форма на главной
+
+
 			.on('click','.footer .js_btn-form',function(e){
 				e.preventDefault();
 				var el = $(this);
@@ -84,6 +87,7 @@ jQuery(function ($) {
 				e.preventDefault();
 				$('body').addClass('menu-open');
 			})
+
 			.on('click','.feedback-list .wrap-btn .btn-more',function(e){
 				e.preventDefault();
 				var el = $(this);
@@ -100,10 +104,10 @@ jQuery(function ($) {
 				el.toggleClass('active');
 
 				//TODO что за нах
-				gallerySlider.update()
-
+				gallerySlider.update();
 			})
-			.on('click',' .double-tab .item',function(e){
+
+			.on('click',' .double-tab .item', function(e){
 				e.preventDefault();
 				var el = $(this);
 				el.closest('.double-tab').find('.item').removeClass('active');
@@ -127,6 +131,7 @@ jQuery(function ($) {
 				e.addClass('active');
 				//e.closest('.wrap-item').find('.btn-form').addClass('active');
 			})
+
 			.on('click','.tab-list .tab-title',function(e){
 				e.preventDefault();
 				var el = $(this);
@@ -142,7 +147,9 @@ jQuery(function ($) {
 				var el = $(this);
 				$('.choose-material .choose-item').removeClass('active');
 				el.addClass('active');
+
 				var i = el.index();
+
 				var p = el.closest('.tab-item').find('.compare-material');
 				p.find('.list').each(function(){
 					var $this = $(this);
@@ -150,72 +157,41 @@ jQuery(function ($) {
 					$this.find('.compare-item').eq(i).fadeIn();
 				});
 			})
+			//TODO
 			.on('click', '.js_gallery-more', function(e){
 				e.preventDefault();
 				$(this).text(function(i, text){
 	          return text === "Подробнее" ? "Скрыть информацию" : "Подробнее";
 	      })
-		    $(this).parents('.item_gallery').find('.item_gallery-toggle').fadeToggle(1000);
+		    .parents('.item_gallery').find('.item_gallery-toggle').fadeToggle(1000);
 			})
 
-
+			//expander
 			.on('click', '.js_expander-trigger', function(e){
 				e.preventDefault();
 				$(this).next('.js_expander-content').slideToggle();
+			})
+			//tabs
+
+			.on('click', '.HERE_tabs .js_tab-trigger', function(){
+
+				var el = $(this),
+						index = el.index(),
+						parent = el.parent('.HERE_tabs'),
+						tabs = parent.find('.js_tab-content'),
+						current_tab = tabs.get(index);
+
+						//console.log(tabs);
+
+						el.addClass('active').siblings().removeClass('active');
+
+						$(current_tab).show().siblings('.js_tab-content').hide();
+					  return false;
 			});
+			$(".js_tab-content:first").show();
 
 
 
-			// $('.js_expander-trigger').click(function(){
-		  //   $(this).toggleClass("expander-hidden");
-		  // });
-
-
-			/*
-
-			$('.accordion-tabs-minimal').each(function(index) {
-				$(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
-			});
-			$('.accordion-tabs-minimal').on('click', 'li > a.tab-link', function(event) {
-				if (!$(this).hasClass('is-active')) {
-					event.preventDefault();
-					var accordionTabs = $(this).closest('.accordion-tabs-minimal');
-					accordionTabs.find('.is-open').removeClass('is-open').hide();
-
-					$(this).next().toggleClass('is-open').toggle();
-					accordionTabs.find('.is-active').removeClass('is-active');
-					$(this).addClass('is-active');
-				} else {
-					event.preventDefault();
-				}
-			});
-
-
-
-
-
-			$('section').each(function() {
-		    // var size = $('.js-tab').size(); //.eq(0).show();
-		    // console.log(size);
-		    $(this).find('.js-tab').eq(0).show();
-		  });
-
-		  $('.js-tabNav a').click(function(e) {
-
-
-		    var index = $(this).index(),
-		        tab = $(this).parent('.js-tabNav').nextAll('.js-tab'),
-		        current_tab = tab.get(index);
-
-		    console.log(current_tab);
-		    $(this).addClass('tab_current').siblings().removeClass('tab_current');
-		    $(current_tab).show().siblings('.js-tab').hide();
-
-		    return false;
-		  });
-
-
-*/
 
 
 	//Swiper
@@ -261,5 +237,6 @@ jQuery(function ($) {
 
 
 	$('.wrap-select select').select2();
+	//$('.select2').select2();
 
 });
