@@ -1,23 +1,16 @@
-//mixin gallery(data)
-//- {"options": ["Все", "Сайдинг", "Фасадные панели", "Дренажные системы", "Газонная решеткa", "Водосточные системы", "Внутренняя отделка"]}
+//-["Все", "Сайдинг", "Фасадные панели", "Дренажные системы", "Газонная решеткa", "Водосточные системы", "Внутренняя отделка"]
 
 
 .section-title Галерея
 .sort-block-i
+
+
 	.wrap-select
+		- var options = ["Все", "Сайдинг", "Фасадные панели", "Наличники", "Откосы", "Панели ПВХ", "Вагонка ПВХ", "Кровля", "Газонная решетка", "Террасная доска", "Водостоки", "Дренажные системы"];
+			select
+				- for option, i in options
+					option(value="#{i}") #{option}
 
-
-		select
-			//- each option, i in options
-			//-   option(value=i) #{options}
-
-			option(value="1") Все
-			option(value="2") Сайдинг
-			option(value="3") Фасадные панели
-			option(value="4") Дренажные системы
-			option(value="5") Газонная решеткa
-			option(value="6") Водосточные системы
-			option(value="7") Внутренняя отделка
 
 
 
@@ -49,7 +42,9 @@
 				b Екатерина
 				|, г. Казань «ОАО Спектр»
 			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque nemo, doloribus excepturi error, saepe quos voluptatibus at omnis debitis voluptatum quo reiciendis quaerat corporis architecto cum ea sint accusantium, obcaecati!
-		//-TODO
+
+
+		// -TODO
 		.XYi Поделиться:
 		.wrap-soc
 			.soc-links
