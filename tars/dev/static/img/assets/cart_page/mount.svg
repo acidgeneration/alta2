@@ -6,7 +6,7 @@
 		xmlns:xlink="http://www.w3.org/1999/xlink"
 		xmlns:ev="http://www.w3.org/2001/xml-events"
 		viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
-<g fill="none" stroke="" stroke-miterlimit="10">
+<g class="group_SVG" fill="none" stroke="" stroke-miterlimit="10">
 	<polygon points="47.5,56.3 40.5,59 40.5,6.2 47.5,3.5 	"/>
 	<line x1="33.5" y1="56.2" x2="40.3" y2="59.3"/>
 	<path d="M41,6.1l-6.6-2.7l6.4-2.5c0,0,6.9,2.4,7,2.4"/>

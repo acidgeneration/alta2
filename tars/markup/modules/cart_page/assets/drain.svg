@@ -6,7 +6,7 @@
 		xmlns:xlink="http://www.w3.org/1999/xlink"
 		xmlns:ev="http://www.w3.org/2001/xml-events"
 		viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
-	<g fill="none" stroke="" stroke-miterlimit="10">
+	<g class="group_SVG" fill="none" stroke="" stroke-miterlimit="10">
 		<path d="M53.7,25.1c0,4.4-3.6,8-8,8s-8-3.6-8-8s8-16,8-16S53.7,20.7,53.7,25.1
 			z"/>
 		<line x1="0.9" y1="23.4" x2="28.8" y2="36.3"/>
