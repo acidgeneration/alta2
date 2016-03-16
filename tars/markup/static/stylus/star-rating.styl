@@ -1,18 +1,34 @@
+//[class=^"star_"]
+
+star()
+	&:before
+		content: "\2605";
+		position: absolute;
+
+
 .rating
+	padding 1em 0
 	b
 		font-size 2em
+		color #CCC
+
 	&.star_1 b
 		&:first-child
-			color gold
+			color color-light-red
+			star()
 	&.star_2 b
 		&:nth-child(-n+2)
-			color gold
+			color color-light-red
+			star()
 	&.star_3 b
 		&:nth-child(-n+3)
-			color gold
+			color color-light-red
+			star()
 	&.star_4 b
 		&:nth-child(-n+4)
-			color gold
+			color color-light-red
+			star()
 	&.star_5 b
 		&:nth-child(-n+5)
-			color gold
+			color color-light-red
+			star()

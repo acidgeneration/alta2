@@ -1,31 +1,3 @@
-head: {
-	defaults: {
-		title: 'Главная',
-		useSocialMetaTags: true
-	},
-	gallery: {
-		title: 'Галерея',
-		useSocialMetaTags: true
-	},
-	lawngrids: {
-		title: 'Газоннные решетки',
-		useSocialMetaTags: true
-	},
-	cart: {
-		title: 'Карточка товара',
-		useSocialMetaTags: true
-	},
-	map: {
-		title: 'Где купить',
-		useSocialMetaTags: true
-	},
-	type: {
-		title: 'Типовая страница',
-		useSocialMetaTags: true
-	}
-}
-,
-
 // {"options": ["Все", "Сайдинг", "Фасадные панели", "Дренажные системы", "Газонная решеткa", "Водосточные системы", "Внутренняя отделка"]}
 
 
@@ -44,15 +16,49 @@ gallery: {
 }
 ,
 
+head: {
+	defaults: {
+		title: 'Главная'
+	},
+	gallery: {
+		title: 'Галерея'
+	},
+	lawngrids: {
+		title: 'Газоннные решетки'
+	},
+	cart: {
+		title: 'Карточка товара'
+	},
+	map: {
+		title: 'Где купить'
+	},
+	type: {
+		title: 'Типовая страница'
+	},
+	homepage: {
+		title: 'Главная страница'
+	},
+	catalog: {
+		title: 'Каталог страница'
+	}
+}
+,
+
 __pages: [{
                 name: 'cart',
                 href: '/cart.html'
              },{
+                name: 'catalog',
+                href: '/catalog.html'
+             },{
+                name: 'catalog_sort_price',
+                href: '/catalog_sort_price.html'
+             },{
                 name: 'gallery',
                 href: '/gallery.html'
              },{
-                name: 'index',
-                href: '/index.html'
+                name: 'homepage',
+                href: '/homepage.html'
              },{
                 name: 'lawngrids',
                 href: '/lawngrids.html'

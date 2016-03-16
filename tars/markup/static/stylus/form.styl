@@ -44,23 +44,31 @@ label.control.radio
 	line-height: 1rem
 
 	cursor pointer
+
+	white-space nowrap
+	text-overflow ellipsis
+	overflow hidden
 	input
 		//display none
 		position absolute
 		opacity 0
 		z-index -1
 
-		&:focus
-			& ~ .control-indicator
-				box-shadow 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9
+		// &:focus
+		// 	& ~ .control-indicator
+		// 		box-shadow 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9
+
 		&:checked
-			& ~ .control-indicator
-				color #fff
-				background-color #0074d9
 		&:active
 			& ~ .control-indicator
 				color #fff
-				background-color #84c6ff
+				border 0
+		&:checked
+			& ~ .control-indicator
+				background-color color-light-blue //#0074d9
+		&:active
+			& ~ .control-indicator
+				background-color #2E8BC7 //#84c6ff
 
 .control-indicator
 	position absolute
@@ -69,11 +77,15 @@ label.control.radio
 
 	width 1rem
 	height 1rem
+
+	background-color #CCC //color-blue
+	border 1px solid #AAA
+
 	line-height 1rem
 	font-size 75% //65%
-	color #FFF //#eee
+	color transparent //#FFF //#eee
 	text-align center
-	background-color #EEE//color-blue
+
 
 	user-select none
 
@@ -81,18 +93,24 @@ label.control.radio
 	.control-indicator
 		border-radius .25rem
 	input
+		height 100%
+		line-height: 0
+		margin 0
 		&:checked
 			& ~ .control-indicator
-				background color-light-blue //#000
+				//background color-light-blue //#000
 				&:before
 					content '✔'
+
 .radio
 	.control-indicator
 		border-radius 50%
 	input
 		&:checked
 			& ~ .control-indicator
-				background #000
+				//
+				&:before
+					content '\26AB'
 
 //TODO end
 
@@ -142,7 +160,7 @@ form
 	select, .select2
 		width 100%
 
-		//font-size 14px
+	//font-size 14px
 	.select2-container--default .select2-selection--single
 		//border-radius 0
 		//border 1px solid #aeaeae
@@ -166,5 +184,5 @@ form
 		margin-top 1px
 .select2-dropdown
 	border-radius 0
-	.select2-results__option
-		//font-size 14px
+	/*.select2-results__option*/
+//font-size 14px

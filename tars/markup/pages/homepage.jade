@@ -1,0 +1,47 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../modules/head/head
+    include ../modules/footer/footer
+    include ../modules/header/menu
+    include ../modules/header/header
+    head
+        +head(head.homepage)
+    body
+        +menu()
+        .content.snap-content#content
+            +page-header()
+
+            .sub-link
+                a.link(href="") Продукция
+                a.link(href="") Где купить
+
+            //Первый
+            include ../modules/header/intro
+
+            //синие отзывы
+            include ../modules/header/blue-reviews
+
+            //нумерованные табы
+            include ../modules/counter-tabs/counter-tabs
+
+            //Популярные товары
+
+            include ../modules/swiper/product-list
+
+            .section-white
+
+                include ../modules/main_page/about-company
+
+            .section-white
+                include ../modules/swiper/photo
+
+
+            .section-white
+                include ../modules/main_page/news
+
+            +footer()
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')
+        script(src='%=static=%js/separate-js/start.js')

@@ -1,5 +1,3 @@
-
-
 function equalHeight(group, groupSize) {
 	if (!group.length) {
 		return;
@@ -18,161 +16,236 @@ function equalHeight(group, groupSize) {
 
 jQuery(function ($) {
 
-/*
-
 	// equalHeight - костыль, убираем уго
 
 
 	var resizeTimeout;
-	var scrollSlider,gallerySlider,scrollSliderSimple;
+	var scrollSlider, productSlider, gallerySlider, scrollSliderSimple, sliderDots, sliderColor;
+
 	function resizeWindow() {
-		$('.color-table .wrap-color').css('height',$('.color-table .wrap-color').width());
-		$('.intro .list-item').css('height', 'auto');
-		equalHeight($('.intro .list-item'));
-		$('.eq-height').css('height','auto');
-		equalHeight($('.double-col .eq-height'),2);
-		$('.columns .col-i').css('height','auto');
-		equalHeight($('.columns .col-i'),2);
+		$('.color-table .wrap-color').css('height', $('.color-table .wrap-color').width());
+		$('.intro a').css('height', 'auto');
+		equalHeight($('.intro a'));
+		$('.eq-height').css('height', 'auto');
+		equalHeight($('.double-col .eq-height'), 2);
+		$('.columns .col-i').css('height', 'auto');
+		equalHeight($('.columns .col-i'), 2);
 	};
 	$(window).on('load resize', function () {
 		resizeWindow();
 	});
+
 	window.addEventListener("orientationchange", function () {
 		clearTimeout(resizeTimeout);
 		resizeTimeout = setTimeout(function () {
 			resizeWindow();
 		}, 100);
 	}, false);
-
-*/
-
 	$(document)
 
-			//форма на главной
-			.on('click','.wrap-form .btn-close',function(e){
+			.on('click', '.wrap-form .btn-close', function (e) {
 				e.preventDefault();
 				var el = $(this);
 				el.closest('.wrap-form').removeClass('sent').find('.form').hide();
 
 				setTimeout(function () {
 					el.closest('.wrap-form').find('.js_btn-form').show();
-				},500)
+				}, 500)
 			})
 
-			.on('click','.wrap-form .btn-send',function(e){
+			.on('click', '.wrap-form .btn-send', function (e) {
 				e.preventDefault();
 				var el = $(this);
 				el.closest('.wrap-form').addClass('sent');
 
-				setTimeout(function(){
+				setTimeout(function () {
 					el.closest('.wrap-form').find('.form').hide();
 					el.closest('.wrap-form').removeClass('sent');
 					setTimeout(function () {
 						el.closest('.wrap-form').find('.js_btn-form').show();
-					},500)
-				},3000);
+					}, 500)
+				}, 3000);
+
 			})
-			// </>форма на главной
-
-
-			.on('click','.footer .js_btn-form',function(e){
+			.on('click', '.footer .js_btn-form', function (e) {
 				e.preventDefault();
 				var el = $(this);
 				el.hide();
 				el.closest('.wrap-form').find('.form').slideDown();
 			})
 
-
-			.on('click','.btn-burger',function(e){
+			.on('click', '.btn-burger ,.wrap-menu .btn-close', function (e) {
 				e.preventDefault();
-				$('body').addClass('menu-open');
+				if (snapper.state().state == "left") {
+					snapper.close();
+				} else {
+					snapper.open('left');
+				}
 			})
 
-			.on('click','.feedback-list .wrap-btn .btn-more',function(e){
+			.on('click', '.feedback-list .wrap-btn .btn-more', function (e) {
 				e.preventDefault();
 				var el = $(this);
 				el.closest('.wrap-btn').addClass('active');
 				el.closest('.wrap-item').find('.hidden').slideDown();
-
 			})
 
-			//tabs
-			.on('click','.btn-drop',function(e){
+		//tabs
+			.on('click', '.btn-drop', function (e) {
 				e.preventDefault();
 				var el = $(this);
 				el.closest('.wrap-item').find('.drop-list').slideToggle();
 				el.toggleClass('active');
-
-				//TODO что за нах
-				gallerySlider.update();
+				if (el.closest('.wrap-item').find('.swiper-container').length) {
+					gallerySlider.update();
+				}
 			})
-
-			.on('click',' .double-tab .item', function(e){
+			.on('click', ' .double-tab .item', function (e) {
 				e.preventDefault();
 				var el = $(this);
-				el.closest('.double-tab').find('.item').removeClass('active');
-				el.addClass('active');
-
-					var p = el.closest('.tab-item');
+				if (!el.hasClass('active')) {
+					el.closest('.double-tab').find('.item').removeClass('active');
+					el.addClass('active');
+//					добавил wrapper-tabs как глобальный класс через него можно будет везде настроить раксрытиве табов
+					var p = el.closest('.tab-item,.wrapper-tabs');
 					p.find('.wrap-list .list').removeClass('active').hide();
-					p.find('.wrap-list .list').eq(el.index()).fadeIn();
+					var list = p.find('.wrap-list .list').eq(el.index());
+					list.fadeIn(function () {
+						list.find('.swiper-product,.swiper-photo').data('swiper').update();
+					});
+					//p.find('.btn-form').removeClass('active');
+					p.find('.color-table .color').removeClass('active');
+					$('.eq-height').css('height', 'auto');
+					equalHeight($('.double-col .eq-height'), 2);
+					$('.columns .col-i').css('height', 'auto');
+					equalHeight($('.columns .col-i'), 2);
+				} else {
+					return
+				}
 
-				//p.find('.btn-form').removeClass('active');
-				p.find('.color-table .color').removeClass('active');
-				$('.eq-height').css('height','auto');
-				equalHeight($('.double-col .eq-height'),2);
-				$('.columns .col-i').css('height','auto');
-				equalHeight($('.columns .col-i'),2);
 			})
-			.on('click','.color-table .color',function(e){
-				e.preventDefault();
-				var e = $(this);
-				$('.color-table .color').removeClass('active');
-				e.addClass('active');
-				//e.closest('.wrap-item').find('.btn-form').addClass('active');
-			})
-
-			.on('click','.tab-list .tab-title',function(e){
+			.on('click', '.color-table .wrap-color .color', function (e) {
 				e.preventDefault();
 				var el = $(this);
-				el.closest('.wrap-item').find('.tab-item').stop(true,true).slideToggle();
-				$('.color-table .wrap-color').css('height',$('.color-table .wrap-color').width());
-				$('.eq-height').css('height','auto');
-				equalHeight($('.double-col .eq-height'),2);
-				$('.columns .col-i').css('height','auto');
-				equalHeight($('.columns .col-i'),2);
+				el.closest('.color-table').find('.color').removeClass('active');
+				el.addClass('active');
+			})
+			.on('click', '.tab-list .tab-title', function (e) {
+				e.preventDefault();
+				var el = $(this);
+				el.closest('.wrap-item').find('.tab-item').stop(true, true).slideToggle();
+				$('.color-table .wrap-color').css('height', $('.color-table .wrap-color').width());
+				$('.eq-height').css('height', 'auto');
+				equalHeight($('.double-col .eq-height'), 2);
+				$('.columns .col-i').css('height', 'auto');
+				equalHeight($('.columns .col-i'), 2);
 			})
 			.on('click', '.choose-material .choose-item', function (e) {
 				e.preventDefault();
 				var el = $(this);
 				$('.choose-material .choose-item').removeClass('active');
 				el.addClass('active');
-
 				var i = el.index();
-
 				var p = el.closest('.tab-item').find('.compare-material');
-				p.find('.list').each(function(){
+				p.find('.list').each(function () {
 					var $this = $(this);
 					$this.find('.compare-item').removeClass('active').hide();
 					$this.find('.compare-item').eq(i).fadeIn();
 				});
 			})
-			//TODO
-			.on('click', '.js_gallery-more', function(e){
+
+			//TODO да бля
+			.on('click', '.js_gallery-more', function (e) {
 				e.preventDefault();
-				$(this).text(function(i, text){
-	          return text === "Подробнее" ? "Скрыть информацию" : "Подробнее";
-	      })
-		    .parents('.item_gallery').find('.item_gallery-toggle').fadeToggle(1000);
+				$(this).text(function (i, text) {
+					return text === "Подробнее" ? "Скрыть информацию" : "Подробнее";
+				});
+				$(this).parents('.item_gallery').find('.item_gallery-toggle').slideToggle();//.fadeToggle(1000);
 			})
 
-			//expander
-			.on('click', '.js_expander-trigger', function(e){
+			/*
+			.on('click', '.js_more', function (e) {
 				e.preventDefault();
-				$(this).next('.js_expander-content').slideToggle();
+				$(this).text(function (i, text) {
+					return text === "Подробнее" ? "Скрыть информацию" : "Подробнее";
+				});
+				$(this).parents('.js_more-content').find('.js_more-toggle').slideToggle();
 			})
-			//tabs
+			*/
 
+
+			//гармошка (аккордеон)
+			.on('click', '.js_expander-trigger', function () {
+				$(this).toggleClass('active').next('.js_expander-content').slideToggle();
+
+			})
+			//гармошка_2
+			.on('click', '.js_more-trigger', function (e) {
+				e.preventDefault();
+				tglTxt = $(this).data('text');
+				//Скрыть иноформацию Подробнее о дилере
+
+				$(this).text($(this).text() == "Скрыть информацию" ? "Подробнее о дилере": "Скрыть информацию");
+
+				$(this).toggleClass('active').prev('.js_more-content').slideToggle();
+			})
+			.on('click', '.wrap-product-grid	.product-title', function (e) {
+				e.preventDefault();
+				var el = $(this);
+				el.toggleClass('active');
+				el.closest('.wrap-product-grid	').find('.text').slideToggle();
+			})
+			.on('click', '.choose-city', function (e) {
+				e.preventDefault();
+				$(this).closest('.wrap-cities').find('.drop-down.cities-list').slideToggle();
+			})
+			.on('click', '.lang-list .item', function (e) {
+				e.preventDefault();
+				var el = $(this);
+				if (!el.hasClass('active')) {
+					$('.lang-list .item').removeClass('active');
+					el.addClass('active');
+				}
+			})
+			.on('click', '.btn-filter-delete', function (e) {
+				e.preventDefault();
+				var el = $(this);
+				var src = el.attr('href');
+				el.closest('.wrap-filters').find('.filter .color, .filter .material').removeClass('active');
+				el.closest('.wrap-filters').find('.filter .wrap-check input').prop("checked", false);
+				$("html, body").animate({ scrollTop: $(src).offset().top - 80 }, 1500);
+			})
+			.on('click', '.wrap-filters .material-table .material,.wrap-filters .color-table .color', function (e) {
+				e.preventDefault();
+				var el = $(this);
+				el.toggleClass('active');
+			})
+			.on('click', '.filter .btn-filter-drop', function (e) {
+				e.preventDefault();
+				var el = $(this);
+				el.toggleClass('active');
+				el.closest('.filter').find('.drop-down').slideToggle();
+			})
+			.on('click', '.btn-open-filters', function (e) {
+				e.preventDefault();
+				var el = $(this);
+				el.toggleClass('active');
+				el.closest('.wrap-filters').find('>.drop-down').slideToggle();
+			})
+			.on('touchstart','.swiper-instruction',function(){
+				$(this).addClass('hide');
+			})
+			.on('click', '.btn-ajax', function (e) {
+				e.preventDefault();
+				var el = $(this);
+				var src = el.attr('href');
+				var content = el.closest('.wrap-ajax').find('.ajax-content');
+				$.ajax({
+					url: src, success: function (data) {
+						content.append(data);
+					}
+				});
+			})
 			.on('click', '.HERE_tabs .js_tab-trigger', function(){
 
 				var el = $(this),
@@ -180,9 +253,6 @@ jQuery(function ($) {
 						parent = el.parent('.HERE_tabs'),
 						tabs = parent.find('.js_tab-content'),
 						current_tab = tabs.get(index);
-
-						//console.log(tabs);
-
 						el.addClass('active').siblings().removeClass('active');
 
 						$(current_tab).show().siblings('.js_tab-content').hide();
@@ -193,30 +263,34 @@ jQuery(function ($) {
 
 
 
-
 	//Swiper
 	var sliderOption = {
 		scrollbar: '.swiper-scrollbar',
 		scrollbarHide: false,
 		centeredSlides: true,
 		slidesPerView: 'auto',
-		spaceBetween: 15
-	}
+		spaceBetween: 15,
+		onInit:function(swiper){
+			swiper.slideTo(1);
+		}
+	};
 
-	//TODO что за нах
-	gallerySlider = new Swiper($('.swiper-photo_blue'),sliderOption);
-	$('.swiper-photo, .swiper-product').swiper(sliderOption);
+	gallerySlider = new Swiper($('.swiper-photo_blue'), sliderOption);
 
+	$('.swiper-photo, .swiper-product').each(function () {
+		var slider = $(this);
+		slider.data('swiper', new Swiper(slider, sliderOption));
+	});
 
-	$('.swiper-dot').swiper({
+	sliderDots = new Swiper($('.swiper-dot').swiper({
 		//Your options here:
-    loop: true,
-    pagination: '.swiper-dot-pagination',
-		paginationClickable: true,
+		loop: true,
+		pagination: '.swiper-dot-pagination',
+		paginationClickable: true
 		//createPagination: true
-  });
+	}));
 
-	$('.swiper-color').swiper({
+	sliderColor = new Swiper($('.swiper-color').swiper({
 		scrollbar: '.swiper-scrollbar',
 		scrollbarHide: false,
 		centeredSlides: true,
@@ -230,13 +304,33 @@ jQuery(function ($) {
 
 		loop: true,
 		pagination: '.swiper-color-pagination',
-		paginationClickable: true,
+		paginationClickable: true
 		//createPagination: true
-	});
-
+	}));
 
 
 	$('.wrap-select select').select2();
-	//$('.select2').select2();
 
+
+	$('.custom-scroll-blue').each(function () {
+		var el = $(this);
+		el.mCustomScrollbar({
+			axis: 'x'
+		});
+	});
+
+	var snapper = new Snap({
+		element: document.getElementById('content'),
+		maxPosition: 290,
+		minPosition: 0,
+		transitionSpeed: 0.3,
+		hyperextensible: false,
+		disable: 'right'
+	});
+	//close menu when scroll content
+	$('.content').on('scroll',function(){
+		if($('.snapjs-left').length){
+			snapper.close();
+		}
+	});
 });

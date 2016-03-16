@@ -1,26 +1,26 @@
 head: {
 	defaults: {
-		title: 'Главная',
-		useSocialMetaTags: true
+		title: 'Главная'
 	},
 	gallery: {
-		title: 'Галерея',
-		useSocialMetaTags: true
+		title: 'Галерея'
 	},
 	lawngrids: {
-		title: 'Газоннные решетки',
-		useSocialMetaTags: true
+		title: 'Газоннные решетки'
 	},
 	cart: {
-		title: 'Карточка товара',
-		useSocialMetaTags: true
+		title: 'Карточка товара'
 	},
 	map: {
-		title: 'Где купить',
-		useSocialMetaTags: true
+		title: 'Где купить'
 	},
 	type: {
-		title: 'Типовая страница',
-		useSocialMetaTags: true
+		title: 'Типовая страница'
+	},
+	homepage: {
+		title: 'Главная страница'
+	},
+	catalog: {
+		title: 'Каталог страница'
 	}
 }

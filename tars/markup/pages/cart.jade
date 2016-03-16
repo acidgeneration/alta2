@@ -1,22 +1,27 @@
 doctype html
 html(class="no-js", lang="ru")
 
-	include ../modules/head/head
-	include ../modules/footer/footer
+    include ../modules/head/head
+    include ../modules/footer/footer
+    include ../modules/catalog-mixin/catalog-mixin
+    include ../modules/header/menu
+    include ../modules/header/header
+    head
+        +head(head.cart)
+    body
+        +menu()
 
-	head
-		+head(head.cart)
-	body
-		.content
-			include ../modules/header/header
+        .content.snap-content#content
 
-			//.section-white
+            +page-header()
 
-			include ../modules/cart_page/cart
+            //.section-white
 
-			+footer()
+            include ../modules/cart_page/cart
 
-		//- Main scripts. You can replace it, but I recommend you to leave it here
-		script(src='%=static=%js/main%=hash=%%=min=%.js')
-		//
-		script(src='%=static=%js/separate-js/start.js')
+            +footer()
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')
+        //
+        script(src='%=static=%js/separate-js/start.js')

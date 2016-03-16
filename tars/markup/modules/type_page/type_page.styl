@@ -171,12 +171,30 @@ blockquote
 
 
 
-table
+
+
+.table-responsive
+  @media screen and (max-width: 720px)
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+
+    .data-table
+      margin 0
+
+
+
+
+.data-table
   margin 3em 0 2em
-  border-collapse collapse
+  //border-collapse collapse
   width 100%
   tr
-    background #f5f5f5
+    background #FFF //#f5f5f5
   tr:nth-child(even)
     background #cce3f1
   td,th

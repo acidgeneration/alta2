@@ -1,21 +1,25 @@
 doctype html
 html(class="no-js", lang="ru")
 
-	include ../modules/head/head
-	include ../modules/footer/footer
+    include ../modules/head/head
+    include ../modules/footer/footer
+    include ../modules/header/menu
+    include ../modules/header/header
+    head
+        +head(head.gallery)
+    body
 
-	head
-		+head(head.gallery)
-	body
+        +menu()
 
-		.content
-			include ../modules/header/header
+        .content.snap-content#content
+            +page-header()
 
-			.section-white
-				include ../modules/gallery_page/gallery
+            .section-white
 
-			+footer()
+                include ../modules/gallery_page/gallery
 
-		//- Main scripts. You can replace it, but I recommend you to leave it here
-		script(src='%=static=%js/main%=hash=%%=min=%.js')
-		script(src='%=static=%js/separate-js/start.js')
+            +footer()
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')
+        script(src='%=static=%js/separate-js/start.js')

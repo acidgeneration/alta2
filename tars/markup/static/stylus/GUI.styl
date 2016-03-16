@@ -1,11 +1,13 @@
-.wrap-menu
-	position: fixed
+.wrap-menu.snap-drawers
+	position: absolute
+	overflow hidden
 	left 0
 	top 0
 	width 290px
 	background color-blue
-	min-height 100%
-	z-index 200
+	height 100%
+	z-index 0
+	box-shadow 7px 0 10px 1px rgba(00,00,00,0.5);
 	.btn-close
 		color #ffffff
 		font-size 15px
@@ -15,14 +17,65 @@
 		top 0
 		padding 17px 20px
 		z-index 20
+	.wrap-search
+		width 100%
+		position: relative
+		padding: 0 13px 40px;
+		input
+			width 100%
+			background transparent
+			height 40px
+			padding: 0 50px 0 17px;
+			color #ffffff
+			font-size 14px;
+			line-height: 16px;
+			margin 0
+			border 1px solid #ffffff
+		::-webkit-input-placeholder {color:#ffffff;}
+		::-moz-placeholder          {color:#ffffff;}
+		:-moz-placeholder           {color:#ffffff;}
+		:-ms-input-placeholder      {color:#ffffff;}
+	.btn-search
+		position: absolute
+		right 13px
+		margin 0
+		background transparent
+		top 0
+		height 40px
+		width 50px
+		text-align center
+	.icon-search
+		font-size 20px
+		line-height: 40px
+		color #ffffff
+	.wrap-soc
+		.soc-icon
+			background #ffffff
+			border 1px solid #ffffff
+			border-radius 2px
+			height 40px
+			width 40px
+			margin 0 0 0 35px
+			&:first-child
+				margin-left 0
+			&:before
+				color #14469b
+		.icon-ok2
+			.path1
+				&:before
+					color #14469b
 .menu-i
-	overflow-y scroll
+	height 100%
+	overflow-y auto
+	position: relative
+
 .menu-top
 	background color-light-blue
 	padding 15px 13px 20px 3px
 	-webkit-box-shadow: 0 7px 10px 1px rgba(00,00,00,0.27)
 	-moz-box-shadow: 0 7px 10px 1px rgba(00,00,00,0.27)
 	box-shadow:  0 7px 10px 1px rgba(00,00,00,0.27)
+	margin-bottom: 10px
 .lang-list
 	position relative
 	padding-bottom 13px
@@ -50,7 +103,8 @@
 		color #ffffff
 		font-size 10px
 		position  relative
-		margin -6px 0 0 9px
+		margin 0px 0 0 9px
+		top -6px
 .chosen-city
 	color #ffffff
 	font-size 14px
@@ -61,3 +115,48 @@
 	text-overflow ellipsis
 	border-bottom 1px dashed #ffffff
 	max-width 90%
+.menu
+	padding 0 13px
+	li
+		position: relative
+		display: block
+
+
+	.btn-drop
+		text-decoration none
+		display: inline-block
+		color #ffffff
+		line-height: 45px;
+		vertical-align: top;
+		padding 0 10px
+		margin-top 2px
+		i
+			display: inline-block
+			font-size 14px
+			margin-top 1px
+		.icon-arrow-t
+			display: none
+		&.active
+			.icon-arrow-t
+				display: inline-block
+			.icon-arrow-b
+				display: none
+
+.menu-item
+	text-decoration underline
+	color #ffffff
+	font-size 18px
+	line-height 45px
+	text-overflow ellipsis
+	overflow: hidden
+	white-space nowrap
+	max-width: 86%
+	display: inline-block
+
+.sub-menu
+	.menu-item
+		padding-left 35px;
+.cities-list
+	padding-top 20px
+	.wrap-search
+		padding-bottom 20px

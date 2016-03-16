@@ -13,17 +13,83 @@
     transform: rotateZ(90deg)
     padding 30px 10px 0 0
 
+  &.active
+    .icon-arrow
+      transform: rotateZ(-90deg)
+      padding 20px 30px 0
+
+
+
+.label-select
+  cf()
+
+  i
+    line-height 35px
+  .wrap-select
+    float right
+    //display inline-block
+    width 68%
+
+
+.info-dealer
+  a:not(.btn)
+    text-decoration underline
+  h2
+    // TODO wtf font ?
+    font-family 'Roboto'
+    font-weight 500
+
+.dlr
+  clear both
+  padding 6px 0 0 50px
+
+  // &:nth-of-type(n+2)
+  //   margin-top 1em
+  //   //padding-top 1em
+  //   border-top 1px solid #999
+
+  h2
+    color #000
+    margin 0
+
+
+.dlr_main
+  background url('%=static=%assets/map_page/dlr_main.png') no-repeat
+.dlr_storage
+  background url('%=static=%assets/map_page/dlr_storage.png') no-repeat
+
+
+.authorised_dealer
+.prices_manufacturer
+  line-height 27px
+  padding-left 36px
+.authorised_dealer
+  background url('%=static=%assets/map_page/authorised_dealer.png') no-repeat
+.prices_manufacturer
+  margin .5em 0 1.2em
+  background url('%=static=%assets/map_page/prices_manufacturer.png') no-repeat
+
 
 //ul
 .dealer_list-param
+
   li
     padding-left 20px
+    line-height 2em
     &:nth-child(1)
       background url('%=static=%assets/map_page/map.png') left center no-repeat
     &:nth-child(2)
       background url('%=static=%assets/map_page/date.png') left center no-repeat
+    &:nth-child(3)
+      background url('%=static=%assets/map_page/tel.png') left center no-repeat
     &:nth-child(5)
       background url('%=static=%assets/map_page/site-ic.png') left center no-repeat
-
     &:nth-child(6)
       background url('%=static=%assets/map_page/mail.png') left center no-repeat
+
+.dlr_product-list
+  margin-bottom 1.2em
+  a
+    color color-dark
+    &:hover
+      color color-light-blue

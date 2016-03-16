@@ -1,4 +1,37 @@
-a.choose-city(href="#")
-	.chosen-city Санкт-Петербург
-	.icon-arrow-b
-.drop-down
+- var city = ['Москва', 'Пенза', 'Санкт-Петербург', 'Перьмь', 'Ленинградская область', 'Ростов-на-Дону', 'Волгоград', 'Рязань', 'Вологда', 'Самара', 'Екатеренбург', 'Саратов', 'Казань', 'Севастополь', 'Красноярск', 'Ставрополь', 'Нижний Новгород', 'Томск', 'Новосибирск', 'Тамала']
+mixin cities()
+    nav.sub-menu.drop-list
+        ul
+            each val in city
+                li
+                    a(href="#").menu-item=val
+.wrap-cities
+    a.choose-city(href="#")
+        .chosen-city Санкт-Петербург
+        .icon-arrow-b
+    .drop-down.cities-list
+        .wrap-search
+            input(type="text" placeholder="Поиск по сайту")
+            button.btn-search
+                .icon-search
+        nav.menu.country
+            ul
+                li.wrap-item
+                    a(href="#").menu-item Россия
+                    a(href="#").btn-drop
+                        i.icon-arrow-t
+                        i.icon-arrow-b
+
+                    +cities()
+                li.wrap-item
+                    a(href="#").menu-item Украина
+                    a(href="#").btn-drop
+                        i.icon-arrow-t
+                        i.icon-arrow-b
+                    +cities()
+                li.wrap-item
+                    a(href="#").menu-item Белороссия
+                    a(href="#").btn-drop
+                        i.icon-arrow-t
+                        i.icon-arrow-b
+                    +cities()
