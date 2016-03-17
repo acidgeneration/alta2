@@ -1,6 +1,6 @@
 figure
 
-  margin-bottom 3em
+  margin 4em 0 2em
   text-align center
 
 figcaption
@@ -12,14 +12,14 @@ figcaption
   &:before
     content: '—'
     position absolute
-    text-indent: -1em
+    text-indent: -1.2em
 
 
 
 
 .poster
   font-weight lighter
-  margin 3em auto
+  margin 0 auto .75em
   color #FFF
   width 320px
   height 217px
@@ -52,7 +52,24 @@ figcaption
     background url('%=static=%assets/type_page/bg_2.jpg') no-repeat
 
 
-
+._grey
+  position relative
+  &-number
+    color: #fff;
+    font-size: 65px;
+    line-height: 65px;
+    letter-spacing: -1px;
+    margin-bottom: 3px;
+    //display: block;
+    font-weight: bold;
+    //text-shadow: 0 5px 0 #e7e7e7, 0 15px 8px rgba(0,0,0,0.24);
+    text-shadow: 0 5px 8px rgba(0,0,0,0.24), 1px 2px 15px rgba(0, 0, 0, 0.3);
+  &-text
+    position absolute
+    top: 1.4em
+    left: 6em
+    font-weight bold
+    color color-light-blue
 
 ._red
   color: color-red
@@ -74,7 +91,7 @@ figcaption
   font-weight: bold
   text-align center
   line-height 1.6
-  margin-bottom 2em
+  margin-bottom 4em
   &-text
     text-transform uppercase
   &-number
@@ -113,14 +130,14 @@ blockquote
   //overflow hidden
   cite
 
-    margin 1em 0 0 50%
+    margin 1em 0 0 30%
 
     color #777
     font-size 12px
     line-height 150%//18px
     display inline-block
-    //width 50%
-    //float right
+    text-align right
+
 
 
   &:after
@@ -135,7 +152,10 @@ blockquote
 
 
 
-
+._bdb
+  border-bottom 2px solid color-light-blue
+  padding-bottom: 1em
+  margin-bottom: 2.2em
 
 
 
@@ -143,6 +163,20 @@ blockquote
 .label
   padding 1.4em 2em 1.4em 4.2em
   margin 3em 0
+  position relative
+
+  .js_label-close
+    cursor pointer
+    position absolute
+    right .5em
+    top .4em
+    font-size 1.4em
+    color rgba(0, 0, 0, .3);
+    //&:before
+
+
+
+
   p //reset
     margin-bottom 0
 
@@ -166,6 +200,8 @@ blockquote
 .faq-question
   padding 2em 0
   border-top 1px solid #CCC
+  &:nth-child(1)
+    margin-top 4em
   p
     font-weight bold
 

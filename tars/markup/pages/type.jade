@@ -1,26 +1,27 @@
 doctype html
 html(class="no-js", lang="ru")
 
-    include ../modules/head/head
-    include ../modules/footer/footer
-    include ../modules/header/menu
-    include ../modules/header/header
-    head
-        +head(head.type)
-    body
-        +menu()
+	include ../modules/head/head
+	include ../modules/footer/footer
+	include ../modules/header/menu
+	include ../modules/header/header
+	head
+		+head(head.type)
+	body
+		+menu()
 
-        .content.snap-content#content
+		.content.snap-content#content
 
-            +page-header()
+			+page-header()
 
-            .section-white
-                include ../modules/type_page/type_page
+			//- .section-white
+			//-     include ../modules/type_page/type_page
+			include ../modules/type_page/type_page
 
-            +footer()
+			+footer()
 
-        //- Main scripts. You can replace it, but I recommend you to leave it here
-        script(src='%=static=%js/main%=hash=%%=min=%.js')
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')
 
-        //
-        script(src='%=static=%js/separate-js/start.js')
+		//
+		script(src='%=static=%js/separate-js/start.js')

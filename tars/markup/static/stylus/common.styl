@@ -20,9 +20,18 @@
 
 .clr_lite
 .clr_lite-i
+time
 	color #999
 .clr_lite-i
 	font-style italic
+
+time
+	font-size 11px
+	display block
+	margin-bottom 2em
+
+
+
 
 // tabs с пунктирным подчеркиванием
 //.js_expander-trigger
@@ -46,20 +55,18 @@
 	display none
 
 .js_more-trigger
-	display block
-	color #999
-	text-align center
-	margin 1.4em 0 2em
-	font-size 1.2em
-	//position relative
-	&:after
-
-		position absolute
-		//right -2em
-	&:after
-		content '\2003 ▼'
-	&.active:after
-		content '\2003 ▲'
+	&.grey
+		display block
+		color #999
+		text-align center
+		margin 1.4em 0 2em
+		font-size 1.2em
+		&:after
+			position absolute
+		&:after
+			content '\2003 ▼'
+		&.active:after
+			content '\2003 ▲'
 
 
 
@@ -148,13 +155,6 @@ strong
 		content '— '
 
 
-//
-// a[href^=tel],
-// a[href^=mailto]
-// 	color color-light-blue
-// 	font-weight bold
-//
-
 //ярлык скидка
 //figure.badge
 .badge
@@ -186,7 +186,7 @@ strong
 
 .section-white
 	background: #fff;
-	padding:25px 13px 20px;
+	padding: 2em 13px //25px 13px 20px;
 	.banner
 		margin-bottom 30px
 	.logotype

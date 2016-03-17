@@ -172,7 +172,9 @@ jQuery(function ($) {
 				$(this).parents('.js_more-content').find('.js_more-toggle').slideToggle();
 			})
 			*/
-
+			.on('click', '.js_label-close', function () {
+				$(this).parent('.label').slideUp();
+			})
 
 			//гармошка (аккордеон)
 			.on('click', '.js_expander-trigger', function () {
@@ -182,11 +184,11 @@ jQuery(function ($) {
 			//гармошка_2
 			.on('click', '.js_more-trigger', function (e) {
 				e.preventDefault();
-				tglTxt = $(this).data('text');
-				//Скрыть иноформацию Подробнее о дилере
-
-				$(this).text($(this).text() == "Скрыть информацию" ? "Подробнее о дилере": "Скрыть информацию");
-
+				var $el = $(this);
+				$el.text(function(i, text) {
+					 return text == $el.data('def-text') ? $el.data('tgl-text')
+																								: $el.data('def-text');
+				});
 				$(this).toggleClass('active').prev('.js_more-content').slideToggle();
 			})
 			.on('click', '.wrap-product-grid	.product-title', function (e) {
