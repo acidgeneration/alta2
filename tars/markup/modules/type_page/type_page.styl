@@ -200,10 +200,14 @@ blockquote
 .faq-question
   padding 2em 0
   border-top 1px solid #CCC
-  &:nth-child(1)
-    margin-top 4em
+
+  //link MORE
+  .active
+    color #999
+
   p
     font-weight bold
+    //margin-bottom 0 //reset
 
 
 
@@ -212,7 +216,7 @@ blockquote
 .table-responsive
   @media screen and (max-width: 720px)
     width: 100%;
-    margin-bottom: 15px;
+    margin 3em 0 2em
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
@@ -242,6 +246,7 @@ blockquote
     font-size 16px
 
   td
+    white-space: nowrap
     text-align center
     &:first-child
       text-align left

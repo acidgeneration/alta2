@@ -97,31 +97,13 @@
 
 
 
-	.faq-question
-		p Какая цена на монтаж решетки?
-		.js_expander-trigger.trigger_link Показать ответ
-		.js_expander-content
-			| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magnam nulla incidunt provident! Laboriosam velit, ex voluptates tempore voluptatum labore facilis rerum, aliquid maiores ipsum, sit consectetur, voluptate obcaecati culpa.
-	.faq-question
-		p Я уже заказал у вас решетку. Надо ли зимой ее убирать?
-		.js_expander-trigger.trigger_link Показать ответ
-		.js_expander-content
-			| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magnam nulla incidunt provident! Laboriosam velit, ex voluptates tempore voluptatum labore facilis rerum, aliquid maiores ipsum, sit consectetur, voluptate obcaecati culpa.
-	.faq-question
-		p Я боюсь, что решетка будет забиваться и трава перестанет расти. Придется ли чистить решетку?
-		.js_expander-trigger.trigger_link Показать ответ
-		.js_expander-content
-			| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magnam nulla incidunt provident! Laboriosam velit, ex voluptates tempore voluptatum labore facilis rerum, aliquid maiores ipsum, sit consectetur, voluptate obcaecati culpa.
-	.faq-question
-		p Долго ли устанавливать решетку?
-		.js_expander-trigger.trigger_link Показать ответ
-		.js_expander-content
-			| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magnam nulla incidunt provident! Laboriosam velit, ex voluptates tempore voluptatum labore facilis rerum, aliquid maiores ipsum, sit consectetur, voluptate obcaecati culpa.
-	.faq-question
-		p Где можно заказать решетку с доставкой и установкой для экопарковки?
-		.js_expander-trigger.trigger_link Показать ответ
-		.js_expander-content
-			| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magnam nulla incidunt provident! Laboriosam velit, ex voluptates tempore voluptatum labore facilis rerum, aliquid maiores ipsum, sit consectetur, voluptate obcaecati culpa.
+	- var questions = ["Какая цена на монтаж решетки?", "Я уже заказал у вас решетку. Надо ли зимой ее убирать?", "Я боюсь, что решетка будет забиваться и трава перестанет расти. Придется ли чистить решетку?", "Долго ли устанавливать решетку?", "Долго ли устанавливать решетку?", "Где можно заказать решетку с доставкой и установкой для экопарковки?"];
+		- for question in questions
+			.faq-question
+				p #{question}
+				.js_more-content
+					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magnam nulla incidunt provident! Laboriosam velit, ex voluptates tempore voluptatum labore facilis rerum, aliquid maiores ipsum, sit consectetur, voluptate obcaecati culpa.
+				.js_more-trigger.trigger_link(data-tgl-text="Скрыть", data-def-text="Показать ответ") Показать ответ
 
 	.example
 		.example-bg
@@ -140,7 +122,7 @@
 	p Экорешетку можно перевозить в легко-вом автомобиле. Установка 1 м2 зани-мает в среднем 20 минут. На небольшом участке экорешетку можно установить за 1 день.
 
 
-	.table-responsive
+	.table-responsive(data-snap-ignore="true")
 		table.data-table
 			tr
 				th Наименование

@@ -193,7 +193,7 @@ mixin productList()
                 //- .scroll-slider.product-slider
         .swiper-container.swiper-product(data-snap-ignore="true")
             - var x = 5;
-            .swiper-wrapper
+            .swiper-wrapper(data-snap-ignore="true")
                 - for (var i=1; i<=x; i++) {
                     a(href="#").swiper-slide
                         img(src="%=static=%img/content/product1.png")
@@ -210,7 +210,7 @@ mixin productList2()
             .swiper-instruction
                 img(src='static/img/content/hand.svg')
             .swiper-container.swiper-photo.swiper-paging(data-snap-ignore="true")
-                .swiper-wrapper
+                .swiper-wrapper(data-snap-ignore="true")
                     a(href="#").swiper-slide
                         img(src='static/img/content/icon_intro_5dark.svg')
                         .title Фасадные панели
@@ -300,7 +300,7 @@ mixin productsGrid2(sort)
 
 mixin swiperProduct()
     .swiper-container.swiper-product.swiper-sub_product(data-snap-ignore="true")
-        .swiper-wrapper
+        .swiper-wrapper(data-snap-ignore="true")
             - var x = 4;
             - for (var i=1; i<=x; i++) {
                 a(href="#").swiper-slide

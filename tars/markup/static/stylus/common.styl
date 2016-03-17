@@ -10,8 +10,10 @@
 	overflow-x hidden
 	overflow-y scroll
 	padding-top 60px
-	z-index 50
-	background #f6f8fa url(../img/content/bg-patter47x35.png) repeat
+	//z-index 50
+	background #FFF
+	&.__bg
+		background #f6f8fa url(../img/content/bg-patter47x35.png) repeat
 
 .center
 	text-align center
@@ -54,12 +56,15 @@ time
 .js_more-content
 	display none
 
+.js_more-content
+	margin-bottom 1em
+
 .js_more-trigger
 	&.grey
 		display block
 		color #999
 		text-align center
-		margin 1.4em 0 2em
+		margin .4em 0 2em
 		font-size 1.2em
 		&:after
 			position absolute
