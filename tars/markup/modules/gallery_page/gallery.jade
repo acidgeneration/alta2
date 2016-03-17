@@ -1,340 +1,62 @@
-//-["Все", "Сайдинг", "Фасадные панели", "Дренажные системы", "Газонная решеткa", "Водосточные системы", "Внутренняя отделка"]
+mixin item_gallery()
+	.item_gallery
+		.gallery_title Виниловый сайдинг
+			i.chat 1
+			i.photo 1
+			p Москва  
+		img(src="%=static=%img/assets/gallery_page/2.jpg", alt="")
+
+		.item_gallery-toggle 
+			img(src="%=static=%img/assets/gallery_page/1.jpg", alt="")
+			img(src="http://placehold.it/295x190", alt="")
+			p До
+			img(src="http://placehold.it/295x190/E8117F/ffffff", alt="")
+			.description
+				h3 Компания «Авангард»
+				dl
+					dt Костромская область
+					dt 2014 год
+					dt В отделке использовали:
+					dd
+						a(href="#") сайдинг
+						|,
+						a(href="#") водосточная система
+						|, 
+						a(href="#") комплектующие
+				p.autor
+					b Екатерина
+					|, г. Казань «ОАО Спектр»
+				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque nemo, doloribus excepturi error, saepe quos voluptatibus at omnis debitis voluptatum quo reiciendis quaerat corporis architecto cum ea sint accusantium, obcaecati!
+
+			// -TODO
+			h2 Поделиться:
+			.pluso(data-background='transparent', data-options='big,square,line,horizontal,nocounter,theme=04', data-services='twitter,facebook,vkontakte,google,odnoklassniki')
+
+		.item_gallery-more
+			a.js_gallery-more(href="#") Подробнее
+			//Скрыть информацию
+
+
+
 
 
 .section-title Галерея
-.sort-block-i
+
+//.sort-block-i
+.wrap-select
+	- var options = ["Все", "Сайдинг", "Фасадные панели", "Наличники", "Откосы", "Панели ПВХ", "Вагонка ПВХ", "Кровля", "Газонная решетка", "Террасная доска", "Водостоки", "Дренажные системы"];
+		select(style="width:100%")
+			- for option, i in options
+				option(value="#{i}") #{option}
 
 
-	.wrap-select
-		- var options = ["Все", "Сайдинг", "Фасадные панели", "Наличники", "Откосы", "Панели ПВХ", "Вагонка ПВХ", "Кровля", "Газонная решетка", "Террасная доска", "Водостоки", "Дренажные системы"];
-			select
-				- for option, i in options
-					option(value="#{i}") #{option}
++item_gallery()
++item_gallery()
++item_gallery()
++item_gallery()
++item_gallery()
++item_gallery()
 
-
-
-
-.item_gallery
-	.gallery_title Виниловый сайдинг
-		i.chat 1
-		i.photo 1
-		p Москва  
-	img(src="%=static=%img/assets/gallery_page/2.jpg", alt="")
-
-	.item_gallery-toggle 
-		img(src="%=static=%img/assets/gallery_page/1.jpg", alt="")
-		img(src="http://placehold.it/295x190", alt="")
-		p До
-		img(src="http://placehold.it/295x190/E8117F/ffffff", alt="")
-		.description
-			h3 Компания «Авангард»
-			dl
-				dt Костромская область
-				dt 2014 год
-				dt В отделке использовали:
-				dd
-					a(href="#") сайдинг
-					|,
-					a(href="#") водосточная система
-					|, 
-					a(href="#") комплектующие
-			p.autor
-				b Екатерина
-				|, г. Казань «ОАО Спектр»
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque nemo, doloribus excepturi error, saepe quos voluptatibus at omnis debitis voluptatum quo reiciendis quaerat corporis architecto cum ea sint accusantium, obcaecati!
-
-
-		// -TODO
-		.XYi Поделиться:
-		.wrap-soc
-			.soc-links
-				a.soc-icon.icon-vk(href="http://vk.com/altaprofilru")
-				a.soc-icon.icon-fb(href="https://www.facebook.com/altaprofilru")
-				a.soc-icon.icon-ok2(href="http://ok.ru/group/52745676259413")
-				a.soc-icon.icon-yt(href="https://www.youtube.com/user/altaprofil1 ")
-	.item_gallery-more
-		a.js_gallery-more(href="#") Подробнее
-		//Скрыть информацию
-
-.item_gallery
-	.gallery_title Виниловый сайдинг
-		i.chat 1
-		i.photo 1
-		p Москва  
-	img(src="%=static=%img/assets/gallery_page/2.jpg", alt="")
-
-	.item_gallery-toggle 
-		img(src="%=static=%img/assets/gallery_page/1.jpg", alt="")
-		img(src="http://placehold.it/295x190", alt="")
-		p До
-		img(src="http://placehold.it/295x190/E8117F/ffffff", alt="")
-		.description
-			h3 Компания «Авангард»
-			dl
-				dt Костромская область
-				dt 2014 год
-				dt В отделке использовали:
-				dd
-					a(href="#") сайдинг
-					|,
-					a(href="#") водосточная система
-					|, 
-					a(href="#") комплектующие
-			p.autor
-				b Екатерина
-				|, г. Казань «ОАО Спектр»
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque nemo, doloribus excepturi error, saepe quos voluptatibus at omnis debitis voluptatum quo reiciendis quaerat corporis architecto cum ea sint accusantium, obcaecati!
-		//-TODO
-		.XYi Поделиться:
-		.wrap-soc
-			.soc-links
-				a.soc-icon.icon-vk(href="http://vk.com/altaprofilru")
-				a.soc-icon.icon-fb(href="https://www.facebook.com/altaprofilru")
-				a.soc-icon.icon-ok2(href="http://ok.ru/group/52745676259413")
-				a.soc-icon.icon-yt(href="https://www.youtube.com/user/altaprofil1 ")
-	.item_gallery-more
-		a.js_gallery-more(href="#") Подробнее
-		//Скрыть информацию
-
-.item_gallery
-	.gallery_title Виниловый сайдинг
-		i.chat 1
-		i.photo 1
-		p Москва  
-	img(src="%=static=%img/assets/gallery_page/2.jpg", alt="")
-
-	.item_gallery-toggle 
-		img(src="%=static=%img/assets/gallery_page/1.jpg", alt="")
-		img(src="http://placehold.it/295x190", alt="")
-		p До
-		img(src="http://placehold.it/295x190/E8117F/ffffff", alt="")
-		.description
-			h3 Компания «Авангард»
-			dl
-				dt Костромская область
-				dt 2014 год
-				dt В отделке использовали:
-				dd
-					a(href="#") сайдинг
-					|,
-					a(href="#") водосточная система
-					|, 
-					a(href="#") комплектующие
-			p.autor
-				b Екатерина
-				|, г. Казань «ОАО Спектр»
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque nemo, doloribus excepturi error, saepe quos voluptatibus at omnis debitis voluptatum quo reiciendis quaerat corporis architecto cum ea sint accusantium, obcaecati!
-		//-TODO
-		.XYi Поделиться:
-		.wrap-soc
-			.soc-links
-				a.soc-icon.icon-vk(href="http://vk.com/altaprofilru")
-				a.soc-icon.icon-fb(href="https://www.facebook.com/altaprofilru")
-				a.soc-icon.icon-ok2(href="http://ok.ru/group/52745676259413")
-				a.soc-icon.icon-yt(href="https://www.youtube.com/user/altaprofil1 ")
-	.item_gallery-more
-		a.js_gallery-more(href="#") Подробнее
-		//Скрыть информацию
-
-.item_gallery
-	.gallery_title Виниловый сайдинг
-		i.chat 1
-		i.photo 1
-		p Москва  
-	img(src="%=static=%img/assets/gallery_page/2.jpg", alt="")
-
-	.item_gallery-toggle 
-		img(src="%=static=%img/assets/gallery_page/1.jpg", alt="")
-		img(src="http://placehold.it/295x190", alt="")
-		p До
-		img(src="http://placehold.it/295x190/E8117F/ffffff", alt="")
-		.description
-			h3 Компания «Авангард»
-			dl
-				dt Костромская область
-				dt 2014 год
-				dt В отделке использовали:
-				dd
-					a(href="#") сайдинг
-					|,
-					a(href="#") водосточная система
-					|, 
-					a(href="#") комплектующие
-			p.autor
-				b Екатерина
-				|, г. Казань «ОАО Спектр»
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque nemo, doloribus excepturi error, saepe quos voluptatibus at omnis debitis voluptatum quo reiciendis quaerat corporis architecto cum ea sint accusantium, obcaecati!
-		//-TODO
-		.XYi Поделиться:
-		.wrap-soc
-			.soc-links
-				a.soc-icon.icon-vk(href="http://vk.com/altaprofilru")
-				a.soc-icon.icon-fb(href="https://www.facebook.com/altaprofilru")
-				a.soc-icon.icon-ok2(href="http://ok.ru/group/52745676259413")
-				a.soc-icon.icon-yt(href="https://www.youtube.com/user/altaprofil1 ")
-	.item_gallery-more
-		a.js_gallery-more(href="#") Подробнее
-		//Скрыть информацию
-
-.item_gallery
-	.gallery_title Виниловый сайдинг
-		i.chat 1
-		i.photo 1
-		p Москва  
-	img(src="%=static=%img/assets/gallery_page/2.jpg", alt="")
-
-	.item_gallery-toggle 
-		img(src="%=static=%img/assets/gallery_page/1.jpg", alt="")
-		img(src="http://placehold.it/295x190", alt="")
-		p До
-		img(src="http://placehold.it/295x190/E8117F/ffffff", alt="")
-		.description
-			h3 Компания «Авангард»
-			dl
-				dt Костромская область
-				dt 2014 год
-				dt В отделке использовали:
-				dd
-					a(href="#") сайдинг
-					|,
-					a(href="#") водосточная система
-					|, 
-					a(href="#") комплектующие
-			p.autor
-				b Екатерина
-				|, г. Казань «ОАО Спектр»
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque nemo, doloribus excepturi error, saepe quos voluptatibus at omnis debitis voluptatum quo reiciendis quaerat corporis architecto cum ea sint accusantium, obcaecati!
-		//-TODO
-		.XYi Поделиться:
-		.wrap-soc
-			.soc-links
-				a.soc-icon.icon-vk(href="http://vk.com/altaprofilru")
-				a.soc-icon.icon-fb(href="https://www.facebook.com/altaprofilru")
-				a.soc-icon.icon-ok2(href="http://ok.ru/group/52745676259413")
-				a.soc-icon.icon-yt(href="https://www.youtube.com/user/altaprofil1 ")
-	.item_gallery-more
-		a.js_gallery-more(href="#") Подробнее
-		//Скрыть информацию
-
-.item_gallery
-	.gallery_title Виниловый сайдинг
-		i.chat 1
-		i.photo 1
-		p Москва  
-	img(src="%=static=%img/assets/gallery_page/2.jpg", alt="")
-
-	.item_gallery-toggle 
-		img(src="%=static=%img/assets/gallery_page/1.jpg", alt="")
-		img(src="http://placehold.it/295x190", alt="")
-		p До
-		img(src="http://placehold.it/295x190/E8117F/ffffff", alt="")
-		.description
-			h3 Компания «Авангард»
-			dl
-				dt Костромская область
-				dt 2014 год
-				dt В отделке использовали:
-				dd
-					a(href="#") сайдинг
-					|,
-					a(href="#") водосточная система
-					|, 
-					a(href="#") комплектующие
-			p.autor
-				b Екатерина
-				|, г. Казань «ОАО Спектр»
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque nemo, doloribus excepturi error, saepe quos voluptatibus at omnis debitis voluptatum quo reiciendis quaerat corporis architecto cum ea sint accusantium, obcaecati!
-		//-TODO
-		.XYi Поделиться:
-		.wrap-soc
-			.soc-links
-				a.soc-icon.icon-vk(href="http://vk.com/altaprofilru")
-				a.soc-icon.icon-fb(href="https://www.facebook.com/altaprofilru")
-				a.soc-icon.icon-ok2(href="http://ok.ru/group/52745676259413")
-				a.soc-icon.icon-yt(href="https://www.youtube.com/user/altaprofil1 ")
-	.item_gallery-more
-		a.js_gallery-more(href="#") Подробнее
-		//Скрыть информацию
-
-.item_gallery
-	.gallery_title Виниловый сайдинг
-		i.chat 1
-		i.photo 1
-		p Москва  
-	img(src="%=static=%img/assets/gallery_page/2.jpg", alt="")
-
-	.item_gallery-toggle 
-		img(src="%=static=%img/assets/gallery_page/1.jpg", alt="")
-		img(src="http://placehold.it/295x190", alt="")
-		p До
-		img(src="http://placehold.it/295x190/E8117F/ffffff", alt="")
-		.description
-			h3 Компания «Авангард»
-			dl
-				dt Костромская область
-				dt 2014 год
-				dt В отделке использовали:
-				dd
-					a(href="#") сайдинг
-					|,
-					a(href="#") водосточная система
-					|, 
-					a(href="#") комплектующие
-			p.autor
-				b Екатерина
-				|, г. Казань «ОАО Спектр»
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque nemo, doloribus excepturi error, saepe quos voluptatibus at omnis debitis voluptatum quo reiciendis quaerat corporis architecto cum ea sint accusantium, obcaecati!
-		//-TODO
-		.XYi Поделиться:
-		.wrap-soc
-			.soc-links
-				a.soc-icon.icon-vk(href="http://vk.com/altaprofilru")
-				a.soc-icon.icon-fb(href="https://www.facebook.com/altaprofilru")
-				a.soc-icon.icon-ok2(href="http://ok.ru/group/52745676259413")
-				a.soc-icon.icon-yt(href="https://www.youtube.com/user/altaprofil1 ")
-	.item_gallery-more
-		a.js_gallery-more(href="#") Подробнее
-		//Скрыть информацию
-
-.item_gallery
-	.gallery_title Виниловый сайдинг
-		i.chat 1
-		i.photo 1
-		p Москва  
-	img(src="%=static=%img/assets/gallery_page/2.jpg", alt="")
-
-	.item_gallery-toggle 
-		img(src="%=static=%img/assets/gallery_page/1.jpg", alt="")
-		img(src="http://placehold.it/295x190", alt="")
-		p До
-		img(src="http://placehold.it/295x190/E8117F/ffffff", alt="")
-		.description
-			h3 Компания «Авангард»
-			dl
-				dt Костромская область
-				dt 2014 год
-				dt В отделке использовали:
-				dd
-					a(href="#") сайдинг
-					|,
-					a(href="#") водосточная система
-					|, 
-					a(href="#") комплектующие
-			p.autor
-				b Екатерина
-				|, г. Казань «ОАО Спектр»
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque nemo, doloribus excepturi error, saepe quos voluptatibus at omnis debitis voluptatum quo reiciendis quaerat corporis architecto cum ea sint accusantium, obcaecati!
-		//-TODO
-		.XYi Поделиться:
-		.wrap-soc
-			.soc-links
-				a.soc-icon.icon-vk(href="http://vk.com/altaprofilru")
-				a.soc-icon.icon-fb(href="https://www.facebook.com/altaprofilru")
-				a.soc-icon.icon-ok2(href="http://ok.ru/group/52745676259413")
-				a.soc-icon.icon-yt(href="https://www.youtube.com/user/altaprofil1 ")
-	.item_gallery-more
-		a.js_gallery-more(href="#") Подробнее
-		//Скрыть информацию
 
 
 

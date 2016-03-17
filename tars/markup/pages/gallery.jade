@@ -1,25 +1,37 @@
 doctype html
 html(class="no-js", lang="ru")
 
-    include ../modules/head/head
-    include ../modules/footer/footer
-    include ../modules/header/menu
-    include ../modules/header/header
-    head
-        +head(head.gallery)
-    body
+	include ../modules/head/head
+	include ../modules/footer/footer
+	include ../modules/header/menu
+	include ../modules/header/header
+	head
+		+head(head.gallery)
+	body
 
-        +menu()
+		+menu()
 
-        .content.snap-content#content
-            +page-header()
+		.content.snap-content#content
+			+page-header()
 
-            .section-white
+			.section-white
 
-                include ../modules/gallery_page/gallery
+				include ../modules/gallery_page/gallery
 
-            +footer()
+			+footer()
 
-        //- Main scripts. You can replace it, but I recommend you to leave it here
-        script(src='%=static=%js/main%=hash=%%=min=%.js')
-        script(src='%=static=%js/separate-js/start.js')
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')
+		script(src='%=static=%js/separate-js/start.js')
+
+
+		script(type='text/javascript').
+			(function() {
+			if (window.pluso)if (typeof window.pluso.start == "function") return;
+			if (window.ifpluso==undefined) { window.ifpluso = 1;
+			var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+			s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+			s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+			var h=d[g]('body')[0];
+			h.appendChild(s);
+			}})();
