@@ -154,24 +154,7 @@ jQuery(function ($) {
 				});
 			})
 
-			//TODO да бля
-			.on('click', '.js_gallery-more', function (e) {
-				e.preventDefault();
-				$(this).text(function (i, text) {
-					return text === "Подробнее" ? "Скрыть информацию" : "Подробнее";
-				});
-				$(this).parents('.item_gallery').find('.item_gallery-toggle').slideToggle();//.fadeToggle(1000);
-			})
 
-			/*
-			.on('click', '.js_more', function (e) {
-				e.preventDefault();
-				$(this).text(function (i, text) {
-					return text === "Подробнее" ? "Скрыть информацию" : "Подробнее";
-				});
-				$(this).parents('.js_more-content').find('.js_more-toggle').slideToggle();
-			})
-			*/
 			.on('click', '.js_label-close', function () {
 				$(this).parent('.label').slideUp();
 			})
@@ -181,22 +164,45 @@ jQuery(function ($) {
 				$(this).toggleClass('active').next('.js_expander-content').slideToggle();
 
 			})
-			//гармошка_2
+
+			//гармошка_ СО СМЕНОЙ ТЕКСТА
 			.on('click', '.js_more-trigger', function (e) {
 				e.preventDefault();
 				var $el = $(this);
 				$el.text(function(i, text) {
-					 return text == $el.data('def-text') ? $el.data('tgl-text')
-																								: $el.data('def-text');
+					 return text == $el.data('def-text') ?  $el.data('tgl-text') : $el.data('def-text');
 				});
 				$(this).toggleClass('active').prev('.js_more-content').slideToggle();
 			})
-			.on('click', '.wrap-product-grid	.product-title', function (e) {
+
+			//TODO да бля
+			.on('click', '.js_gallery-more', function (e) {
 				e.preventDefault();
-				var el = $(this);
-				el.toggleClass('active');
-				el.closest('.wrap-product-grid	').find('.text').slideToggle();
+				$(this).text(function (i, text) {
+					return text === "Подробнее" ? "Скрыть информацию" : "Подробнее";
+				});
+				$(this).parents('.item_gallery').find('.item_gallery-toggle').slideToggle();//
 			})
+
+
+
+
+
+
+			// ЗАМЕНИЛ на js_expander-trigger
+
+			//.wrap-product-grid	.product-title
+			// .on('click', '.wrap-product-grid	.product-title', function (e) {
+			// 	e.preventDefault();
+			// 	var el = $(this);
+			// 	el.toggleClass('active');
+			//
+			// 	el.css("color", "red"); //TEST
+			// 	//el.closest('.wrap-product-grid	').find('.text').slideToggle();
+			// 	el.next('.text').slideToggle();
+			// })
+			//
+
 			.on('click', '.choose-city', function (e) {
 				e.preventDefault();
 				$(this).closest('.wrap-cities').find('.drop-down.cities-list').slideToggle();
@@ -209,12 +215,14 @@ jQuery(function ($) {
 					el.addClass('active');
 				}
 			})
+			//снять фильтры
 			.on('click', '.btn-filter-delete', function (e) {
 				e.preventDefault();
 				var el = $(this);
 				var src = el.attr('href');
 				el.closest('.wrap-filters').find('.filter .color, .filter .material').removeClass('active');
-				el.closest('.wrap-filters').find('.filter .wrap-check input').prop("checked", false);
+				$("input").prop("checked", false);
+
 				$("html, body").animate({ scrollTop: $(src).offset().top - 80 }, 1500);
 			})
 			.on('click', '.wrap-filters .material-table .material,.wrap-filters .color-table .color', function (e) {
