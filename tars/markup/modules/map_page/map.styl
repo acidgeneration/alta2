@@ -5,18 +5,28 @@
   height 350px
 
 
-// TODO wtf
+// TODO стрелка
 .js_expander-trigger
+  position relative
   .icon-arrow
-    float right
+    position absolute
+    top 10px
+    right 20px
+
     content: "\e900"
     transform: rotateZ(90deg)
-    padding 30px 10px 0 0
 
   &.active
     .icon-arrow
       transform: rotateZ(-90deg)
-      padding 20px 30px 0
+      right 22px
+
+.map_filter
+  h2
+    margin 1em 0
+  .control + .wrap-select
+    margin-top 1em
+
 
 
 

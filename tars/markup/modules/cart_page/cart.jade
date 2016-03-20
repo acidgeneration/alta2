@@ -6,38 +6,24 @@
 	.swiper-container.swiper-color
 		//- include ../lawngrids/swiper-color
 		.swiper-wrapper(data-snap-ignore="true")
-			.swiper-slide
-				figure.badge
-					.badge-sale 6%
-					img(src="//placehold.it/250x200/59933C/ffffff", alt="")
-			.swiper-slide
-				figure.badge
-					.badge-sale 6%
-					img(src="//placehold.it/250x200/50390C/ffffff", alt="")
-			.swiper-slide
-				figure.badge
-					.badge-sale 6%
-					img(src="//placehold.it/250x200/2F2F2F/ffffff", alt="")
-			.swiper-slide
-				figure.badge
-					.badge-sale 6%
-					img(src="//placehold.it/250x200/FF7D77/ffffff", alt="")
-			.swiper-slide
-				figure.badge
-					.badge-sale 6%
-					img(src="//placehold.it/250x200/F2E841/ffffff", alt="")
-			.swiper-slide
-				figure.badge
-					.badge-sale 6%
-					img(src="//placehold.it/250x200/10D8F4/ffffff", alt="")
+
+			- var colors = ['59933C','50390C','2F2F2F','FF7D77','F2E841','10D8F4']
+				- for color, i in colors
+					.swiper-slide
+						figure.badge
+							//6%
+							.badge-sale #{i+9}%
+							img(src="//placehold.it/250x200/#{color}/ffffff", alt="")
 		.swiper-color-pagination
 		.swiper-scrollbar.scroll-blue
 
 
-
-
-	h2 Стоимость: 161 р./шт.
+	h2 Стоимость: 
+		b 161 р./шт.
 	h2 Количество:
+
+	.Stock Акция
+
 
 	span
 		input(type="text", placeholder="штук")
