@@ -26,13 +26,15 @@
   .select2-selection--multiple
     box-sizing: border-box
     cursor: pointer
-    display: block
-    min-height: 32px
+    display inline-block
+    width 100%
+    //display: block
+    //min-height: 32px
     user-select: none
     -webkit-user-select: none
     .select2-selection__rendered
-      display: inline-block
-      overflow: hidden
+      //display: inline-block
+      //overflow: hidden
       padding-left: 8px
       text-overflow: ellipsis
       white-space: nowrap
@@ -45,13 +47,14 @@
       margin-top: 5px
       &::-webkit-search-cancel-button
         -webkit-appearance: none
-  
+
 .select2-dropdown
   background-color: white
   border: 1px solid #aaa
-  border-radius: 4px
-  box-sizing: border-box
-  display: block
+  //border-radius: 4px
+  //box-sizing: border-box
+  //display: block
+  margin-top -5px
   position: absolute
   left: -100000px
   width: 100%
@@ -167,11 +170,16 @@
         b
           border-color: transparent transparent #888 transparent
           border-width: 0 4px 5px 4px
-      
+
   .select2-selection--multiple
-    background-color: white
+
     border: 1px solid #aaa
-    border-radius: 4px
+
+    background: url("../img/content/arrow-b.svg") right 20px center no-repeat #FFF
+    background-size 10px
+
+    //background-color: white
+    //border-radius: 4px
     cursor: text
     .select2-selection__rendered
       box-sizing: border-box
@@ -218,7 +226,9 @@
         margin-right: auto
   &.select2-container--focus
     .select2-selection--multiple
-      border: solid black 1px
+      //border: solid black 1px
+
+
       outline: 0
   &.select2-container--disabled
     .select2-selection--multiple
@@ -226,16 +236,16 @@
       cursor: default
     .select2-selection__choice__remove
       display: none
-  
+
 
   &.select2-container--open.select2-container--above
     .select2-selection--single, .select2-selection--multiple
       border-top-left-radius: 0
       border-top-right-radius: 0
-  &.select2-container--open.select2-container--below
-    .select2-selection--single, .select2-selection--multiple
-      border-bottom-left-radius: 0
-      border-bottom-right-radius: 0
+  // &.select2-container--open.select2-container--below
+  //   .select2-selection--single, .select2-selection--multiple
+  //     border-bottom-left-radius: 0
+  //     border-bottom-right-radius: 0
   .select2-search--dropdown
     .select2-search__field
       border: 1px solid #aaa

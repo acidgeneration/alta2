@@ -184,25 +184,6 @@ jQuery(function ($) {
 				$(this).parents('.item_gallery').find('.item_gallery-toggle').slideToggle();//
 			})
 
-
-
-
-
-
-			// ЗАМЕНИЛ на js_expander-trigger
-
-			//.wrap-product-grid	.product-title
-			// .on('click', '.wrap-product-grid	.product-title', function (e) {
-			// 	e.preventDefault();
-			// 	var el = $(this);
-			// 	el.toggleClass('active');
-			//
-			// 	el.css("color", "red"); //TEST
-			// 	//el.closest('.wrap-product-grid	').find('.text').slideToggle();
-			// 	el.next('.text').slideToggle();
-			// })
-			//
-
 			.on('click', '.choose-city', function (e) {
 				e.preventDefault();
 				$(this).closest('.wrap-cities').find('.drop-down.cities-list').slideToggle();
@@ -221,10 +202,19 @@ jQuery(function ($) {
 				var el = $(this);
 				var src = el.attr('href');
 				el.closest('.wrap-filters').find('.filter .color, .filter .material').removeClass('active');
+
 				$("input").prop("checked", false);
+
+				var $select = $('.wrap-select select').select2();
+
+				$('.select2-selection__choice').remove();//.empty();
+				//$select.val(null).trigger("change");
+				//$select.val(null).trigger('change.select2');
 
 				$("html, body").animate({ scrollTop: $(src).offset().top - 80 }, 1500);
 			})
+
+
 			.on('click', '.wrap-filters .material-table .material,.wrap-filters .color-table .color', function (e) {
 				e.preventDefault();
 				var el = $(this);
@@ -320,7 +310,14 @@ jQuery(function ($) {
 
 
 	$('.wrap-select select').select2();
-
+	//
+	// $(".tags select").select2({
+	// 	//tags: true,
+	// 	//allowClear: true,
+	// 	placeholder: "множественный выбор"
+  // 	//tokenSeparators: [',', ' ']
+	// });
+	//
 
 	$('.custom-scroll-blue').each(function () {
 		var el = $(this);
