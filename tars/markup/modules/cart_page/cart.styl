@@ -63,3 +63,18 @@
 		font-weight bold
 		position absolute
 		left -1em
+
+
+//form
+.Additionally
+	margin-bottom 1em
+	& + p
+		margin-bottom 2em
+
+.best-dealer_counter
+	counter-reset: dealer;
+	h2
+		color #000
+		&:before
+			counter-increment: dealer;
+			content: counter(dealer) ". ";

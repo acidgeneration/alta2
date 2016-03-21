@@ -35,48 +35,35 @@
 
 	h2 Дополнительно к заказу:
 
-	//- Система крепления
-	//- Болты (10 шт.) — от 1 000 р.
-	//- Планка крепежная (5 шт.) — от 3 200 р.
-	//- Стяжка металлическая (25 шт.) — 
-	//- от 2 000 р. 
-	//- Монтаж от производителя
+	form.Additionally(action="")
 
-
-
-
-
-	label.control.checkbox
-		input(type="checkbox", name="x")
-		i.control-indicator
-		| Система крепления
-	label.control.checkbox
-		input(type="checkbox", name="x")
-		i.control-indicator
-		| Болты (10 шт.) — от 1 000 р.
-	label.control.checkbox
-		input(type="checkbox", name="x")
-		i.control-indicator
-		| Планка крепежная (5 шт.) — от 3 200 р.
-	label.control.checkbox
-		input(type="checkbox", name="x")
-		i.control-indicator
-		| Стяжка металлическая (25 шт.) — от 2 000 р.
-	label.control.checkbox
-		input(type="checkbox", name="x")
-		i.control-indicator
-		| Монтаж от производителя
-
-
-
-
+		label.control.checkbox
+			input(type="checkbox", name="x")
+			i.control-indicator
+			| Система крепления
+		label.control.checkbox
+			input(type="checkbox", name="x")
+			i.control-indicator
+			| Болты (10 шт.) — от 1 000 р.
+		label.control.checkbox
+			input(type="checkbox", name="x")
+			i.control-indicator
+			| Планка крепежная (5 шт.) — от 3 200 р.
+		label.control.checkbox
+			input(type="checkbox", name="x")
+			i.control-indicator
+			| Стяжка металлическая (25 шт.) — от 2 000 р.
+		label.control.checkbox
+			input(type="checkbox", name="x")
+			i.control-indicator
+			| Монтаж от производителя
 
 	p Конечную стоимость дополнительных услуг, вы сможете уточнить у дилера при оформлении заказа.
 
 	a.btn.btn-red(href="#") Добавить к заказу
 
 
-
+	hr
 	h2 Описание
 	dl.param
 		dt 
@@ -139,8 +126,27 @@
 
 		h2 Выбрать лучшего дилера
 		p Программа автоматически подберет для вас лучшего дилера
+
 		a.btn.btn-red(href="#") Выбрать
 
+		.best-dealer_counter
+			h2 Компания «Авангард»
+			ul.dealer_list-param
+				li г. Москва, ул. 2-я Магистральная, 19-г
+				li 09:00 — 20:00, пн.-пт.
+			a.btn.btn-red(href="#") Выбрать
+
+			h2 Компания «Компания»
+			ul.dealer_list-param
+				li г. Москва, Красная площадь дом 1
+				li 10:00 — 10:00, пн.-пт.
+			a.btn.btn-red(href="#") Выбрать
+
+			h2 Компания «НИИ Втор Чер Мет Загран Поставка»
+			ul.dealer_list-param
+				li г. Москва, Таганская дом 10
+				li 10:00 — 10:00, пн.-пт.
+			a.btn.btn-red(href="#") Выбрать
 
 	h2.js_expander-trigger.trigger_dashed 
 		i Отзывы
@@ -272,9 +278,8 @@
 
 
 
-
+	h1 Не забудьте про:
 	.swiper-container.swiper-photo.swiper-svg
-		h1 Не забудьте про:
 		.swiper-wrapper(data-snap-ignore="true")
 			//- - var options = ['Водостоки','Фасадные панели','Газонная решетка','Наличники','Дренажные системы','Кровля','Сайдинг', 'Фасадные панели'];
 			//- 	- for option in options	
