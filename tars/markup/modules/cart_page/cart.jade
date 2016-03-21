@@ -18,19 +18,27 @@
 		.swiper-scrollbar.scroll-blue
 
 
-	h2 Стоимость: 
+	h2._R Стоимость: 
 		b 161 р./шт.
-	h2 Количество:
-
-	.Stock Акция
 
 
+	.js_expander-trigger.Stock 
+		b %
+		i 
+			| Акция
+	.js_expander-content
+		h2._b Скидка 6% покупателям в «Татьянин день»
+		p Спешите только до 01.04.2016 во всех фирменных салонах «Альта-Профиль» в вашем городе.
+
+
+	h2._b Количество:
 	span
 		input(type="text", placeholder="штук")
 		i или
 		input(type="text", placeholder="м2")
 
-	.as_h1 Итого: 15 761 р.
+	.as_h1._R Итого: 
+		b 15 761 р.
 	a.btn.btn-red(href="#") В корзину
 
 	h2 Дополнительно к заказу:
@@ -209,6 +217,8 @@
 				-}
 			.swiper-scrollbar.scroll-blue
 
+
+	hr
 	.wrap-product-slider.wrapper-tabs
 		h1 С сайдингом покупают:
 		.double-tab.clearfix
