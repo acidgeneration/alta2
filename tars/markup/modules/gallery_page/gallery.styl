@@ -1,3 +1,25 @@
+.share
+  text-align center
+  a
+    width: 40px
+    height: 40px
+    display inline-block
+
+    background url(%=static=%content/share.png)
+    & + a
+      margin-left 3%
+  .Twitter
+    background-position: -42px 0
+  .Facebook
+    background-position: 0 0
+  .Vkontakte
+    background-position: -168px 0
+  .Google
+    background-position: -252px 0
+  .Odnoklassniki
+    background-position: -126px 0
+
+
 .item_gallery
   color color-dark
   margin-bottom 2em
@@ -33,7 +55,7 @@
     color #777
     font-size 18px
   .autor
-    margin 1em 0 0
+    margin 1em 0
 
   b
     font-weight bold
@@ -52,28 +74,11 @@
 
 
 
-//TODO переделать!!! Поделиться:
-// .XYi
-//   font-size 18px
-//   color color-dark
-//
-//
-
-// .pluso
-//   a
-//     text-align center
-
 .item_gallery-more
   text-align center
   margin 2em 0
 
   a
-    //display block
-    //! костыль
-    // display inline-block
-    // width 100%
-    // margin-top 2em
-
     font-size 16px
     color #999
     border-bottom 1px dashed #999
