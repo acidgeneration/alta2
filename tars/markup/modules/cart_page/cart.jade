@@ -150,14 +150,31 @@
 
 	h2.js_expander-trigger.trigger_dashed 
 		i Отзывы
-	.js_expander-content
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis numquam dolor libero atque assumenda aspernatur iste aperiam cum quis voluptate veniam, ratione doloremque quod ullam illo porro quia sapiente molestiae?
+	//- ОТЗЫВЫ
+	.js_expander-content.reviews
+
+		mixin reviews(name, from)
+			.reviews_item
+				p		
+					b #{name}
+					|, #{from}
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque nemo, doloribus excepturi error, saepe quos voluptatibus at omnis debitis voluptatum quo reiciendis quaerat corporis architecto cum ea sint
+
+		+reviews('Катя', 'г. Казань «ОАО Спектр»')
+		+reviews('Вася', 'г. Москва')
+		+reviews('Людмила Ивановна', 'г. Урюпинск')
 
 
 	h2.js_expander-trigger.trigger_dashed 
 		i Монтаж
 	.js_expander-content
 		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos amet placeat nulla molestiae id repellat harum cum! Ut commodi dolores adipisci provident placeat. Nisi culpa, beatae temporibus sit rerum ut.
+
+		p Rem maxime cupiditate in aliquid ipsa magnam amet repudiandae nam vel iure tenetur quisquam numquam, temporibus quo possimus culpa voluptate ipsam sit.
+
+		.wrap-video
+			iframe.video(src="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=0")
+			a.btn-play(href="#")
 
 	h2.js_expander-trigger.trigger_dashed 
 		i Процесс заказа
@@ -172,48 +189,82 @@
 
 		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, deserunt, veniam non vitae consequatur consectetur nostrum cumque assumenda id molestias suscipit officia error labore. Consequuntur libero, necessitatibus perferendis rem voluptates.
 
-	h1 С сайдингом покупают:
+	mixin swiperProduct()
+		.swiper-container.swiper-product.swiper-sub_product
+			.swiper-wrapper(data-snap-ignore="true")
+				- var x = 4;
+				- for (var i=1; i<=x; i++) {
+					a(href="#").swiper-slide
+						.wrap-img
+							img(src="%=static=%img/content/sub_product2.jpg")
+						.title Профиль D 4,5
+						dl
+							dt Д
+							dd 1 170 мм
+							dt Ш
+							dd 50 мм
+							dt В
+							dd 42 мм
+							dd.large (для «Канада плюс»)
+				-}
+			.swiper-scrollbar.scroll-blue
+
+	.wrap-product-slider.wrapper-tabs
+		h1 С сайдингом покупают:
+		.double-tab.clearfix
+			a(href="#").item.active Планки
+			a(href="#").item.dbl-row Крепежные <br/>  элементы
+		.wrap-list
+			.list.active
+				+swiperProduct()
+			.list
+				+swiperProduct()
+
+	//- 
+	//- .swiper-container.swiper-product.swiper-sub_product
+	//- 	h1 С сайдингом покупают:
+	//- 	.swiper-wrapper(data-snap-ignore="true")
+	//- 		.swiper-slide
+	//- 
+	//- 			img(src="%=static=%img/assets/cart_page/test_sub_product.png")
+	//- 			.title Профиль D 4,5
+	//- 			dl
+	//- 				dt Д
+	//- 				dd 1 170 мм
+	//- 				dt Ш
+	//- 				dd 50 мм
+	//- 				dt В
+	//- 				dd 42 мм
+	//- 
+	//- 		.swiper-slide
+	//- 			img(src="%=static=%img/assets/cart_page/test_sub_product.png")
+	//- 			.title Профиль D 4,5
+	//- 			dl
+	//- 				dt Д
+	//- 				dd 1 170 мм
+	//- 				dt Ш
+	//- 				dd 50 мм
+	//- 				dt В
+	//- 				dd 42 мм
+	//- 
+	//- 		.swiper-slide
+	//- 			img(src="%=static=%img/assets/cart_page/test_sub_product.png")
+	//- 			.title Профиль D 4,5
+	//- 			dl
+	//- 				dt Д
+	//- 				dd 1 170 мм
+	//- 				dt Ш
+	//- 				dd 50 мм
+	//- 				dt В
+	//- 				dd 42 мм
+	//- 
+	//- 
+	//- 	.swiper-scrollbar.scroll-blue
+	//- 
+	//- 
+	//- 
 
 
-
-	.swiper-container.swiper-product.swiper-sub_product
-		.swiper-wrapper(data-snap-ignore="true")
-			.swiper-slide
-
-				img(src="%=static=%img/assets/cart_page/test_sub_product.png")
-				.title Профиль D 4,5
-				dl
-					dt Д
-					dd 1 170 мм
-					dt Ш
-					dd 50 мм
-					dt В
-					dd 42 мм
-
-			.swiper-slide
-				img(src="%=static=%img/assets/cart_page/test_sub_product.png")
-				.title Профиль D 4,5
-				dl
-					dt Д
-					dd 1 170 мм
-					dt Ш
-					dd 50 мм
-					dt В
-					dd 42 мм
-
-			.swiper-slide
-				img(src="%=static=%img/assets/cart_page/test_sub_product.png")
-				.title Профиль D 4,5
-				dl
-					dt Д
-					dd 1 170 мм
-					dt Ш
-					dd 50 мм
-					dt В
-					dd 42 мм
-
-
-		.swiper-scrollbar.scroll-blue
 
 	.section-title Популярные цвета
 	.wrap-select
@@ -277,9 +328,11 @@
 	a.btn.btn-red(href="#") В каталог
 
 
+	hr
 
 	h1 Не забудьте про:
 	.swiper-container.swiper-photo.swiper-svg
+
 		.swiper-wrapper(data-snap-ignore="true")
 			//- - var options = ['Водостоки','Фасадные панели','Газонная решетка','Наличники','Дренажные системы','Кровля','Сайдинг', 'Фасадные панели'];
 			//- 	- for option in options	
