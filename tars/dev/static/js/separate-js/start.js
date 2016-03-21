@@ -205,13 +205,17 @@ jQuery(function ($) {
 
 				$("input").prop("checked", false);
 
-				var $select = $('.wrap-select select').select2();
+				//TODO
+				// var $select = $('.wrap-select select').select2();
+				// $select.val(null).trigger('change.select2');
 
-				$('.select2-selection__choice').remove();//.empty();
-				//$select.val(null).trigger("change");
-				//$select.val(null).trigger('change.select2');
+				$('.select2-selection__choice').remove();
+				$('.select2-results__option').attr("aria-selected", false);//.prop("aria-selected", false);
 
-				$("html, body").animate({ scrollTop: $(src).offset().top - 80 }, 1500);
+				//.empty();
+				//$select.val(null).trigger('change');
+
+				//$("html, body").animate({ scrollTop: $(src).offset().top - 80 }, 1500);
 			})
 
 
@@ -310,14 +314,14 @@ jQuery(function ($) {
 
 
 	$('.wrap-select select').select2();
-	//
+
 	// $(".tags select").select2({
 	// 	//tags: true,
-	// 	//allowClear: true,
+	// 	allowClear: true,
 	// 	placeholder: "множественный выбор"
   // 	//tokenSeparators: [',', ' ']
 	// });
-	//
+
 
 	$('.custom-scroll-blue').each(function () {
 		var el = $(this);
