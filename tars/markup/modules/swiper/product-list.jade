@@ -4,13 +4,11 @@ img.banner(src='%=static=%img/content/banner.jpg' alt='banner')
 	.sort-block-i
 		.wrap-select
 			select(style="width:100%")
-				option(value="1") Все
-				option(value="2") Сайдинг
-				option(value="3") Фасадные панели
-				option(value="4") Дренажные системы
-				option(value="5") Газонная решеткa
-				option(value="6") Водосточные системы
-				option(value="7") Внутренняя отделка
+				- var options = ['Все', 'Сайдинг','Фасадные панели','Дренажные системы','Газонная решеткa', 'Водосточные системы','Внутренняя отделка'];
+					- for option, i in options
+						option(value="#{i}") #{option}
+
+
 
 	//- .scroll-slider.product-slider
 

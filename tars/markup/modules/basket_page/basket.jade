@@ -35,6 +35,46 @@
 				li 10:00 — 10:00, пн.-пт.
 			a.btn.btn-red(href="#") Выбрать
 
+
+.section-white
+
+
+
+
+.section-white_bg-dot
+	h2.js_expander-trigger.trigger_dashed
+		i Добавьте к своему заказу
+	.js_expander-content
+
+		.wrap-select
+			select(style="width:100%")
+				- var options = ['Гвозди','Руки','Ноги','Нюхнуть скунца','Засметанить клубница'];
+					- for option in options
+						option #{option}
+
+		a.btn.btn-red(href="") Добавить к заказу
+
+.section-white
+	h2.js_expander-trigger.trigger_dashed
+		i Добавить товар по артикулу
+	.js_expander-content
+		form(action="")
+			input(type="text", name="", placeholder="Введите код артикула")
+			button.btn.btn-red Добавить в корзину
+
+.section-white_bg-dot
+
+	h2.js_expander-trigger.trigger_dashed
+		i Дополнительные услуги
+	.js_expander-content
+		a.btn.btn-red(href="") Добавить к заказу
+
+.Total-to-pay
+	p Итого к оплате:
+	b 8 675 р.
+
+
+
 .section-white
 	hr
 	+swiper-svg()
