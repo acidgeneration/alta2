@@ -34,28 +34,34 @@
 
 		a.btn.btn-blue(href="") Показать ещё
 
-.section-white
+.section-white.in-cart
+
+	.item_in-cart
+		div
+			img(src="%=static=%img/assets/basket_page/basket_item.png", alt="")
+		div
+			h2 Cайдинг «Аляска» 
+			p Цвет: бежевый
+			p Арт. 125789
+			h2 4 875 р.*
 
 
+		p * Цена указана примерная, точную стоимость вы можете уточнить у вашего дилера при оформлени заказа
+		span
+			input(type='text', placeholder='штук')
+			i или
+			input(type='text', placeholder='м2')
 
-
-	p * Цена указана примерная, точную стоимость вы можете уточнить у вашего дилера при оформлени заказа
-	span
-		input(type='text', placeholder='штук')
-		i или
-		input(type='text', placeholder='м2')
-
-
-	dl.param
-		dt
-			b Цена за еденицу
-		dd 195 р.
-		dt
-			b Вес
-		dd 6,2 кг
-		dt
-			b Длина
-		dd 5 м
+		dl.param
+			dt
+				b Цена за единицу
+			dd 195 р.
+			dt
+				b Вес
+			dd 6,2 кг
+			dt
+				b Длина
+			dd 5 м
 
 
 
@@ -69,7 +75,7 @@
 
 		.wrap-select
 			select(style="width:100%")
-				- var options = ['Гвозди','Руки','Ноги','Нюхнуть скунца','Засметанить клубница'];
+				- var options = ['Гвозди','item_1','item_2','item_3','item_4'];
 					- for option in options
 						option #{option}
 

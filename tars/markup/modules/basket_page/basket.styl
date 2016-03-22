@@ -1,3 +1,25 @@
+//#FDFDFD
+
+.in-cart
+  background #FDFDFD
+  counter-reset num
+.item_in-cart
+
+
+  & > div
+    width 50%
+    float left
+    &:first-child:before
+      counter-increment: num
+      content: counter(num) ". "
+      font-size 2em
+    img
+      float right
+      margin-right 1em
+
+  p
+    color #888
+
 .Total-to-pay
   background #0066cc
   color #FFF

@@ -103,10 +103,19 @@
 
 	h2.js_expander-trigger.trigger_dashed 
 		i Отзывы
-	.js_expander-content
-		h3 Отзывы
+		//- ОТЗЫВЫ
+	.js_expander-content.reviews
 
-		p Отзывы я переделаю на других страницах а то отзывы у нас уже какой раз как элемент встречаются. Только когда я переделаю отзывы единообразно главное не забыть вставить их сюда
+		mixin reviews(name, from)
+			.reviews_item
+				p		
+					b #{name}
+					|, #{from}
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque nemo, doloribus excepturi error, saepe quos voluptatibus at omnis debitis voluptatum quo reiciendis quaerat corporis architecto cum ea sint
+
+		+reviews('Николай Пeтрович', 'г. Комсомольск на Амуре')
+		+reviews('Сидор Сидорович', 'г. Берибеджан')
+		+reviews('Лена Ленина', 'г. Урюпинск')
 
 
 
