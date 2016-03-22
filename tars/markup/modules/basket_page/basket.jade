@@ -74,6 +74,39 @@
 	b 8 675 р.
 
 
+.section-white
+	h2.js_expander-trigger.trigger_dashed
+		i Промокод на скидку
+	.js_expander-content
+		form(action="")
+			input(type="text", name="", placeholder="Введите промокод")
+			button.btn.btn-red Использовать
+
+
+	.HERE_tabs
+		.js_tab-trigger.gray.active Частное лицо
+		.js_tab-trigger.gray Юридическое лицо
+		.js_tab-content
+			form(action="")
+				input(type="text", name="", placeholder="Введите ваше Ф.И.О.")
+				input(type="text", name="", placeholder="Введите ваш e-mail")
+				input(type="text", name="", placeholder="Введите ваш телефон")
+				.wrap-select
+					select(style="width:100%")
+						- var options = ['Москва','Хабаровск','Тутуево','Кукуево','Гадюкино'];
+							- for option in options
+								option #{option}
+				textarea(name="", rows="4", placeholder="Напишите комментарий к заказу")
+				button.btn.btn-red Заказать
+		.js_tab-content
+
+			form(action="")
+				input(type="text", name="", placeholder="Введите ИНН")
+				input(type="text", name="", placeholder="Наименование организации")
+				input(type="text", name="", placeholder="Ваша должность")
+				input(type="text", name="", placeholder="Введите ваше Ф.И.О.")
+				textarea(name="", rows="4", placeholder="Напишите комментарий к заказу")
+				button.btn.btn-red Заказать
 
 .section-white
 	hr
