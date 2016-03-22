@@ -40,11 +40,17 @@ head: {
 	},
 	catalog: {
 		title: 'Каталог страница'
+	},
+	basket: {
+		title: 'Корзина'
 	}
 }
 ,
 
 __pages: [{
+                name: 'basket',
+                href: '/basket.html'
+             },{
                 name: 'cart',
                 href: '/cart.html'
              },{

@@ -3,9 +3,10 @@ html(class="no-js", lang="ru")
 
 	include ../modules/head/head
 	include ../modules/footer/footer
-	include ../modules/catalog-mixin/catalog-mixin
+	//- include ../modules/catalog-mixin/catalog-mixin
 	include ../modules/header/menu
 	include ../modules/header/header
+
 	include ../modules/swiper/swiper-svg
 	head
 		+head(head.cart)
@@ -16,9 +17,8 @@ html(class="no-js", lang="ru")
 
 			+page-header()
 
-			//.section-white
-
-			include ../modules/cart_page/cart
+			//.section-white //to module
+			include ../modules/basket_page/basket
 
 			+footer()
 

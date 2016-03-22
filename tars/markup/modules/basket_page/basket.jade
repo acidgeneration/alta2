@@ -1,0 +1,40 @@
+//mixin _template(data)
+.section-white
+	.section-title Корзина
+	//h1 Корзина
+
+
+.section-white_bg-dot
+	.js_expander-trigger.trigger_dashed-small 
+		i Ваш дилер «Авангард»
+	.js_expander-content
+
+		h2 Выбрать лучшего дилера
+		p Программа автоматически подберет для вас лучшего дилера
+
+		hr
+
+		a.btn.btn-red(href="#") Выбрать
+
+		.best-dealer_counter
+			h2 Компания «Авангард»
+			ul.dealer_list-param
+				li г. Москва, ул. 2-я Магистральная, 19-г
+				li 09:00 — 20:00, пн.-пт.
+			a.btn.btn-red(href="#") Выбрать
+
+			h2 Компания «Компания»
+			ul.dealer_list-param
+				li г. Москва, Красная площадь дом 1
+				li 10:00 — 10:00, пн.-пт.
+			a.btn.btn-red(href="#") Выбрать
+
+			h2 Компания «НИИ Втор Чер Мет Загран Поставка»
+			ul.dealer_list-param
+				li г. Москва, Таганская дом 10
+				li 10:00 — 10:00, пн.-пт.
+			a.btn.btn-red(href="#") Выбрать
+
+.section-white
+	hr
+	+swiper-svg()

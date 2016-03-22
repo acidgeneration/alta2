@@ -22,5 +22,8 @@ head: {
 	},
 	catalog: {
 		title: 'Каталог страница'
+	},
+	basket: {
+		title: 'Корзина'
 	}
 }
