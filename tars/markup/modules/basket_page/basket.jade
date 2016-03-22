@@ -8,35 +8,56 @@
 	.js_expander-trigger.trigger_dashed-small 
 		i Ваш дилер «Авангард»
 	.js_expander-content
-
 		h2 Выбрать лучшего дилера
 		p Программа автоматически подберет для вас лучшего дилера
-
 		hr
-
 		a.btn.btn-red(href="#") Выбрать
-
 		.best-dealer_counter
 			h2 Компания «Авангард»
 			ul.dealer_list-param
 				li г. Москва, ул. 2-я Магистральная, 19-г
 				li 09:00 — 20:00, пн.-пт.
-			a.btn.btn-red(href="#") Выбрать
-
+			a.btn.btn-gray(href="#") Ваш дилер
 			h2 Компания «Компания»
 			ul.dealer_list-param
 				li г. Москва, Красная площадь дом 1
 				li 10:00 — 10:00, пн.-пт.
 			a.btn.btn-red(href="#") Выбрать
-
 			h2 Компания «НИИ Втор Чер Мет Загран Поставка»
 			ul.dealer_list-param
 				li г. Москва, Таганская дом 10
 				li 10:00 — 10:00, пн.-пт.
 			a.btn.btn-red(href="#") Выбрать
 
+		.js_expander-close
+			a(href="") Скрыть информацию
+
+		a.btn.btn-blue(href="") Показать ещё
 
 .section-white
+
+
+
+
+	p * Цена указана примерная, точную стоимость вы можете уточнить у вашего дилера при оформлени заказа
+	span
+		input(type='text', placeholder='штук')
+		i или
+		input(type='text', placeholder='м2')
+
+
+	dl.param
+		dt
+			b Цена за еденицу
+		dd 195 р.
+		dt
+			b Вес
+		dd 6,2 кг
+		dt
+			b Длина
+		dd 5 м
+
+
 
 
 

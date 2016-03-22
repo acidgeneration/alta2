@@ -39,14 +39,26 @@ btn()
 		color #fff
 		&:hover
 			background #0063A5
+	&-gray
+		background #888
+		color #fff
+		&:hover
+			background #555
+
 	&.btn-simple
 		text-decoration underline
 		color color-dark //#444
 
 
+text-overflow()
+	white-space nowrap
+	text-overflow ellipsis
+	overflow hidden
 
 .gray
 	btn()
+	padding 0 6px
+	text-overflow()
 
 	color #444
 	background #FFF

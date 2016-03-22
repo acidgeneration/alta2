@@ -165,6 +165,12 @@ jQuery(function ($) {
 
 			})
 
+			//TODO да бля
+			.on('click', '.js_expander-close', function (e) {
+				e.preventDefault();
+				$(this).parent('.js_expander-content').slideUp("slow");
+			})
+
 			//гармошка_ СО СМЕНОЙ ТЕКСТА
 			.on('click', '.js_more-trigger', function (e) {
 				e.preventDefault();
