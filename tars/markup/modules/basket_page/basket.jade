@@ -13,11 +13,8 @@ mixin item_basket()
 
 		//- .js_expander-trigger.trigger_dashed-small
 
-		.js_expander-trigger.trigger_dashed-small
-			i Подробнее
 
-		.js_expander-content
-
+		.js_more-content
 			p * Цена указана примерная, точную стоимость вы можете уточнить у вашего дилера при оформлени заказа
 			span
 				input(type='text', placeholder='штук')
@@ -34,6 +31,8 @@ mixin item_basket()
 					b Длина
 				dd 5 м
 
+
+		.js_more-trigger.basket_more(data-tgl-text="Подробнее", data-def-text="Скрыть информацию") Подробнее
 
 
 
