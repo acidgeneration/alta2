@@ -37,9 +37,11 @@
 .section-white.basket
 
 	.item_basket
-		i.js_basket-item_remove ✖
+		i.js_basket-item_remove(title="Удалить") ✖
+
 		.item_basket_L
 			img(src="%=static=%img/assets/basket_page/basket_item.png", alt="")
+
 		ul.item_basket_R
 			li Cайдинг «Аляска» 
 			li Цвет: бежевый
@@ -74,12 +76,25 @@
 		i Добавьте к своему заказу
 	.js_expander-content
 
+
+		img(src="%=static=%img/assets/basket_page/basket_add.png", alt="")
+
 		.wrap-select
 			select(style="width:100%")
 				- var options = ['Гвозди','item_1','item_2','item_3','item_4'];
 					- for option in options
 						option #{option}
 
+
+		dl.param
+			dt
+				b Цена за единицу
+			dd 240 р.
+			dt
+				b Вес
+			dd 4 кг
+
+		.basket_add-price 480 р.
 		a.btn.btn-red(href="") Добавить к заказу
 
 .section-white
@@ -112,7 +127,8 @@
 .Total-to-pay
 	p Итого к оплате:
 	b 8 675 р.
-
+.Total-weight
+	| Общий вес: 36, 4 кг
 
 .section-white
 	h2.js_expander-trigger.trigger_dashed
