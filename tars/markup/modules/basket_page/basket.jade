@@ -10,6 +10,14 @@ mixin item_basket()
 			li Цвет: бежевый
 			li Арт. 125789
 			li 4 875 р.*
+
+		//- .js_expander-trigger.trigger_dashed-small
+
+		js_more-trigger.trigger_dashed-small
+			i Подробнее
+
+
+
 		p * Цена указана примерная, точную стоимость вы можете уточнить у вашего дилера при оформлени заказа
 		span
 			input(type='text', placeholder='штук')
@@ -63,7 +71,7 @@ mixin item_basket()
 
 		a.btn.btn-blue(href="") Показать ещё
 
-.section-white_separator.basket
+.section_basket
 
 	+item_basket()
 	+item_basket()

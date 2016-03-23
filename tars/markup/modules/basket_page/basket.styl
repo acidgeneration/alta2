@@ -7,6 +7,8 @@
   color #888
   &:hover
     color #000
+  &:active
+    color red
 
 ._W50
   width 48%
@@ -27,24 +29,15 @@
 
 
 
-.basket
+.section_basket
+  padding 1em 13px 1px
   background #FDFDFD
   counter-reset num
 
 .item_basket
-  // cf()
-  // & > div
-  //   width 48%
-  //   //float left
-  //   display inline-block
-  //
-  //   // &:first-child:before
-  //   //   counter-increment: num
-  //   //   content: counter(num) ". "
-  //   //   font-size 2em
-  //   // img
-  //   //   float right
-  //   //   margin-right 1em
+  padding 3em 0 0
+  & + .item_basket
+    border-top 1px solid #CCC
   p,li
     color #888
 
