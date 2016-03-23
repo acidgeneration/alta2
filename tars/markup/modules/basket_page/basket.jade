@@ -65,13 +65,7 @@
 			dt
 				b Длина
 			dd 5 м
-		//- - var param = {
-		//- 	"Цена за единицу" : "190 р.",
-		//- 	"Вес" : "6,2 кг",
-		//- 	"Длина" : "5 м"
-		//- };   
-		//- 
-		//- +dl_param(param)
+
 
 
 
@@ -85,13 +79,32 @@
 
 		img(src="%=static=%img/assets/basket_page/basket_add.png", alt="")
 
+
 		.wrap-select
 			select(style="width:100%")
 				- var options = ['Гвозди','item_1','item_2','item_3','item_4'];
 					- for option in options
 						option #{option}
+		span.add_quantity
+			input(type="number", name="", placeholder="1")
+			b компл.
+		dl.param
+			dt
+				b Цена за единицу
+			dd 0 р.
+			dt
+				b Вес
+			dd -
+		.param_sum 0 р.
 
-
+		.wrap-select
+			select(style="width:100%")
+				- var options = ['Дюбели','item_1','item_2','item_3','item_4'];
+					- for option in options
+						option #{option}
+		span.add_quantity
+			input(type="number", name="", placeholder="1")
+			b компл.
 		dl.param
 			dt
 				b Цена за единицу
@@ -99,6 +112,9 @@
 			dt
 				b Вес
 			dd 4 кг
+		.param_sum 480 р.
+
+
 
 		.basket_add-price 480 р.
 		a.btn.btn-red(href="") Добавить к заказу
