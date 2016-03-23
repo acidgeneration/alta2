@@ -10,7 +10,7 @@ mixin items(arr)
 
 
 h1 Где купить сайдинг?
-.wrap-select(data-snap-ignore="true")
+.wrap-select
 	- var options = ["Москва", "Московская область", "Тутуево", "Кукуево"];
 		select(style="width:100%")
 			- for option in options
@@ -69,7 +69,7 @@ h1 Где купить сайдинг?
 
 		.label-select 
 			i Сортировать
-			.wrap-select(data-snap-ignore="true")
+			.wrap-select
 				- var options = ["по сериям", "Сортировать по...", "Сортировать по...", "Сортировать по..."];
 					select(style="width:100%")
 						- for option in options
