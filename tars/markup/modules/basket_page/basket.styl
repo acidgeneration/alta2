@@ -1,24 +1,54 @@
 //#FDFDFD
+// ._bg_FDFDFD
+//   background #FDFDFD
+.js_basket-item_remove
+  cursor pointer
+  font-size 1.6em
+  color #888
 
-.in-cart
+
+
+.basket
   background #FDFDFD
   counter-reset num
-.item_in-cart
 
-
-  & > div
-    width 50%
-    float left
-    &:first-child:before
-      counter-increment: num
-      content: counter(num) ". "
-      font-size 2em
-    img
-      float right
-      margin-right 1em
-
+.item_basket
+  // cf()
+  // & > div
+  //   width 48%
+  //   //float left
+  //   display inline-block
+  //
+  //   // &:first-child:before
+  //   //   counter-increment: num
+  //   //   content: counter(num) ". "
+  //   //   font-size 2em
+  //   // img
+  //   //   float right
+  //   //   margin-right 1em
   p
     color #888
+
+.item_basket_L
+.item_basket_R
+  display inline-block
+  vertical-align top
+.item_basket_L
+  width 40%
+  &:before
+    counter-increment: num
+    content: counter(num) ". "
+    font-size 2em
+  img
+    float right
+    margin-right 1em
+
+.item_basket_R
+  width 50%
+
+
+
+
 
 .Total-to-pay
   background #0066cc
