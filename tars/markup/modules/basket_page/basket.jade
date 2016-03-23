@@ -13,26 +13,29 @@ mixin item_basket()
 
 		//- .js_expander-trigger.trigger_dashed-small
 
-		js_more-trigger.trigger_dashed-small
+		.js_expander-trigger.trigger_dashed-small
 			i Подробнее
 
+		.js_expander-content
+
+			p * Цена указана примерная, точную стоимость вы можете уточнить у вашего дилера при оформлени заказа
+			span
+				input(type='text', placeholder='штук')
+				i или
+				input(type='text', placeholder='м2')
+			dl.param
+				dt
+					b Цена за единицу
+				dd 192 р.
+				dt
+					b Вес
+				dd 6,2 кг
+				dt
+					b Длина
+				dd 5 м
 
 
-		p * Цена указана примерная, точную стоимость вы можете уточнить у вашего дилера при оформлени заказа
-		span
-			input(type='text', placeholder='штук')
-			i или
-			input(type='text', placeholder='м2')
-		dl.param
-			dt
-				b Цена за единицу
-			dd 192 р.
-			dt
-				b Вес
-			dd 6,2 кг
-			dt
-				b Длина
-			dd 5 м
+
 
 
 
