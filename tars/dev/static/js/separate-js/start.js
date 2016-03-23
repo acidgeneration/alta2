@@ -165,6 +165,11 @@ jQuery(function ($) {
 
 			})
 
+			//js_basket-item_remove
+			.on('click', '.js_basket-item_remove', function () {
+				$(this).parent('.item_basket').hide("slow");
+			})
+
 			//TODO да бля
 			.on('click', '.js_expander-close', function (e) {
 				e.preventDefault();

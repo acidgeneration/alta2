@@ -1,6 +1,35 @@
 //mixin _template(data)
-.section-white
-	.section-title Корзина
+
+mixin item_basket()
+	.item_basket
+		i.js_basket-item_remove(title="Удалить") ✖
+		.item_basket_L
+			img(src="%=static=%img/assets/basket_page/basket_item.png", alt="")
+		ul.item_basket_R
+			li Cайдинг «Аляска» 
+			li Цвет: бежевый
+			li Арт. 125789
+			li 4 875 р.*
+		p * Цена указана примерная, точную стоимость вы можете уточнить у вашего дилера при оформлени заказа
+		span
+			input(type='text', placeholder='штук')
+			i или
+			input(type='text', placeholder='м2')
+		dl.param
+			dt
+				b Цена за единицу
+			dd 192 р.
+			dt
+				b Вес
+			dd 6,2 кг
+			dt
+				b Длина
+			dd 5 м
+
+
+
+.section-white_separator
+	h1 Корзина
 	//h1 Корзина
 
 
@@ -36,37 +65,10 @@
 
 .section-white_separator.basket
 
-	.item_basket
-		i.js_basket-item_remove(title="Удалить") ✖
-
-		.item_basket_L
-			img(src="%=static=%img/assets/basket_page/basket_item.png", alt="")
-
-		ul.item_basket_R
-			li Cайдинг «Аляска» 
-			li Цвет: бежевый
-			li Арт. 125789
-			li 4 875 р.*
-
-
-		p * Цена указана примерная, точную стоимость вы можете уточнить у вашего дилера при оформлени заказа
-		span
-			input(type='text', placeholder='штук')
-			i или
-			input(type='text', placeholder='м2')
-
-		dl.param
-			dt
-				b Цена за единицу
-			dd 192 р.
-			dt
-				b Вес
-			dd 6,2 кг
-			dt
-				b Длина
-			dd 5 м
-
-
+	+item_basket()
+	+item_basket()
+	+item_basket()
+	+item_basket()
 
 
 
