@@ -50,7 +50,7 @@ mixin item_gallery()
 .section-title Галерея
 
 //.sort-block-i
-.wrap-select
+.wrap-select(data-snap-ignore="true")
 	- var options = ["Все", "Сайдинг", "Фасадные панели", "Наличники", "Откосы", "Панели ПВХ", "Вагонка ПВХ", "Кровля", "Газонная решетка", "Террасная доска", "Водостоки", "Дренажные системы"];
 		select(style="width:100%")
 			- for option, i in options

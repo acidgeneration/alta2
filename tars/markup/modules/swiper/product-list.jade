@@ -2,7 +2,7 @@ img.banner(src='%=static=%img/content/banner.jpg' alt='banner')
 .sort-block
 	.section-title Популярные товары
 	.sort-block-i
-		.wrap-select
+		.wrap-select(data-snap-ignore="true")
 			select(style="width:100%")
 				- var options = ['Все', 'Сайдинг','Фасадные панели','Дренажные системы','Газонная решеткa', 'Водосточные системы','Внутренняя отделка'];
 					- for option, i in options

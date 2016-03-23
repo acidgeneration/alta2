@@ -39,8 +39,8 @@ mixin item_basket()
 	.js_expander-content
 		h2 Выбрать лучшего дилера
 		p Программа автоматически подберет для вас лучшего дилера
-		hr
 		a.btn.btn-red(href="#") Выбрать
+		hr
 		.best-dealer_counter
 			h2 Компания «Авангард»
 			ul.dealer_list-param
@@ -87,7 +87,7 @@ mixin item_basket()
 				br
 				| крепления
 		.js_expander-content
-			.wrap-select
+			.wrap-select(data-snap-ignore="true")
 				select(style="width:100%")
 					- var options = ['Гвозди','item_1','item_2','item_3','item_4'];
 						- for option in options
@@ -104,7 +104,7 @@ mixin item_basket()
 				dd -
 			.param_sum 0 р.
 
-			.wrap-select
+			.wrap-select(data-snap-ignore="true")
 				select(style="width:100%")
 					- var options = ['Дюбели','item_1','item_2','item_3','item_4'];
 						- for option in options
@@ -173,7 +173,7 @@ mixin item_basket()
 				input(type="text", name="", placeholder="Введите ваше Ф.И.О.")
 				input(type="text", name="", placeholder="Введите ваш e-mail")
 				input(type="text", name="", placeholder="Введите ваш телефон")
-				.wrap-select
+				.wrap-select(data-snap-ignore="true")
 					select(style="width:100%")
 						- var options = ['Москва','Хабаровск','Тутуево','Кукуево','Гадюкино'];
 							- for option in options
