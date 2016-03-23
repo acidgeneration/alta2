@@ -76,47 +76,49 @@
 		i Добавьте к своему заказу
 	.js_expander-content
 
+		._W50
+			img(src="%=static=%img/assets/basket_page/basket_add.png", alt="")
 
-		img(src="%=static=%img/assets/basket_page/basket_add.png", alt="")
+		.js_expander-trigger._W50
+			i
+				| Cистема 
+				br
+				| крепления
+		.js_expander-content
+			.wrap-select
+				select(style="width:100%")
+					- var options = ['Гвозди','item_1','item_2','item_3','item_4'];
+						- for option in options
+							option #{option}
+			span.add_quantity
+				input(type="number", name="", placeholder="1")
+				b компл.
+			dl.param
+				dt
+					b Цена за единицу
+				dd 0 р.
+				dt
+					b Вес
+				dd -
+			.param_sum 0 р.
 
-
-		.wrap-select
-			select(style="width:100%")
-				- var options = ['Гвозди','item_1','item_2','item_3','item_4'];
-					- for option in options
-						option #{option}
-		span.add_quantity
-			input(type="number", name="", placeholder="1")
-			b компл.
-		dl.param
-			dt
-				b Цена за единицу
-			dd 0 р.
-			dt
-				b Вес
-			dd -
-		.param_sum 0 р.
-
-		.wrap-select
-			select(style="width:100%")
-				- var options = ['Дюбели','item_1','item_2','item_3','item_4'];
-					- for option in options
-						option #{option}
-		span.add_quantity
-			input(type="number", name="", placeholder="1")
-			b компл.
-		dl.param
-			dt
-				b Цена за единицу
-			dd 240 р.
-			dt
-				b Вес
-			dd 4 кг
-		.param_sum 480 р.
-
-
-
-		.basket_add-price 480 р.
+			.wrap-select
+				select(style="width:100%")
+					- var options = ['Дюбели','item_1','item_2','item_3','item_4'];
+						- for option in options
+							option #{option}
+			span.add_quantity
+				input(type="number", name="", placeholder="1")
+				b компл.
+			dl.param
+				dt
+					b Цена за единицу
+				dd 240 р.
+				dt
+					b Вес
+				dd 4 кг
+			.param_sum 480 р.
+			.basket_add-price 480 р.
 		a.btn.btn-red(href="") Добавить к заказу
 
 .section-white
