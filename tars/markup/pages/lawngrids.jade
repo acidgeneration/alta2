@@ -9,15 +9,15 @@ html(class="no-js", lang="ru")
 		+head(head.lawngrids)
 	body
 		+menu()
-
 		.content.snap-content#content
-
 			+page-header()
 
-			//.section-white
-			include ../modules/lawngrids_page/lawngrids
+			.content-i
 
-			+footer()
+				//.section-white
+				include ../modules/lawngrids_page/lawngrids
+
+				+footer()
 
 		//- Main scripts. You can replace it, but I recommend you to leave it here
 		script(src='%=static=%js/main%=hash=%%=min=%.js')

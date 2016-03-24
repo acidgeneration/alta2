@@ -3,25 +3,23 @@ html(class="no-js", lang="ru")
 
 	include ../modules/head/head
 	include ../modules/footer/footer
-	//- include ../modules/catalog-mixin/catalog-mixin
 	include ../modules/header/menu
 	include ../modules/header/header
-
 	include ../modules/swiper/swiper-svg
 	include ../modules/swiper/swiper-product
 	head
 		+head(head.basket)
 	body
 		+menu()
-
 		.content.snap-content#content
-
 			+page-header()
 
-			//.section-white //to module
-			include ../modules/basket_page/basket
+			.content-i
 
-			+footer()
+				//.section-white //to module
+				include ../modules/basket_page/basket
+
+				+footer()
 
 		//- Main scripts. You can replace it, but I recommend you to leave it here
 		script(src='%=static=%js/main%=hash=%%=min=%.js')

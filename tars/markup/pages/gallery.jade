@@ -8,17 +8,16 @@ html(class="no-js", lang="ru")
 	head
 		+head(head.gallery)
 	body
-
 		+menu()
-
 		.content.snap-content#content
 			+page-header()
 
-			.section-white
+			.content-i
 
-				include ../modules/gallery_page/gallery
+				.section-white
+					include ../modules/gallery_page/gallery
 
-			+footer()
+				+footer()
 
 		//- Main scripts. You can replace it, but I recommend you to leave it here
 		script(src='%=static=%js/main%=hash=%%=min=%.js')

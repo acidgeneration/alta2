@@ -12,35 +12,27 @@ html(class="no-js", lang="ru")
 		.content.__bg.snap-content#content
 			+page-header()
 
-			.sub-link
-				a.link(href="") Продукция
-				a.link(href="") Где купить
+			.content-i
 
-			//Первый
-			include ../modules/header/intro
+				.sub-link
+					a.link(href="") Продукция
+					a.link(href="") Где купить
 
-			//синие отзывы
-			include ../modules/header/blue-reviews
-
-			//нумерованные табы
-			include ../modules/counter-tabs/counter-tabs
-
-			//Популярные товары
-
-			include ../modules/swiper/product-list
-
-			.section-white
-
-				include ../modules/main_page/about-company
-
-			.section-white
-				include ../modules/swiper/photo
-
-
-			.section-white
-				include ../modules/main_page/news
-
-			+footer()
+				//Первый
+				include ../modules/header/intro
+				//синие отзывы
+				include ../modules/header/blue-reviews
+				//нумерованные табы
+				include ../modules/counter-tabs/counter-tabs
+				//Популярные товары
+				include ../modules/swiper/product-list
+				.section-white
+					include ../modules/main_page/about-company
+				.section-white
+					include ../modules/swiper/photo
+				.section-white
+					include ../modules/main_page/news
+				+footer()
 
 		//- Main scripts. You can replace it, but I recommend you to leave it here
 		script(src='%=static=%js/main%=hash=%%=min=%.js')

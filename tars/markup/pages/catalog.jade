@@ -1,128 +1,129 @@
 doctype html
 html(class="no-js", lang="ru")
 
-    include ../modules/head/head
-    include ../modules/footer/footer
-    include ../modules/catalog-mixin/catalog-mixin
-    include ../modules/header/menu
-    include ../modules/header/header
-    head
-        +head(head.catalog)
-    body
-        +menu()
-        .content.snap-content#content
-            +page-header()
+	include ../modules/head/head
+	include ../modules/footer/footer
+	include ../modules/catalog-mixin/catalog-mixin
+	include ../modules/header/menu
+	include ../modules/header/header
+	head
+		+head(head.catalog)
+	body
+		+menu()
+		.content.snap-content#content
+			+page-header()
 
-            .content-i
+			.content-i
 
-                .section-white
-                    +productList2()
-                    .wrap-filters#filters
-                        a(href="#").btn.btn-blue.btn-open-filters Показать фильтр
-                            i.icon-arrow-b
-                            i.icon-arrow-t
+				.section-white
+					+productList2()
+					.wrap-filters#filters
+						a(href="#").btn.btn-blue.btn-open-filters Показать фильтр
+							i.icon-arrow-b
+							i.icon-arrow-t
 
-                        .drop-down
-                            .filter-list
-                                .filter.wrapper-tabs
-                                    h4.sub-title.dark Цвет
-                                    .double-tab.clearfix
-                                        a(href="#").item.active Основные
-                                        a(href="#").item Палитра
-                                    .wrap-list
-                                        .list.active
-                                            +tableColor1()
-                                        .list
-                                            +tableColor2()
-                                .filter.wrapper-tabs
-                                    h4.sub-title.dark Имитация материала
-                                    .double-tab.clearfix
-                                        a(href="#").item.active Основные
-                                        a(href="#").item Все
-                                    .wrap-list
-                                        .list.active
-                                            +tableMaterial1()
-                                        .list
-                                            +tableMaterial2()
-                                .filter.wrapper-drop
-                                    a.sub-title.dark.btn-filter-drop(href="#") Материалы
-                                        i.icon-arrow-b
-                                        i.icon-arrow-t
-                                    .drop-down
-                                        +checkList1()
-                                .filter.wrapper-drop
-                                    a.sub-title.dark.btn-filter-drop(href="#") Класс
-                                        i.icon-arrow-b
-                                        i.icon-arrow-t
-                                    .drop-down
-                                        +checkList2()
-                                .filter.wrapper-drop
-                                    a.sub-title.dark.btn-filter-drop(href="#") Серия
-                                        i.icon-arrow-b
-                                        i.icon-arrow-t
-                                    .drop-down
-                                        +checkList3()
-                                .filter.wrapper-drop
-                                    a.sub-title.dark.btn-filter-drop(href="#") Доп. параметры
-                                        i.icon-arrow-b
-                                        i.icon-arrow-t
-                                    .drop-down
-                                        +checkList4()
-                                .filter.wrapper-drop
-                                    a.sub-title.dark.btn-filter-drop(href="#") Цена
-                                        i.icon-arrow-b
-                                        i.icon-arrow-t
-                                    .drop-down.wrapper-tabs
-                                        .double-tab.clearfix
-                                            a(href="#").item.active За штуку
-                                            a(href="#").item За упаковку
-                                        .wrap-list
-                                            .list.active
-                                                .wrap-amount.clearfix
-                                                    em от
-                                                    .wrap-input
-                                                        input(type='text')
-                                                    em до
-                                                    .wrap-input
-                                                        input(type='text')
-                                                    em р.
-                                            .list
-                                                .wrap-amount.clearfix
-                                                    em от
-                                                    .wrap-input
-                                                        input(type='text')
-                                                    em до
-                                                    .wrap-input
-                                                        input(type='text')
-                                                    em р.
-                            a(href="#").btn.btn-red Показать 120 моделей
-                            a(href="#filters").btn.btn-simple.btn-filter-delete Сбросить фильтр
+						.drop-down
+							.filter-list
+								.filter.wrapper-tabs
+									h4.sub-title.dark Цвет
+									.double-tab.clearfix
+										a(href="#").item.active Основные
+										a(href="#").item Палитра
+									.wrap-list
+										.list.active
+											+tableColor1()
+										.list
+											+tableColor2()
+								.filter.wrapper-tabs
+									h4.sub-title.dark Имитация материала
+									.double-tab.clearfix
+										a(href="#").item.active Основные
+										a(href="#").item Все
+									.wrap-list
+										.list.active
+											+tableMaterial1()
+										.list
+											+tableMaterial2()
+								.filter.wrapper-drop
+									a.sub-title.dark.btn-filter-drop(href="#") Материалы
+										i.icon-arrow-b
+										i.icon-arrow-t
+									.drop-down
+										+checkList1()
+								.filter.wrapper-drop
+									a.sub-title.dark.btn-filter-drop(href="#") Класс
+										i.icon-arrow-b
+										i.icon-arrow-t
+									.drop-down
+										+checkList2()
+								.filter.wrapper-drop
+									a.sub-title.dark.btn-filter-drop(href="#") Серия
+										i.icon-arrow-b
+										i.icon-arrow-t
+									.drop-down
+										+checkList3()
+								.filter.wrapper-drop
+									a.sub-title.dark.btn-filter-drop(href="#") Доп. параметры
+										i.icon-arrow-b
+										i.icon-arrow-t
+									.drop-down
+										+checkList4()
+								.filter.wrapper-drop
+									a.sub-title.dark.btn-filter-drop(href="#") Цена
+										i.icon-arrow-b
+										i.icon-arrow-t
+									.drop-down.wrapper-tabs
+										.double-tab.clearfix
+											a(href="#").item.active За штуку
+											a(href="#").item За упаковку
+										.wrap-list
+											.list.active
+												.wrap-amount.clearfix
+													em от
+													.wrap-input
+														input(type='text')
+													em до
+													.wrap-input
+														input(type='text')
+													em р.
+											.list
+												.wrap-amount.clearfix
+													em от
+													.wrap-input
+														input(type='text')
+													em до
+													.wrap-input
+														input(type='text')
+													em р.
+							a(href="#").btn.btn-red Показать 120 моделей
+							a(href="#filters").btn.btn-simple.btn-filter-delete Сбросить фильтр
 
-                    .select-sort.clearfix
-                        label(for="sort1") Сортировать
-                        .wrap-select
-                            select(style="width:100%")#sort1
-                                option(value="1") по сериям
-                                option(value="2") по цене
-                                option(value="3") по цене
-                                option(value="4") по цене
+					.select-sort.clearfix
+						label(for="sort1") Сортировать
+						.wrap-select
+							select(style="width:100%")#sort1
+								option(value="1") по сериям
+								option(value="2") по цене
+								option(value="3") по цене
+								option(value="4") по цене
 
 
-                    +productsGrid('sortSeries')
-                    +productsGrid2('sortSeries')
-                    .wrap-product-slider.wrapper-tabs
-                        h1 С сайдингом покупают:
-                        .double-tab.clearfix
-                            a(href="#").item.active Планки
-                            a(href="#").item.dbl-row Крепежные <br/>  элементы
-                        .wrap-list
-                            .list.active
-                                +swiperProduct()
-                            .list
-                                +swiperProduct()
-                    +productList()
+					+productsGrid('sortSeries')
+					+productsGrid2('sortSeries')
+					.wrap-product-slider.wrapper-tabs
+						h1 С сайдингом покупают:
+						.double-tab.clearfix
+							a(href="#").item.active Планки
+							a(href="#").item.dbl-row Крепежные <br/>  элементы
+						.wrap-list
+							.list.active
+								+swiperProduct()
+							.list
+								+swiperProduct()
+					+productList()
 
-                 +footer()
-        //- Main scripts. You can replace it, but I recommend you to leave it here
-        script(src='%=static=%js/main%=hash=%%=min=%.js')
-        script(src='%=static=%js/separate-js/start.js')
+				+footer()
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')
+		script(src='%=static=%js/separate-js/start.js')

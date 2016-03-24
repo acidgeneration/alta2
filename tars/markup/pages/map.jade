@@ -10,16 +10,15 @@ html(class="no-js", lang="ru")
 		+head(head.map)
 	body
 		+menu()
-
 		.content.snap-content#content
-
 			+page-header()
 
-			.section-white
+			.content-i
 
-				include ../modules/map_page/map
+				.section-white
+					include ../modules/map_page/map
 
-			+footer()
+				+footer()
 
 		//- Main scripts. You can replace it, but I recommend you to leave it here
 		script(src='%=static=%js/main%=hash=%%=min=%.js')

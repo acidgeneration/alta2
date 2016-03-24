@@ -12,16 +12,13 @@ html(class="no-js", lang="ru")
 		+head(head.cart)
 	body
 		+menu()
-
 		.content.snap-content#content
-
 			+page-header()
 
-			//.section-white
-
-			include ../modules/cart_page/cart
-
-			+footer()
+			.content-i
+				//.section-white
+				include ../modules/cart_page/cart
+				+footer()
 
 		//- Main scripts. You can replace it, but I recommend you to leave it here
 		script(src='%=static=%js/main%=hash=%%=min=%.js')
