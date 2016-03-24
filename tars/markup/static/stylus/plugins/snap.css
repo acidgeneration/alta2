@@ -17,8 +17,7 @@ html, body {
   width: auto;
   height: auto;
   z-index: 2;
-  overflow-y: auto;
-  overflow-x:hidden;
+  overflow:hidden;
   -webkit-overflow-scrolling: touch;
 }
 

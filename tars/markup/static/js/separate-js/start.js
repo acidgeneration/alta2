@@ -355,4 +355,8 @@ jQuery(function ($) {
 			snapper.close();
 		}
 	});
+	var scroller = new AppScroll({
+		toolbar: toolbarElement,
+		scroller: contentElement
+	});
 });
