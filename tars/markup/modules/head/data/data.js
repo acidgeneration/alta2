@@ -29,14 +29,11 @@ head: {
 	certificates: {
 		title: 'Сертификаты'
 	},
-	certificates: {
-		title: 'Сертификаты'
-	},
 	about : {
 		title: 'О компании'
 	},
-	certificates: {
-		title: 'manufacture'
+	manufacture: {
+		title: 'Производство'
 	}
 
 }
