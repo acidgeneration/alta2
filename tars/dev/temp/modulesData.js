@@ -58,6 +58,9 @@ head: {
 ,
 
 __pages: [{
+                name: 'about',
+                href: '/about.html'
+             },{
                 name: 'basket',
                 href: '/basket.html'
              },{
@@ -81,6 +84,9 @@ __pages: [{
              },{
                 name: 'lawngrids',
                 href: '/lawngrids.html'
+             },{
+                name: 'manufacture',
+                href: '/manufacture.html'
              },{
                 name: 'map',
                 href: '/map.html'

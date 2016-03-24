@@ -1,0 +1,28 @@
+doctype html
+html(class="no-js", lang="ru")
+
+	include ../modules/head/head
+	include ../modules/footer/footer
+
+	include ../modules/header/menu
+	include ../modules/header/header
+
+
+	head
+		+head(head.about)
+	body
+		+menu()
+
+		.content.snap-content#content
+
+			+page-header()
+
+			//.section-white to module
+			include ../modules/about_page/about
+
+			+footer()
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')
+		//
+		script(src='%=static=%js/separate-js/start.js')
