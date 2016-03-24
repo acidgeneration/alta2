@@ -43,7 +43,20 @@ head: {
 	},
 	basket: {
 		title: 'Корзина'
+	},
+	certificates: {
+		title: 'Сертификаты'
+	},
+	certificates: {
+		title: 'Сертификаты'
+	},
+	about : {
+		title: 'О компании'
+	},
+	certificates: {
+		title: 'manufacture'
 	}
+
 }
 ,
 
@@ -59,6 +72,9 @@ __pages: [{
              },{
                 name: 'catalog_sort_price',
                 href: '/catalog_sort_price.html'
+             },{
+                name: 'certificates',
+                href: '/certificates.html'
              },{
                 name: 'gallery',
                 href: '/gallery.html'

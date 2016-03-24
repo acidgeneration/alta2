@@ -25,5 +25,18 @@ head: {
 	},
 	basket: {
 		title: 'Корзина'
+	},
+	certificates: {
+		title: 'Сертификаты'
+	},
+	certificates: {
+		title: 'Сертификаты'
+	},
+	about : {
+		title: 'О компании'
+	},
+	certificates: {
+		title: 'manufacture'
 	}
+
 }
