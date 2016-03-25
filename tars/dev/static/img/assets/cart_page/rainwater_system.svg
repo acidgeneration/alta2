@@ -1,1 +1,32 @@
-<svg baseProfile="full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><g class="group_SVG" fill="none" stroke-miterlimit="10"><path d="M30.1,21.5c0,2.9-2.4,5.3-5.3,5.3s-5.3-2.4-5.3-5.3S24.8,11,24.8,11 S30.1,18.6,30.1,21.5z"/><path d="M-9.9 24.6L19.8 38.3"/><path d="M-21.7 29.2L8 42.8"/><path d="M29.5 9.5L59.2 23.2"/><path d="M30.1 22.1L45.4 28.8"/><path d="M13.7 14.9L20.7 17.9"/><path d="M45.2,28.8C46.4,35,44.6,47,35.6,49c-11.7,2.6-15.3-8.9-15.8-10.9"/><path d="M19.5 38.2L7.8 42.9"/><path d="M59.2 23.2L45.2 28.8"/><path d="M8 42.8L5.9 60"/><path d="M15.1 40L12.6 60"/><path d="M22 43.3L20 60"/><path d="M28.8 48.7L27.3 60"/><path d="M35.1 49L34 60.5"/><path d="M43.2 42.8L40.5 61.9"/><path d="M51.8 26.1L47.4 61.9"/><path d="M59.3 23.1L54.6 62.9"/><path d="M0.2 0H60.1V60H0.2z"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+		baseProfile="full"
+		xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		xmlns:ev="http://www.w3.org/2001/xml-events"
+		viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
+	<g class="group_SVG" fill="none" stroke="" stroke-miterlimit="10">
+	<path d="M30.1,21.5c0,2.9-2.4,5.3-5.3,5.3s-5.3-2.4-5.3-5.3S24.8,11,24.8,11
+		S30.1,18.6,30.1,21.5z"/>
+	<line x1="-9.9" y1="24.6" x2="19.8" y2="38.3"/>
+	<line x1="-21.7" y1="29.2" x2="8" y2="42.8"/>
+	<line x1="29.5" y1="9.5" x2="59.2" y2="23.2"/>
+	<line x1="30.1" y1="22.1" x2="45.4" y2="28.8"/>
+	<line x1="13.7" y1="14.9" x2="20.7" y2="17.9"/>
+	<path d="M45.2,28.8C46.4,35,44.6,47,35.6,49c-11.7,2.6-15.3-8.9-15.8-10.9"/>
+	<line x1="19.5" y1="38.2" x2="7.8" y2="42.9"/>
+	<line x1="59.2" y1="23.2" x2="45.2" y2="28.8"/>
+	<line x1="8" y1="42.8" x2="5.9" y2="60"/>
+	<line x1="15.1" y1="40" x2="12.6" y2="60"/>
+	<line x1="22" y1="43.3" x2="20" y2="60"/>
+	<line x1="28.8" y1="48.7" x2="27.3" y2="60"/>
+	<line x1="35.1" y1="49" x2="34" y2="60.5"/>
+	<line x1="43.2" y1="42.8" x2="40.5" y2="61.9"/>
+	<line x1="51.8" y1="26.1" x2="47.4" y2="61.9"/>
+	<line x1="59.3" y1="23.1" x2="54.6" y2="62.9"/>
+	<path d="M63.5,42.5"/>
+	<path d="M66.3,20.5"/>
+	<rect x="0.2" width="59.9" height="60"/>
+</g>
+</svg>
