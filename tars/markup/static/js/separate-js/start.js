@@ -356,7 +356,7 @@ jQuery(function ($) {
 		}
 	});
 	var scroller = new AppScroll({
-		toolbar: toolbarElement,
-		scroller: contentElement
+		toolbar: $('.page-header'),
+	  scroller: $('.content-i')
 	});
 });
