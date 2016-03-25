@@ -290,6 +290,9 @@ jQuery(function ($) {
 		}
 	};
 
+
+	//.swiper-manufacture
+
 	gallerySlider = new Swiper($('.swiper-photo_blue'), sliderOption);
 
 	$('.swiper-photo, .swiper-product').each(function () {
