@@ -34,6 +34,9 @@ head: {
 	},
 	manufacture: {
 		title: 'Производство'
+	},
+	news: {
+		title: 'Новости'
 	}
 
 }

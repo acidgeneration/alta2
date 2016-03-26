@@ -52,6 +52,9 @@ head: {
 	},
 	manufacture: {
 		title: 'Производство'
+	},
+	news: {
+		title: 'Новости'
 	}
 
 }
@@ -90,6 +93,9 @@ __pages: [{
              },{
                 name: 'map',
                 href: '/map.html'
+             },{
+                name: 'news',
+                href: '/news.html'
              },{
                 name: 'type',
                 href: '/type.html'

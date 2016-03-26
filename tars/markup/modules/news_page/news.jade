@@ -1,0 +1,29 @@
+//mixin _template(data)
+h1 Новости
+.wrap-select
+	select(style="width:100%")
+		- var options = ['Все','item_1','item_2','item_3','item_4'];
+			- for option in options
+				option #{option}
+
+
+mixin news_item-IMG(time, title)
+	time #{time}
+	img(src="%=static=%img/assets/gallery_page/1.jpg", alt="")
+	h2 #{title}
+	p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed nihil similique adipisci vero ipsam ipsum odit eligendi culpa odio, tenetur labore animi, fugit sunt aliquid, repellat ducimus. Rem, veniam, qui.
+	a.btn.btn-blue Читать далее
+
+mixin news_item(time, title)
+	time #{time}
+	h2 #{title}
+	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id odio ex sed, qui nisi officiis aut dicta sit, deserunt quae est eveniet cumque nobis nemo cupiditate, maiores veniam! Doloribus, enim.
+	a.btn.btn-blue Читать далее
+
++news_item-IMG('11.02.2016', 'Фотоотчет о выставке «Mosbuild 2015»')
++news_item-IMG('12.02.2016', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.')
++news_item-IMG('13.02.2016', 'Lorem ipsum dolor sit.')
+
++news_item('14.02.2016', 'Lorem ipsum dolor.')
++news_item('15.02.2016', 'Lorem ipsum dolor sit amet, consectetur.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.')
++news_item('16.02.2016', 'Lorem ipsum dolor sit amet, consectetur.')
