@@ -216,16 +216,8 @@ jQuery(function ($) {
 
 				$("input").prop("checked", false);
 
-				//TODO
-				// var $select = $('.wrap-select select').select2();
-				// $select.val(null).trigger('change.select2');
-
 				$('.select2-selection__choice').remove();
-				$('.select2-results__option').attr("aria-selected", false);//.prop("aria-selected", false);
-
-				//.empty();
-				//$select.val(null).trigger('change');
-
+				$('.select2-results__option').attr("aria-selected", false);
 				//$("html, body").animate({ scrollTop: $(src).offset().top - 80 }, 1500);
 			})
 
@@ -262,7 +254,6 @@ jQuery(function ($) {
 				});
 			})
 			.on('click', '.HERE_tabs .js_tab-trigger', function(){
-
 				var el = $(this),
 						index = el.index(),
 						parent = el.parent('.HERE_tabs'),
@@ -329,12 +320,6 @@ jQuery(function ($) {
 
 	$('.wrap-select select').select2();
 
-	// $(".tags select").select2({
-	// 	//tags: true,
-	// 	allowClear: true,
-	// 	placeholder: "множественный выбор"
-  // 	//tokenSeparators: [',', ' ']
-	// });
 
 
 	$('.custom-scroll-blue').each(function () {
