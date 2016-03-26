@@ -55,6 +55,9 @@ head: {
 	},
 	news: {
 		title: 'Новости'
+	},
+	fordealer: {
+		title: 'Стать дилером'
 	}
 
 }
@@ -78,6 +81,9 @@ __pages: [{
              },{
                 name: 'certificates',
                 href: '/certificates.html'
+             },{
+                name: 'fordealer',
+                href: '/fordealer.html'
              },{
                 name: 'gallery',
                 href: '/gallery.html'

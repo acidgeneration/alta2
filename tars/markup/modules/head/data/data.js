@@ -37,6 +37,9 @@ head: {
 	},
 	news: {
 		title: 'Новости'
+	},
+	fordealer: {
+		title: 'Стать дилером'
 	}
 
 }
