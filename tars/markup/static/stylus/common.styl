@@ -44,6 +44,10 @@ time
 	i
 		border-bottom 1px dashed color-dark
 
+	& + .faq-question
+		border-top 0
+		padding-top 1em
+
 .trigger_dashed-small
 	//font-size 25px
 	cursor pointer
@@ -95,8 +99,9 @@ time
 			content '\2000 ▲'
 
 
-.v_ritm
+.v_2em0
 	margin 2em 0
+
 
 // .HERE_tabs
 // 	.js_tab-content
@@ -120,6 +125,8 @@ h1, h2, h3, h4, h5, h6
 	line-height 20px
 
 
+.h_clr
+	color color-light-blue
 
 h1()
 	font-size 25px
@@ -131,18 +138,17 @@ h1
 h2()
 	font-size 18px
 	font-weight bold
-	color color-dark
-	padding 0
+
 
 h2
 	font-size 18px
-	color color-dark
+	//color color-dark
 
 
 h3
-	color color-light-blue
+	//color color-light-blue
 	font-size 18px
-	padding 2em 0 1em
+	//padding 2em 0 1em
 //margin 2em 0 1em
 
 h4
@@ -152,8 +158,10 @@ h4
 	margin-bottom 1em
 
 
+
 p a
 	text-decoration underline
+
 p, ul
 	margin-bottom 1em
 strong
@@ -229,128 +237,6 @@ strong
 
 
 
-.section-white
-	background: #fff //#FDFDFD
-	padding: 2em 13px //25px 13px 20px;
-	.banner
-		margin-bottom 30px
-	.logotype
-		display: block
-		padding-bottom 15px
-		img
-			display: block
-			margin 0 auto;
-	.section-title
-		margin: 0 0 20px
-
-	//compare-material
-	.list
-		padding-top 15px;
-		li
-			padding-left 60px;
-			position: relative
-			//font-size 14px;
-			line-height: 18px;
-			color color-dark
-			padding-bottom 20px;
-			box-sizing: content-box
-			min-height: 40px;
-			&:last-child
-				padding-bottom 0
-		.icon
-			position: absolute;
-			width:40px;
-			height:40px;
-			left:0;
-			top:0;
-			overflow:hidden;
-			border-radius 2px;
-			background: #d9d6d6;
-
-
-
-
-.banner
-	width 288px
-	border 1px solid color-dark
-	margin 0 auto 50px
-	display block
-
-
-
-
-.sort-block
-	.wrap-btn
-		margin 0 13px 20px
-.sort-block-i
-	.wrap-select
-		margin 0 13px
-.drop-list
-	display: none
-
-
-
-
-
-
-.section-blue
-	background color-blue
-	padding-bottom 10px
-	.btn-drop
-		color #fff
-		display block
-		font-size 25px
-		line-height 50px
-		padding 0 13px
-		&.active
-			.icon-arrow
-				top 5px
-				left 5px
-				margin-left 5px
-				transform rotateZ(90deg)
-		.icon-arrow
-			display: inline-block
-			position relative
-			top -2px
-			margin-left 5px
-
-
-
-
-// белые отзывы
-.feedback-list
-	padding 9px 13px 0px
-	color #FFF
-	.item
-		padding-bottom 30px
-		p
-			font-size 14px
-			line-height 18px
-			padding-bottom 12px
-			word-wrap break-word
-		strong
-			font-weight bold
-	.btn-more
-		text-decoration underline
-	.hidden
-		display none
-	.wrap-btn
-		text-align center
-		padding-bottom 35px
-		a
-			color #FFF
-			font-size 15px
-			line-height 17px
-			font-weight 600
-			display inline-block
-			text-decoration underline
-		.link
-			display: none
-		&.active
-			.btn-more
-				display: none
-			.link
-				display inline-block
 
 //ОТЗЫВЫ
 .reviews
@@ -397,345 +283,3 @@ strong
 			line-height 2.1em
 			color #FFF
 			text-align center
-
-
-
-
-
-
-.choose-material
-	color #777
-	padding-top 7px
-	padding-bottom 10px
-.choose-item
-	float left
-	width 50%
-	position relative
-	text-align center
-	.icon
-		width 58px
-		height 58px
-		display block
-		margin 0 auto 7px
-		position relative
-		img
-			width 100%
-			position relative
-			z-index 2
-	.title
-		color #777
-		font-size 14px
-		font-weight lighter
-		line-height 20px
-		padding-bottom 15px
-		display block
-	&.active
-		img
-			box-shadow 0 0 0 2px #ff3131
-		.title
-			color color-light-blue
-
-
-
-.compare-material
-	position relative
-	display block
-	padding-bottom 25px
-	.list
-		float left
-		width 50%
-		position relative
-		&:first-child
-			padding-right 14px
-		&:last-child
-			padding-left 14px
-			&:before
-				content 'vs'
-				font-weight bold
-				color color-light-blue
-				font-size 12px
-				line-height 60px
-				position absolute
-				display block
-				left 0
-				top 0
-				transform translateX(-50%)
-
-.compare-item
-	position relative
-	display none
-	&.active
-		display block
-	.title
-		color #777
-		font-size 14px
-		line-height 17px
-		padding-bottom 3px
-		display block
-		font-weight bold
-	.icon
-		margin 0 auto 15px
-		width 110px
-		height 59px
-		position relative
-		overflow hidden
-	img
-		width 100%
-		display block
-		height 100%
-	ul
-		padding-bottom 3px
-		li
-			color #777
-			font-size 14px
-			line-height 18px
-			padding-left 10px
-			position relative
-			&:before
-				position absolute
-				left 2px
-				top 7px
-				content ''
-				display block
-				width 5px
-				height 5px
-				border-radius 50%
-		&.plus
-			li
-				&:before
-					background #58b200
-		&.minus
-			li
-				&:before
-					background #ff1744
-
-
-
-
-
-.double-tab
-	padding-bottom 23px
-	.item
-		//font-size 14px
-		line-height 33px
-		height 35px
-		color #444
-
-		//box-sizing: content-box
-		width 48%
-		float left
-
-		text-align center
-		background #FFF
-		border 1px solid #CCC
-		box-shadow -3px 3px 9px 0 rgba(0,0,0,.24);
-		margin-top -1px
-		transition border .3s ease 0s,box-shadow .3s ease 0s,background .3s ease 0s
-		&:last-child
-			float right
-		&.active
-			background #DDD
-			box-shadow none
-			border none
-			margin-top 0
-		&.dbl-row
-			line-height 18px
-			height 39px
-
-
-.color-table
-	padding-bottom 25px
-	margin 0 -5px
-	.wrap-color
-		float left
-		width 16.66%
-		position relative
-	.color
-		display block
-		position absolute
-		right 5px
-		top 5px
-		left 5px
-		bottom 5px
-		&.active
-			box-shadow 0 0 0 2px #ff3131
-			&.shadow
-				box-shadow 0 0 0 2px #ff3131,0 0 2px 5px rgba(0,0,0,.24)
-			.accept
-				opacity 1
-	.accept
-		position absolute
-		width 80%
-		height 80%
-		max-height 50px
-		max-width 50px
-		display block
-		left 50%
-		top 50%
-		transform translate(-50%,-50%)
-		border-radius 50%
-		background rgba(255,255,255,.5)
-		opacity 0
-		.icon-check
-			z-index 2
-			color #000000
-			font-size 10px
-			position absolute
-			top 50%
-			left 50%
-			transform translate(-50%,-50%)
-		&:before
-			width 70%
-			height 70%
-			top 15%
-			left 15%
-			display block
-			position absolute
-			content ''
-			z-index 1
-			background #FFF
-			border-radius 50%
-
-.double-col
-	position relative
-	.map-img
-		position absolute
-		left 0px
-		top -20px
-		padding 0 13px
-
-		box-sizing: content-box
-
-		width 100%
-		display block
-		z-index 0
-	>.item
-		float left
-		width 50%
-		text-align center
-		z-index 1
-		position relative
-		padding-bottom 25px
-		&:nth-child(even)
-			padding-right 10px
-		&:nth-child(odd)
-			padding-left 10px
-		.title
-			color color-light-blue
-			font-weight bold
-			font-size 14px
-			line-height 15px
-			display: block
-		.number
-			color #FFF
-			font-size 65px
-			line-height 65px
-			letter-spacing -1px
-			margin-bottom 3px
-			display: block
-			font-weight bold
-			text-shadow 0 5px 0 #e7e7e7, 0 15px 8px rgba(0,0,0,.24)
-		li
-			text-align left
-			position relative
-			font-size 14px
-			line-height 18px
-			color color-light-blue
-			padding-left 15px
-			&:before
-				position absolute
-				width 10px
-				height 1px
-				background	color-light-blue
-				left 0
-				top 9px
-				content ''
-				display block
-
-.wrap-list
-	padding-bottom 12px
-	.list
-		display none
-		&.active
-			display: block
-.wrap-video
-	padding 10px
-	width 100%
-	height 200px
-	position relative
-	background #FFF
-	margin-bottom 30px
-	.btn-play
-		position: absolute
-		top 50%
-		left 50%
-		width 50px
-		height 50px
-		margin -25px 0 0 -25px
-		background color-light-blue
-		display block
-		box-shadow 0 0 1px 0 rgba(255,255,255,.1);
-		z-index 2
-		&:after
-			display block
-			content ''
-			position: absolute
-			top 17px
-			left 17px
-			background url(../img/content/icon-play.png) no-repeat 50% 50%
-
-			background-size cover
-
-			width 16px
-			height 16px
-	.video
-		width 100%
-		height 100%
-		position relative
-		z-index 1
-
-
-
-
-.columns
-	padding-top 5px
-	.col-i
-		width 50%
-		float left
-		min-height 50px
-		line-height 30px
-		display table-cell
-		vertical-align middle
-		position relative
-		padding 0 10px 8px 45px
-		&:nth-child(even)
-			float right
-			padding-left 50px
-			.icon
-				left 5px
-		.title
-			display inline-block
-			position relative
-			color #777
-			font-size 14px
-			line-height 18px
-		.icon
-			width 36px
-			height 36px
-			position absolute
-			left 0
-			top 0
-			border 1px solid #777
-			border-radius 1px
-			overflow hidden
-			img
-				display block
-				margin 1px auto 0
-
-
-.title-form
-	font-size 18px
-	line-height 20px
-	display block
-	font-weight bold
-	padding-bottom 25px

@@ -3,6 +3,15 @@
 .tstBG
  background #000
 
+
+._blue-section
+  background color-light-blue
+  color #FFF
+  padding 1em 13px 2em
+  h2
+    color #FFF
+
+
 .img_FW
   display block
   width 100%
@@ -38,6 +47,8 @@
     color #FFF
     font-size 18px
 
+  & + p
+    padding 1em
 
 
 // типа факты в числах
@@ -80,13 +91,15 @@
 
 
 .principles
+
   h2
     h1()
   h3
     h2()
+    padding-top .8em
 
   margin 2em 0
-  padding 2em 0 .25em
+  padding 2em 0 1em //.25em
 
   border-top 5px solid color-light-blue
   border-bottom 5px solid color-light-blue

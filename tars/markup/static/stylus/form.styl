@@ -74,7 +74,7 @@ label.control.radio
 		&:checked
 		&:active
 			& ~ .control-indicator
-				color #fff
+				//color #fff
 				border 0
 		&:checked
 			& ~ .control-indicator
@@ -98,6 +98,7 @@ label.control.radio
 	font-size 75% //65%
 	//color transparent //#FFF //#eee
 	text-align center
+	color #FFF
 
 
 	user-select none
@@ -131,13 +132,14 @@ label.control.radio
 
 
 form
-	text-align center
+	//text-align center
 	//padding 1em 1em 1.4em
 	h1
 		margin .5em 0
 		line-height 125%
 
-
+	h4
+		margin 1.4em 0
 
 	//TODO а нужен ли wrap
 	.wrap-select
@@ -151,6 +153,7 @@ form
 
 
 .blue-form
+	text-align center
 	background color-light2-blue
 	padding 1em 1em 1.4em
 
