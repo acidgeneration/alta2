@@ -160,7 +160,8 @@ jQuery(function ($) {
 			})
 
 			//гармошка (аккордеон)
-			.on('click', '.js_expander-trigger', function () {
+			.on('click', '.js_expander-trigger', function (e) {
+				e.preventDefault();
 				$(this).toggleClass('active').next('.js_expander-content').slideToggle();
 
 			})

@@ -1,3 +1,11 @@
+mixin test()
+	img(src="%=static=%img/assets/about_page/test.jpg", alt="")
+	ul.blue-dot
+		li Увеличение объемов выпуска ПВХ-вагонки в 4 разa
+		li Запуск первой экструзионной линии по производству винилового сайдинга
+
+
+
 
 .intro_section
 
@@ -133,27 +141,62 @@ img.img_FW(src="%=static=%img/assets/about_page/fw_3.jpg", alt="")
 	p._AR
 		a(href="") Больше информации
 
+img.img_FW(src="%=static=%img/assets/about_page/fw_4.jpg", alt="")
+.section-white
+
+	//- js_expander-trigger
+	//- js_expander-content
 	.time-line
-
-		a(href="") 2001
-		a(href="") 2002-2004
-		a(href="") 2004-2005
-		a(href="") 2006
-		a(href="") 2006-2007
-		a(href="") 2008
-		a(href="") 2009
-		a(href="") 2010
-		a(href="") наши дни
-
+		.time-item
+			a.js_expander-trigger(href="") 2001
+			.js_expander-content
+				+test()
+		.time-item
+			a.js_expander-trigger(href="") 2002-2004
+			.js_expander-content
+				+test()
+		.time-item
+			a.js_expander-trigger(href="") 2004-2005
+			.js_expander-content
+				+test()
+		.time-item
+			a.js_expander-trigger(href="") 2006
+			.js_expander-content
+				+test()
+		.time-item
+			a.js_expander-trigger(href="") 2006-2007
+			.js_expander-content
+				+test()
+		.time-item
+			a.js_expander-trigger(href="") 2008
+			.js_expander-content
+				+test()
+		.time-item
+			a.js_expander-trigger(href="") 2009
+			.js_expander-content
+				+test()
+		.time-item
+			a.js_expander-trigger(href="") 2010
+			.js_expander-content
+				+test()
+		.time-item
+			a.js_expander-trigger(href="") наши дни
+			.js_expander-content
+				+test()
 
 	h1 А что на практике?
 
 	p Продукция компании «Альта-Профиль» стала единственным облицовочным материалом отечественного изготовления, который прошел полную сертификацию в соответствии со всеми российскими ГОСТ-ами. Мы готовы предоставить полный пакет документов – сертификаты соответствия и пожарной безопасности, экспертные заключения на все виды производимых нами отделочных материалов.
 
 
+	h4 Наш сайдинг отлично зарекомендовал себя и на практике, пройдя ряд натуральных испытаний в различных климатических поясах:
+	.center
+		img(src="%=static=%img/assets/about_page/map_1.png", alt="")
+
+
+	img(src="%=static=%img/assets/about_page/show.jpg", alt="")
 	p "Компания ежегодно участвует  в международных строительных и интерьерных выставках.
 
-	h4 Наш сайдинг отлично зарекомендовал себя и на практике, пройдя ряд натуральных испытаний в различных климатических поясах:
 
 	//- .center
 	//- 	img(src="%=static=%img/assets/certificates_page/certificates_4.jpg", alt="")
@@ -171,6 +214,11 @@ img.img_FW(src="%=static=%img/assets/about_page/fw_3.jpg", alt="")
 		.swiper-scrollbar.scroll-blue
 
 	p Для того чтобы убедиться в наших словах, вы можете сами просмотреть все <a href="#">сертификаты и ГОСТы</a>, которые имеются у нас.
+
+	.center
+		img(src="%=static=%img/content/logo-about.png", alt="")
+
+	p Не знаете <a href="#">где купить?</a> Проверьте есть ли в вашем городе торговый представитель компании «Альта-Профиль».
 
 	.center 
 		h2 «Присоединяйтесь к нам <br>– как партнеры, клиенты и просто друзья компании Альта-Профиль. Вместе мы достигнем большего!»
