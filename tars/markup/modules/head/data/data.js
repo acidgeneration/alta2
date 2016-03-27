@@ -40,6 +40,11 @@ head: {
 	},
 	fordealer: {
 		title: 'Стать дилером'
+	},
+	partners: {
+		title: 'Партнёры'
 	}
+
+
 
 }

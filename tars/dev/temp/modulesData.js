@@ -58,7 +58,12 @@ head: {
 	},
 	fordealer: {
 		title: 'Стать дилером'
+	},
+	partners: {
+		title: 'Партнёры'
 	}
+
+
 
 }
 ,
@@ -102,6 +107,9 @@ __pages: [{
              },{
                 name: 'news',
                 href: '/news.html'
+             },{
+                name: 'partners',
+                href: '/partners.html'
              },{
                 name: 'type',
                 href: '/type.html'
