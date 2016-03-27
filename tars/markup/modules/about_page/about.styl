@@ -17,8 +17,28 @@
   width 100%
 
 
+
 .intro_section
-  background #000
+.intro_section-text
+  height 438px
+  background url(%=static=%assets/about_page/i_bg.jpg) center/cover no-repeat
+
+.intro_section-text
+  display flex
+  flex-direction column
+  justify-content center
+
+  text-align center
+  color #FFF
+  padding 1em
+  h1
+    color #FFF
+
+
+.intro_section
+  height 438px
+  background url(%=static=%assets/about_page/i_bg.jpg) center/cover no-repeat
+
   position relative
 
   .center
@@ -29,7 +49,7 @@
     position absolute
     bottom 0
     left 50%
-    transform: translate(-50%, 20px);
+    transform: translateX(-50%);
   //.tstBG
 
 
