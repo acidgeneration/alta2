@@ -43,8 +43,13 @@ head: {
 	},
 	partners: {
 		title: 'Партнёры'
+	},
+	faq: {
+		title: 'FAQ'
+	},
+	answer: {
+		title: 'Ответ'
 	}
-
 
 
 }

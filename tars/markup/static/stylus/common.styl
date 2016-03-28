@@ -47,7 +47,6 @@ h2.trigger_dashed
 	font-size 18px
 	i
 		border-bottom 1px dashed color-dark
-
 	& + .faq-question
 		border-top 0
 		padding-top 1em
@@ -116,6 +115,7 @@ h2.trigger_dashed
 ._AR
 	text-align right
 
+
 h1, h2, h3, h4, h5, h6
 	margin: 0 0 0.75em
 	line-height: 1.25
@@ -137,17 +137,20 @@ h1, h2, h3, h4, h5, h6
 
 h1()
 	font-size 25px
-	color color-light-blue
 	line-height 30px
-h1
+h1, .h1
 	h1()
+	color color-light-blue
 
+.h1_black
+	h1()
+.h2_b
+	h2()
 h2()
 	font-size 18px
 	font-weight bold
 
-
-h2
+h2, .h2
 	font-size 18px
 	//color color-dark
 

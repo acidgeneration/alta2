@@ -1,0 +1,38 @@
+mixin faq()
+	- var questions = ["Какая цена на монтаж решетки?", "Я уже заказал у вас решетку. Надо ли зимой ее убирать?", "Я боюсь, что решетка будет забиваться и трава перестанет расти. Придется ли чистить решетку?", "Долго ли устанавливать решетку?", "Долго ли устанавливать решетку?", "Где можно заказать решетку с доставкой и установкой для экопарковки?"];
+		- for question in questions
+			.faq-question
+				p #{question}
+				.js_more-content
+					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magnam nulla incidunt provident! Laboriosam velit, ex voluptates tempore voluptatum labore facilis rerum, aliquid maiores ipsum, sit consectetur, voluptate obcaecati culpa.
+				.js_more-trigger.trigger_link(data-tgl-text="Скрыть", data-def-text="Показать ответ") Показать ответ
+
+
+
+
+
+h1 F.A.Q
+
+.wrap-select
+	- var options = ["Все", "item1", "item2", "item3", "item4", "item5"];
+		select(style="width:100%")
+			- for option, i in options
+				option(value="#{i}") #{option}
+
+
++faq()
+
+.js_more-content
+	+faq()
+
+a.js_more-trigger.btn.btn-blue(href="") Показать ещё
+
+
+form.center.faq-form_bg-dot
+	h2.h1_black Задайте свой вопрос
+	input(type="text", name="", placeholder="Ваше имя и фамилия")
+	input(type="text", name="", placeholder="Ваш телефон")
+	input(type="text", name="", placeholder="Ваш e-mail")
+	textarea(name="", rows="6", placeholder="Ваш вопрос")
+
+	button.btn.btn-red Cпросить

@@ -61,8 +61,13 @@ head: {
 	},
 	partners: {
 		title: 'Партнёры'
+	},
+	faq: {
+		title: 'FAQ'
+	},
+	answer: {
+		title: 'Ответ'
 	}
-
 
 
 }
@@ -86,6 +91,9 @@ __pages: [{
              },{
                 name: 'certificates',
                 href: '/certificates.html'
+             },{
+                name: 'faq',
+                href: '/faq.html'
              },{
                 name: 'fordealer',
                 href: '/fordealer.html'
